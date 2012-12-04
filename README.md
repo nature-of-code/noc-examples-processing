@@ -1,10 +1,6 @@
 The-Nature-of-Code-Examples
 ===========================
 
-Repository for example code from The Nature of Code book
+Repository for example code from The Nature of Code book (http://natureofcode.com/)
 
-http://natureofcode.com/
-
-Repo for book's raw content (text, illustrations, images, CSS, etc.)
-
-https://github.com/shiffman/The-Nature-of-Code
+The repo for book's raw content (text, illustrations, images, CSS, etc.): https://github.com/shiffman/The-Nature-of-Code
