@@ -19,6 +19,7 @@ class KochLine {
 
   void display() {
     stroke(0);
+    strokeWeight(2);
     line(start.x, start.y, end.x, end.y);
   }
 

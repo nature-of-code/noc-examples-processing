@@ -58,7 +58,7 @@ class Spring {
     md.target.set(mp);
     // Some stuff about how strong and bouncy the spring should be
     md.maxForce = 1000.0 * box.body.m_mass;
-    md.frequencyHz = 5.0;
+    md.frequencyHz = 0.1;
     md.dampingRatio = 0.9;
 
     // Make the joint!

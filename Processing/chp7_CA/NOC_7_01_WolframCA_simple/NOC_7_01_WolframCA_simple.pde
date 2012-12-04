@@ -17,5 +17,7 @@ void draw() {
   if (ca.generation < height/ca.w) {
     ca.generate();
   }
+  
+  //if (frameCount == 2) noLoop();
 }
 

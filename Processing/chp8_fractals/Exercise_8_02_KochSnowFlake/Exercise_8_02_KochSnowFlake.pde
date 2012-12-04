@@ -7,7 +7,7 @@
 ArrayList<KochLine> lines  ;   // A list to keep track of all the lines
 
 void setup() {
-  size(600, 692);
+  size(600, 692/2);
   background(255);
   lines = new ArrayList<KochLine>();
   PVector a   = new PVector(0, 173);
@@ -28,6 +28,8 @@ void setup() {
 
 void draw() {
   background(255);
+  scale(0.5);
+  translate(width/2,0);
   for (KochLine l : lines) {
     l.display();
   }

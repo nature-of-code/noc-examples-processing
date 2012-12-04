@@ -8,7 +8,7 @@ class CA {
   int[] cells;     // An array of 0s and 1s 
   int generation;  // How many generations?
 
-  int[] ruleset = {0, 1, 0, 1, 1, 0, 1, 0};     // An array to store the ruleset, for example {0,1,1,0,1,1,0,1}
+  int[] ruleset = {1,1,0,1,1,1,1,0};           // Rule 222  
 
   int w = 10;
 
@@ -36,6 +36,7 @@ class CA {
     // The current generation is the new generation
     cells = nextgen;
     generation++;
+    
   }
 
   // This is the easy part, just draw the cells, fill 255 for '1', fill 0 for '0'
@@ -47,6 +48,8 @@ class CA {
       rect(i*w, generation*w, w, w);
     }
   }
+
+
 
   // Implementing the Wolfram rules
   // Could be improved and made more concise, but here we can explicitly see what is going on for each case
