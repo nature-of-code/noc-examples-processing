@@ -1,5 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 // Smoke Particle Syste
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A class to describe a group of Particles
 // An ArrayList is used to manage the list of Particles 

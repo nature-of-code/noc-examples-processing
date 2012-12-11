@@ -1,7 +1,8 @@
-// Recursive Tree
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Recursive Tree
 // Renders a simple tree-like structure via recursion
 // Branching angle calculated as a function of horizontal mouse location
 

@@ -1,6 +1,8 @@
-// Sine Wave
-// Daniel Shiffman <http://www.shiffman.net>
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Sine Wave
 
 // Two wave objects
 Wave wave0;

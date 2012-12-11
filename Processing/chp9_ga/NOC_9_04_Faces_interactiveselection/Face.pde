@@ -1,6 +1,9 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Interactive Selection
 // http://www.genarts.com/karl/papers/siggraph91.html
-// Daniel Shiffman <http://www.shiffman.net>
 
 // The class for our "face", contains DNA sequence, fitness value, position on screen
 

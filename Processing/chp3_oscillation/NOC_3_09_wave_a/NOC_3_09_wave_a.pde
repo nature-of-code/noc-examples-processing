@@ -1,3 +1,6 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 float startAngle = 0;
 float angleVel = 0.05;

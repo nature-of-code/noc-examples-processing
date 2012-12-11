@@ -1,8 +1,8 @@
+// The Nature of Code
 // Daniel Shiffman
-// <http://www.shiffman.net>
+// http://natureofcode.com
 
 // The old way to do intersection tests, look how slow!!
-
 
 int totalThings = 2000;
 

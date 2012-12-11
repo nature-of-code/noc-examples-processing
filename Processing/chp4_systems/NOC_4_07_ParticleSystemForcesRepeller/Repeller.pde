@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Particles + Forces
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A very basic Repeller class
 class Repeller {

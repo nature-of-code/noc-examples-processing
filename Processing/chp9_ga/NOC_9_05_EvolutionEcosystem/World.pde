@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Evolution EcoSystem
-// Daniel Shiffman <http://www.shiffman.net>
-// Spring 2007, The Nature of Code
 
 // The World we live in
 // Has bloops and food
@@ -51,6 +53,4 @@ class World {
     }
   }
 }
-
-
 

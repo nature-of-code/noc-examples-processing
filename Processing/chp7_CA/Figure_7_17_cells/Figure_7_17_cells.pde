@@ -1,3 +1,6 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 size(1800,90);
 

@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Simple Particle System
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Particles are generated each cycle through draw(),
 // fall with gravity and fade out over time

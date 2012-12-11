@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
-// Toxiclibs example: http://toxiclibs.org/
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Force directed graph
 // Heavily based on: http://code.google.com/p/fidgen/

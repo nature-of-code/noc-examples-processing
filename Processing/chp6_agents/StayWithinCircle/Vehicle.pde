@@ -1,8 +1,6 @@
-// Wander
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
-
-// The "Vehicle" class (for wandering)
+// Daniel Shiffman
+// http://natureofcode.com
 
 class Vehicle {
 

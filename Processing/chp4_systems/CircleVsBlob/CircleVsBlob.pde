@@ -1,9 +1,6 @@
-// Smoke Particle System
-// Daniel Shiffman <http://www.shiffman.net>
-
-// A basic smoke effect using a particle system
-// Each particle is rendered as an alpha masked image
-
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 void setup() {
   size(200,200);

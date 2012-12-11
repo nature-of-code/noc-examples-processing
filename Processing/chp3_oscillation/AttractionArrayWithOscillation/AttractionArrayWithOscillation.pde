@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Attraction Array with Oscillating objects around each Crawler
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Spring 2012
 
 // Click and drag attractive body to move throughout space
 

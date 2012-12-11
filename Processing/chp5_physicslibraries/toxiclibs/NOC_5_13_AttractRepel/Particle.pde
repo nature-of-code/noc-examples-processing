@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // class Spore extends the class "VerletParticle2D"
 class Particle extends VerletParticle2D {
 

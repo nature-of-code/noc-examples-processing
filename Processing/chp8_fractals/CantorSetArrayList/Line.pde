@@ -1,6 +1,6 @@
-// Cantor Set
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Cantor line is a simple horizontal line with a starting point
 // and length

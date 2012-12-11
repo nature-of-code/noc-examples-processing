@@ -1,6 +1,6 @@
-// Nature of Code 2011
+// The Nature of Code
 // Daniel Shiffman
-// Chapter 3: Oscillation
+// http://natureofcode.com
 
 // Bob class, just like our regular Mover (location, velocity, acceleration, mass)
 

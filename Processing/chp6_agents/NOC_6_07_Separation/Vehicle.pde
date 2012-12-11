@@ -1,6 +1,6 @@
-// Separation
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, 2011
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Vehicle class
 

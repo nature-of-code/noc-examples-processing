@@ -1,12 +1,11 @@
-// Wander
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Demonstration of Craig Reynolds' "Wandering" behavior
 // See: http://www.red3d.com/cwr/
 
 // Click mouse to turn on and off rendering of the wander circle
-
 
 Vehicle wanderer;
 boolean debug = true;

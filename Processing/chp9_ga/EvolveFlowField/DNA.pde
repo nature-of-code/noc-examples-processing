@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pathfinding w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // DNA is an array of vectors
 

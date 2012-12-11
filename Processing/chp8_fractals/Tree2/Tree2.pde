@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Recursive Tree (w/ ArrayList)
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
 
 // Recursive branching "structure" without an explicitly recursive function
 // Instead we have an ArrayList to hold onto N number of elements

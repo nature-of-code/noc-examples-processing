@@ -1,6 +1,8 @@
+// Daniel Shiffman
+// The Nature of Code
+// http://natureofcode.com
+
 // An animated drawing of a Neural Network
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code
 
 class Neuron {
   // Neuron has a location

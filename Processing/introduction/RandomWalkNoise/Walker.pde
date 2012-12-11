@@ -1,5 +1,5 @@
-// Daniel Shiffman
 // The Nature of Code
+// Daniel Shiffman
 // http://natureofcode.com
 
 // A random walker object!

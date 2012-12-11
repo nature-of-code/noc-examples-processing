@@ -1,7 +1,8 @@
-// Stochastic Tree
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Stochastic Tree
 // Renders a simple tree-like structure via recursion
 // Angles and number of branches are random
 

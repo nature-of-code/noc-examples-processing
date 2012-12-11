@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
-// Toxiclibs example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A soft pendulum (series of connected springs)
 

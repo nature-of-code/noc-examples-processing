@@ -1,5 +1,5 @@
-// Daniel Shiffman
 // The Nature of Code
+// Daniel Shiffman
 // http://natureofcode.com
 
 float[] vals;  // Array to count how often a random # is picked

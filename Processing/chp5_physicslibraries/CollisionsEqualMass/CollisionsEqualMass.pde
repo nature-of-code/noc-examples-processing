@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Collisions -- Elastic, Equal Mass, Two objects only
-// Nature of Code, Spring 2009
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Based off of Chapter 9: Resolving Collisions
 // Mathematics and Physics for Programmers by Danny Kodicek

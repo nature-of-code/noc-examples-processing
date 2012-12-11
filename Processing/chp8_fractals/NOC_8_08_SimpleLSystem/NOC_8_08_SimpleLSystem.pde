@@ -1,7 +1,8 @@
-// L-System
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// L-System
 // Just demonstrating working with L-System strings
 // No drawing
 

@@ -1,4 +1,6 @@
-
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 class Neuron {
   PVector location;

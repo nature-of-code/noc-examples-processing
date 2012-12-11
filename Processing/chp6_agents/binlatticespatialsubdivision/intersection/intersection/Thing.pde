@@ -1,6 +1,7 @@
+// The Nature of Code
 // Daniel Shiffman
-// <http://www.shiffman.net>
-// April 6, 2006
+// http://natureofcode.com
+// Daniel Shiffman
 
 // Simple class describing an ellipse living on our screen
 

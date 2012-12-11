@@ -1,7 +1,8 @@
-// Stay Within Walls
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Stay Within Walls
 // "Made-up" Steering behavior to stay within walls
 
 

@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Basic example of controlling an object with our own motion (by attaching a MouseJoint)
 // Also demonstrates how to know which object was hit

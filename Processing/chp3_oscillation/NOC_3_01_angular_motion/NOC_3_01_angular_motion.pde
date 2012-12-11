@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 float angle = 0;
 float aVelocity = 0;
 float aAcceleration = 0.0001;

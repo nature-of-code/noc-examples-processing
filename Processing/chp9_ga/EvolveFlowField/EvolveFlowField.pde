@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pathfinding Flowfield w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // This example produces an obstacle course with a start and finish
 // Virtual "creatures" are rewarded for making it closer to the finish

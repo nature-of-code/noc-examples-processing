@@ -1,3 +1,6 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 class ParticleSystem {
   ArrayList<Particle> particles;

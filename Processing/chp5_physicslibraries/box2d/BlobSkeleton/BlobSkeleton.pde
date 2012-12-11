@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2012
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A blob skeleton
 // Could be used to create blobbly characters a la Nokia Friends

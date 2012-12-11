@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Koch Snowflake
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Renders a simple fractal, the Koch snowflake
 // Each recursive level drawn in sequence

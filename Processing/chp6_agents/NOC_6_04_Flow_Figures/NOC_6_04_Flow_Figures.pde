@@ -1,6 +1,8 @@
-// Flow Field Following
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Flow Field Following
 
 // Via Reynolds: http://www.red3d.com/cwr/steer/FlowFollow.html
 

@@ -1,8 +1,6 @@
-// Learning Processing
+// The Nature of Code
 // Daniel Shiffman
-// http://www.learningprocessing.com
-
-// Example 22-1: Inheritance
+// http://natureofcode.com
 
 class Square extends Shape {
   // Variables are inherited from the parent.

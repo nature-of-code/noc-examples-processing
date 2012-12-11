@@ -1,7 +1,8 @@
-// Koch Curve
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Koch Curve
 // A class to describe one line segment in the fractal
 // Includes methods to calculate midPVectors along the line according to the Koch algorithm
 

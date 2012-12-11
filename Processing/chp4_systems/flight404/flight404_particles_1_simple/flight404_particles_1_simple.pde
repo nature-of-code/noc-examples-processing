@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Updated version of flight404 Particle Emitter release 1
 // This works with Processing 1.0
 // All of the advanced openGL direct calls that use display lists, etc. have been stripped out

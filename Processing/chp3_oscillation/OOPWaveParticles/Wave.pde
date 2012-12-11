@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 class Wave {
   
   int xspacing = 8; // How far apart should each horizontal location be spaced

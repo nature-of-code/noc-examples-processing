@@ -1,5 +1,6 @@
+// The Nature of Code
 // Daniel Shiffman
-// <http://www.shiffman.net>
+// http://natureofcode.com
 
 // Bin-Lattice Spatial Subdivision
 // http://www.red3d.com/cwr/papers/2000/pip.pdf

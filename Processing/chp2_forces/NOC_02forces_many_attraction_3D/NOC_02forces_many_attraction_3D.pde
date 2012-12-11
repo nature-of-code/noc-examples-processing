@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 import processing.opengl.*;
 
 Mover[] movers = new Mover[10];

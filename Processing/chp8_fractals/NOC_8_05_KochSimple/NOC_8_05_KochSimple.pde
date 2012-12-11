@@ -1,7 +1,8 @@
-  // Koch Curve
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Koch Curve
 // Renders a simple fractal, the Koch snowflake
 // Each recursive level drawn in sequence
 

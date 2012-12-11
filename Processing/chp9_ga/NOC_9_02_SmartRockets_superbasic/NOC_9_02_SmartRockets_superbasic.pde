@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Smart Rockets w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Each Rocket's DNA is an array of PVectors
 // Each PVector acts as a force for each frame of animation

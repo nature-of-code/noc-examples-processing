@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Separation
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, 2011
 
 // Via Reynolds: http://www.red3d.com/cwr/steer/
 

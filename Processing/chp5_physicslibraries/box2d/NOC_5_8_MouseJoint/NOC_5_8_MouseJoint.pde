@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2011
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Basic example of controlling an object with the mouse (by attaching a spring)
 

@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pathfinding w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A class for an obstacle, just a simple rectangle that is drawn
 // and can check if a Rocket touches it

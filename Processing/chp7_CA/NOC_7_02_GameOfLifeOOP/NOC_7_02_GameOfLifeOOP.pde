@@ -1,5 +1,6 @@
-// Daniel Shiffman, Nature of Code
-// <http://www.shiffman.net>
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A basic implementation of John Conway's Game of Life CA
 

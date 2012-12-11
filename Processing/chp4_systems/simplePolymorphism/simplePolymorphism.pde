@@ -1,8 +1,6 @@
-// Learning Processing
+// The Nature of Code
 // Daniel Shiffman
-// http://www.learningprocessing.com
-
-// Example 22-2: Polymorphism
+// http://natureofcode.com
 
 // One array of Shapes
 Shape[] shapes = new Shape[30];

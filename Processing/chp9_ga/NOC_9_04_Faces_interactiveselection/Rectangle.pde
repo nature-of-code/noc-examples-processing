@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Re-implementing java.awt.Rectangle
 // so JS mode works
 

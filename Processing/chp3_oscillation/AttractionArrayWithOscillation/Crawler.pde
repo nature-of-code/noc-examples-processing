@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Attraction
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Spring 2012
 
 // A class to describe a thing in our world, has vectors for location, velocity, and acceleration
 // Also includes scalar values for mass, maximum velocity, and elasticity

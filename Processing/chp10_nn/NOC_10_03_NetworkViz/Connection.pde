@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // A static drawing of a Neural Network
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code
 
 class Connection {
 

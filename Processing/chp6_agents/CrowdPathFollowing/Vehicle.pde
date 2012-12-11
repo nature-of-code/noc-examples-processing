@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Path Following
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, Spring 2009
 
 // Vehicle class
 

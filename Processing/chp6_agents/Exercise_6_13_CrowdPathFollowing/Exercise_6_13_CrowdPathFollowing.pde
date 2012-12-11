@@ -1,7 +1,8 @@
-// Crowd Path Following
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, Spring 2009
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Crowd Path Following
 // Via Reynolds: http://www.red3d.com/cwr/steer/CrowdPath.html
 
 // Using this variable to decide whether to draw all the stuff

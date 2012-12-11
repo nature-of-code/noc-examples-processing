@@ -1,10 +1,6 @@
-// Nature of Code 2011
+// The Nature of Code
 // Daniel Shiffman
-// Chapter 3: Oscillation
-// Mover attached to spring connection
-// PVector
-// http://www.shiffman.net
-
+// http://natureofcode.com
 
 // Mover object
 Bob bob;

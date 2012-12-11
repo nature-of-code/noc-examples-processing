@@ -1,6 +1,6 @@
-// Flocking
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, Spring 2011
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Flock class
 // Does very little, simply manages the ArrayList of all the boids

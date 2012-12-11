@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pendulum
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A simple pendulum simulation
 // Given a pendulum with an angle theta (0 being the pendulum at rest) and a radius r

@@ -1,9 +1,6 @@
-// Simple Particle System
-// Daniel Shiffman <http://www.shiffman.net>
-
-// A simple Particle class, renders the particle as an image
-
-// Created 2 May 2005
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 class Particle {
   PVector loc;

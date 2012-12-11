@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Genetic Algorithm, Evolving Shakespeare
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Demonstration of using a genetic algorithm to perform a search
 

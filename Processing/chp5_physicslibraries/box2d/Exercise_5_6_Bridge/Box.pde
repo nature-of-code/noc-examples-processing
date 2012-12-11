@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A rectangular box
 class Box {

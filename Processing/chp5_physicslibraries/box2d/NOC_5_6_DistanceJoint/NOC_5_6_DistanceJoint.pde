@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 201
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Example demonstrating distance joints 
 // A bridge is formed by connected a series of particles with joints

@@ -1,11 +1,11 @@
-/**
- * PolarToCartesian
- * by Daniel Shiffman.  
- * 
- * Convert a polar coordinate (r,theta) to cartesian (x,y):  
- * x = r * cos(theta)
- * y = r * sin(theta)
- */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// PolarToCartesian
+// Convert a polar coordinate (r,theta) to cartesian (x,y):  
+// x = r * cos(theta)
+// y = r * sin(theta)
  
 float r;
 float theta;

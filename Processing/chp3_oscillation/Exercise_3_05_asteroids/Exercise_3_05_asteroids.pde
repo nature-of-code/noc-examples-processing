@@ -1,7 +1,8 @@
-// Nature of Code 2011
+// The Nature of Code
 // Daniel Shiffman
+// http://natureofcode.com
+
 // Chapter 3: Asteroids exercise
-// http://www.shiffman.net
 
 // Mover object
 Spaceship ship;

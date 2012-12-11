@@ -1,7 +1,8 @@
-// Koch Curve
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Koch Curve
 // A class to manage the list of line segments in the snowflake pattern
 
 class KochFractal {

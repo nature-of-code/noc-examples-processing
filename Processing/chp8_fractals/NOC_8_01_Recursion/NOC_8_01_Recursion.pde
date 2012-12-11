@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Simple Recursion
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
 
 void setup() {
   size(800,200);  
