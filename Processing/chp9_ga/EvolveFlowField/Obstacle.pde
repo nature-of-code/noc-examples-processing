@@ -9,8 +9,6 @@
 
 // Also using this class for starting point and target location
 
-import java.awt.Rectangle;
-
 class Obstacle {
 
   Rectangle r;

@@ -10,6 +10,8 @@
 // Each creature's DNA is a "flowfield" of PVectors that
 // determine steering vectors for each cell on the screen
 
+import java.awt.Rectangle;
+
 int gridscale = 24;              // Scale of grid is 1/24 of screen size
 
 // DNA needs one vector for every spot on the grid 
