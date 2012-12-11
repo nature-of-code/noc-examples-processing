@@ -1,6 +1,6 @@
 // Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// http://natureofcode.com
 
 // Declare a Random number generator object
 Random generator;

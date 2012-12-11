@@ -1,12 +1,6 @@
-/**
- * Forces (Gravity and Fluid Resistence) with Vectors 
- * by Daniel Shiffman.  
- * 
- * Demonstration of multiple force acting on bodies (Mover class)
- * Bodies experience gravity continuously
- * Bodies experience fluid resistance when in "water"
- */
-
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 class Mover {
 

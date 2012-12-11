@@ -1,5 +1,6 @@
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 // TIME
 float t = 0.0;

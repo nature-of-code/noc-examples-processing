@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 Mover[] movers = new Mover[20];
 
 float g = 0.4;

@@ -1,6 +1,6 @@
-// Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/teaching/nature
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Landscape with height values according to Perlin noise
 

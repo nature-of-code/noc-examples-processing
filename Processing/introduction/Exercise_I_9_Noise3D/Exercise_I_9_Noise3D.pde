@@ -1,6 +1,6 @@
-// Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 float increment = 0.01;
 // The noise function's 3rd argument, a global variable that increments once per cycle

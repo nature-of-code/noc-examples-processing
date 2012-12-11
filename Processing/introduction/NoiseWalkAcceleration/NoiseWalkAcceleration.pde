@@ -1,6 +1,6 @@
-// Noise Walker
-// Daniel Shiffman <http://www.shiffman.net>
+// Daniel Shiffman
 // The Nature of Code
+// http://natureofcode.com
 
 Walker w;
 

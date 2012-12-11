@@ -1,3 +1,7 @@
+// Daniel Shiffman
+// The Nature of Code
+// http://natureofcode.com
+
 // An array to keep track of how often random numbers are picked
 float[] randomCounts;
 

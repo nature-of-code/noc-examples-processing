@@ -1,6 +1,6 @@
 // Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// http://natureofcode.com
 
 float increment = 0.02;
 
