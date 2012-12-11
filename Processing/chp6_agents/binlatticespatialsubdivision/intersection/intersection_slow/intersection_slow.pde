@@ -23,8 +23,6 @@ void draw() {
   background(0);
   fill(255);
   noStroke();
-  smooth();
-
   // Run through the Grid
   stroke(255);
   for (Thing t : a) {

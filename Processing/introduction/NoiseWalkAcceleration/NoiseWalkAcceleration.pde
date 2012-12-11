@@ -6,8 +6,6 @@ Walker w;
 
 void setup() {
   size(640,360);
-  smooth();
-
   // Create a walker object
   w = new Walker();
 

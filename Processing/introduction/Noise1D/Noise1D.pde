@@ -8,7 +8,6 @@ float xincrement = 0.01;
 void setup() {
   size(200,200);
   background(0);
-  smooth();
   noStroke();
 }
 

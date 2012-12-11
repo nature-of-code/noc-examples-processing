@@ -44,7 +44,6 @@ PFont f;
 
 void setup() {
   size(800,300);
-  smooth();
   f = createFont("Georgia",12,true);
 
   // Initialize the physics

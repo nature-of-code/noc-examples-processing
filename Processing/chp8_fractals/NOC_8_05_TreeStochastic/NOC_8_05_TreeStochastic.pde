@@ -8,7 +8,6 @@
 
 void setup() {
   size(600, 400);
-  smooth();
   newTree();
 }
 

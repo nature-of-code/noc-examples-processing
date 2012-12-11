@@ -6,7 +6,6 @@ Walker w;
 
 void setup() {
   size(640,360);
-  smooth();
   w = new Walker();
   background(0);
 }

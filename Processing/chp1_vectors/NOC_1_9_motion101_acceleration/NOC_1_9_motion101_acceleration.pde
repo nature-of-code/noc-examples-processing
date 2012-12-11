@@ -6,7 +6,6 @@ Mover mover;
 
 void setup() {
   size(800,200);
-  smooth();
   mover = new Mover(); 
 }
 

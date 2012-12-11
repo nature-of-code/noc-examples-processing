@@ -16,7 +16,6 @@ Liquid liquid;
 
 void setup() {
   size(450, 450);
-  smooth();
   randomSeed(1);
   reset();
   // Create liquid object

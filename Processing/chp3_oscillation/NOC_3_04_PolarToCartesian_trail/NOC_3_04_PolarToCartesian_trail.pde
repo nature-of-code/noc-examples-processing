@@ -14,8 +14,6 @@ float theta;
 void setup() {
   size(800, 200);
   background(255);
-  smooth();
-  
   // Initialize all values
   r = height * 0.45;
   theta = 0;

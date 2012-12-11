@@ -11,8 +11,6 @@ Attractor a;
 
 void setup() {
   size(640,360);
-  smooth();
-
   // Some random bodies
   for (int i = 0; i < crawlers.length; i++) {
     crawlers[i] = new Crawler();

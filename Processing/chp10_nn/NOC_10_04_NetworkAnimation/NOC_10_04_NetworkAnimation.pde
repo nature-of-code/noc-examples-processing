@@ -8,8 +8,6 @@ Network network;
 
 void setup() {
   size(800, 200); 
-  smooth();
-  
   // Create the Network object
   network = new Network(width/2, height/2);
 

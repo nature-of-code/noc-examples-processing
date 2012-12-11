@@ -7,8 +7,6 @@ float angleVel = 0.1;
 
 size(800,200);
 background(255);
-smooth();
-
 stroke(0);
 strokeWeight(2);
 noFill();

@@ -16,7 +16,6 @@ boolean showVectors = true;
 
 void setup() {
   size(200,200);
-  smooth();
   a = new Mover(new PVector(random(5),random(-5,5)),new PVector(10,10));
   b = new Mover(new PVector(-2,1),new PVector(150,150));
 }

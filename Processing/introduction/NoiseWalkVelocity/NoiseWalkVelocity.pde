@@ -6,7 +6,6 @@ Walker w;
 
 void setup() {
   size(400,400);
-  smooth();
   frameRate(30);
 
   // Create a walker object

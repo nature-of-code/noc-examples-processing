@@ -37,7 +37,6 @@ void setup() {
 void draw() {
 
   background(255); 
-  smooth();
   flock.run();
   drawScrollbars();
 

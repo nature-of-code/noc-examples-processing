@@ -13,7 +13,6 @@ PImage a;
 
 void setup() {
   size(1800, 60*9);
-  smooth();
   // Make a new flow field with "resolution" of 16
   flowfield = new FlowField(60);
   arrow = loadShape("arrow.svg");

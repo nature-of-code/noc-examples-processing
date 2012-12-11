@@ -11,7 +11,6 @@ Circle c;
 
 void setup() {
   size(200,200);
-  smooth();
   // A square and circle
   s = new Square(75,75,10);
   c = new Circle(125,125,20,color(175));

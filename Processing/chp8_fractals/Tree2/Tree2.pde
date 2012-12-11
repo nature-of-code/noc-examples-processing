@@ -14,8 +14,6 @@ ArrayList<Branch> tree;
 void setup() {
   size(200,200);
   background(255);
-  smooth();
-  
   // Setup the arraylist and add one branch to it
   tree = new ArrayList();
   // A branch has a starting location, a starting "velocity", and a starting "timer" 

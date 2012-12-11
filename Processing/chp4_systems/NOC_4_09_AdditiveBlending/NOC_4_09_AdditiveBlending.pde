@@ -18,9 +18,7 @@ void setup() {
   img = loadImage("texture.png");
 
   ps = new ParticleSystem(0, new PVector(width/2, 50));
-  smooth();
-
-}
+  }
 
 void draw() {
   

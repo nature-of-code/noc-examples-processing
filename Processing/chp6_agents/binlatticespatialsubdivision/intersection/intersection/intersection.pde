@@ -18,8 +18,6 @@ int cols, rows;         // Total coluns and rows
 
 void setup() {
   size(640,360);
-  smooth();
-
   a = new ArrayList<Thing>();  // Create the list
   cols = width/scl;     // Calculate cols & rows
   rows = height/scl;    

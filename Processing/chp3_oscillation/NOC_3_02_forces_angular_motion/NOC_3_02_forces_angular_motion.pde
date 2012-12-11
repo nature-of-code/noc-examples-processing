@@ -8,7 +8,6 @@ Attractor a;
 
 void setup() {
   size(800,200);
-  smooth();
   background(255);
   for (int i = 0; i < movers.length; i++) {
     movers[i] = new Mover(random(0.1,2),random(width),random(height)); 

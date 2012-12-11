@@ -17,8 +17,6 @@ Vehicle car2;
 
 void setup() {
   size(800, 200);
-  smooth();
-
   // Call a function to generate new Path object
   newPath();
 

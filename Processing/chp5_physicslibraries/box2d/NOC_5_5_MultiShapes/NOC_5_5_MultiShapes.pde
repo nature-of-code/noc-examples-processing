@@ -19,8 +19,6 @@ ArrayList<Lollipop> pops;
 
 void setup() {
   size(800,200);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this,20);
   box2d.createWorld();

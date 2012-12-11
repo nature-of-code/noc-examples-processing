@@ -9,7 +9,6 @@ Spaceship ship;
 
 void setup() {
   size(750, 200);
-  smooth();
   ship = new Spaceship();
 }
 

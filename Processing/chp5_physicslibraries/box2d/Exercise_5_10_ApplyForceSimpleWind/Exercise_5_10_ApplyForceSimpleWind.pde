@@ -19,8 +19,6 @@ ArrayList<Box> boxes;
 
 void setup() {
   size(640,360);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this);
   box2d.createWorld();

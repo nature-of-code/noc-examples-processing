@@ -24,8 +24,6 @@ PVector target;        // Target location
 
 void setup() {
   size(800, 200);
-  smooth();
-
   // The number of cycles we will allow a generation to live
   lifetime = 200;
 

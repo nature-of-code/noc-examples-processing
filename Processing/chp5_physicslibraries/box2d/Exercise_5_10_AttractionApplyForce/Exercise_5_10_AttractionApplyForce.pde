@@ -20,8 +20,6 @@ Attractor a;
 
 void setup() {
   size(800,200);
-  smooth();
-
   box2d = new PBox2D(this);
   box2d.createWorld();
   // No global gravity force

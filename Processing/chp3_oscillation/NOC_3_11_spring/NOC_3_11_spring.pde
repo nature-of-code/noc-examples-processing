@@ -10,7 +10,6 @@ Spring spring;
 
 void setup() {
   size(800,200);
-  smooth();
   // Create objects at starting location
   // Note third argument in Spring constructor is "rest length"
   spring = new Spring(width/2,10,100); 

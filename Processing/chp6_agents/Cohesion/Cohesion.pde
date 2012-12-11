@@ -11,8 +11,6 @@ ArrayList<Vehicle> vehicles;
 
 void setup() {
   size(640,360);
-  smooth();
-
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();
   for (int i = 0; i < 100; i++) {

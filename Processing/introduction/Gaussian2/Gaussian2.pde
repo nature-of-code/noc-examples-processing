@@ -7,7 +7,6 @@ Random generator;
 void setup() {
   size(200,200);
   background(0);
-  smooth();
   generator = new Random();
 }
 

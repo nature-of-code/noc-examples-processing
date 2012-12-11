@@ -12,7 +12,6 @@ GOL gol;
 
 void setup() {
   size(400, 400);
-  smooth();
   gol = new GOL();
 }
 

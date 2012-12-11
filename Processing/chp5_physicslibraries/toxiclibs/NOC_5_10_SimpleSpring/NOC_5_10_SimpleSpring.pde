@@ -16,7 +16,6 @@ Particle p2;
 
 void setup() {
   size(800,200);
-  smooth();
   frameRate(30);
 
   // Initialize the physics

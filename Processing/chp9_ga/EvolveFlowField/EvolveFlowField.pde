@@ -33,8 +33,6 @@ ArrayList<Obstacle> obstacles;  //an array list to keep track of all the obstacl
 
 void setup() {
   size(640,480);
-  smooth();
-  
   dnasize = (width / gridscale) * (height / gridscale); 
   lifetime = width/2;
 

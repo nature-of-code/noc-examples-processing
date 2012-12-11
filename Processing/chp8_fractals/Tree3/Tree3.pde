@@ -16,8 +16,6 @@ ArrayList<Leaf> leaves;
 void setup() {
   size(200,200);
   background(255);
-  smooth();
-
   // Setup the arraylist and add one branch to it
   tree = new ArrayList<Branch>();
   leaves = new ArrayList<Leaf>();

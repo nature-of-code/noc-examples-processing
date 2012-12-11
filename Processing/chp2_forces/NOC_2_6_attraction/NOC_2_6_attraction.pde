@@ -7,7 +7,6 @@ Attractor a;
 
 void setup() {
   size(800,200);
-  smooth();
   m = new Mover(); 
   a = new Attractor();
 }

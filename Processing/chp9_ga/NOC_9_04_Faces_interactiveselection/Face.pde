@@ -52,7 +52,6 @@ class Face {
     noStroke();
 
     // Draw the head
-    smooth();
     fill(c);
     ellipseMode(CENTER);
     ellipse(0, 0, r, r);

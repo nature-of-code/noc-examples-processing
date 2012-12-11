@@ -4,7 +4,6 @@
 
 void setup() {
   size(200,200);
-  smooth();
   PImage img = loadImage("texture.png");
   background(0);
   image(img,0,0,width,height);

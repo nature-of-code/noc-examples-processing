@@ -12,8 +12,6 @@ ArrayList<PVector> targets;
 
 void setup() {
   size(800, 200);
-  smooth();
-  
   // The Vehicle's desired location
   desired = new PVector(width/2,height/2);
 

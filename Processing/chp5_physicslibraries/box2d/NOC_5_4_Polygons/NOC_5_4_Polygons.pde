@@ -19,8 +19,6 @@ ArrayList<CustomShape> polygons;
 
 void setup() {
   size(800,200);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this);
   box2d.createWorld();

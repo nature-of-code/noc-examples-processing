@@ -16,7 +16,6 @@ float[] yvalues;                           // Using an array to store height val
 
 void setup() {
   size(750,200);
-  smooth();
   w = width + 16;
 
   for (int i = 0; i < maxwaves; i++) {

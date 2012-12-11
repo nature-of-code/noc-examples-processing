@@ -11,7 +11,6 @@ Button button;
 void setup() {
   size(800,200);
   colorMode(RGB,1.0);
-  smooth();
   int popmax = 10;
   float mutationRate = 0.05;  // A pretty high mutation rate here, our population is rather small we need to enforce variety
   // Create a population with a target phrase, mutation rate, and population max

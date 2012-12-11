@@ -22,8 +22,6 @@ ArrayList<ParticleSystem> systems;
 
 void setup() {
   size(400,300);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this);
   box2d.createWorld();

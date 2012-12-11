@@ -7,7 +7,6 @@ ArrayList<Box> boxes;
 
 void setup() {
   size(800,200);
-  smooth();
   // Create ArrayLists
   boxes = new ArrayList<Box>();
 }

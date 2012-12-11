@@ -16,7 +16,6 @@ Liquid liquid;
 
 void setup() {
   size(800, 200);
-  smooth();
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);

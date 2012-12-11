@@ -29,8 +29,6 @@ ArrayList<Obstacle> obstacles;  //an array list to keep track of all the obstacl
 
 void setup() {
   size(800, 200);
-  smooth();
-
   // The number of cycles we will allow a generation to live
   lifetime = 300;
 
