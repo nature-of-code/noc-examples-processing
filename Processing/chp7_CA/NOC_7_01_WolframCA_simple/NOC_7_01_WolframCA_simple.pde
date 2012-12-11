@@ -20,6 +20,5 @@ void draw() {
     ca.generate();
   }
   
-  //if (frameCount == 2) noLoop();
 }
 

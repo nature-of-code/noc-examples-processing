@@ -10,7 +10,7 @@ class CA {
   int[] cells;     // An array of 0s and 1s 
   int generation;  // How many generations?
 
-  int[] ruleset = {1,1,0,1,1,1,1,0};           // Rule 222  
+  int[] ruleset = {0, 1, 0, 1, 1, 0, 1, 0};     // An array to store the ruleset, for example {0,1,1,0,1,1,0,1}
 
   int w = 10;
 
