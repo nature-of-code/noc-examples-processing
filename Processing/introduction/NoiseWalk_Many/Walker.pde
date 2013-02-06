@@ -11,7 +11,7 @@ class Walker {
 
   Walker() {
     location = new PVector(width/2, height/2);
-    noff = new PVector(0,0);
+    noff = new PVector(random(1000),random(1000));
   }
 
   void display() {
