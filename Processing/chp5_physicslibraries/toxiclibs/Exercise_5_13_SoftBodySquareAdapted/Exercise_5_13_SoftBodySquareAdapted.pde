@@ -1,7 +1,9 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 /**
  * This example is adapted from Karsten Schmidt's SoftBodySquare example
- * Daniel Shiffman, 2011
- * The Nature of Code book
  */
 
 /* <p>Softbody square demo is showing how to create a 2D square mesh out of
@@ -45,7 +47,6 @@ Blanket b;
 
 void setup() {
   size(800,240);
-  smooth();
   physics=new VerletPhysics2D();
   physics.addBehavior(new GravityBehavior(new Vec2D(0,0.1)));
 

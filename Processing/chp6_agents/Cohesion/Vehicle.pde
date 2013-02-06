@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Separation
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, 2011
 
 // Vehicle class
 
@@ -29,7 +31,7 @@ class Vehicle {
     acceleration.add(force);
   }
 
-  // Separation
+  // Cohesion
   // Method checks for nearby vehicles and steers away
   void cohesion (ArrayList<Vehicle> vehicles) {
     float desiredseparation = r*2;

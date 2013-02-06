@@ -1,5 +1,7 @@
-// Daniel Shiffman
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Testing Distribution of Perlin Noise generated #'s vs. Randoms
 
 float[] vals;

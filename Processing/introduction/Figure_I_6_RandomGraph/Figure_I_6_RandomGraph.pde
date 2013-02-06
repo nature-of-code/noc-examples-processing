@@ -1,5 +1,6 @@
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 void setup() {
   size(400,200);

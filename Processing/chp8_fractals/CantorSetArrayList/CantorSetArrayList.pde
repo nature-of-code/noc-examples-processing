@@ -1,7 +1,8 @@
-// Cantor Set
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Chapter 8
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Cantor Set
 // Renders a simple fractal, the Cantor Set
 // Uses an ArrayList to store list of objects
 // Generates when mouse is pressed

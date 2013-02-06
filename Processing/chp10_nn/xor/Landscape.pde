@@ -1,5 +1,7 @@
+// The Nature of Code
 // Daniel Shiffman
-// <http://www.shiffman.net>
+// http://natureofcode.com
+
 // "Landscape" example
 
 class Landscape {

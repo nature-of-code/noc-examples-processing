@@ -1,6 +1,9 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Interactive Selection
 // http://www.genarts.com/karl/papers/siggraph91.html
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A class to describe a population of faces
 // this hasn't changed very much from example to example

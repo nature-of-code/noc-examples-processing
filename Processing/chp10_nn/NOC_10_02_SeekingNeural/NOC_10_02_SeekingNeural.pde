@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // A Vehicle controlled by a Perceptron
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Spring 2011
 
 Vehicle v;
 
@@ -10,8 +12,6 @@ ArrayList<PVector> targets;
 
 void setup() {
   size(800, 200);
-  smooth();
-  
   // The Vehicle's desired location
   desired = new PVector(width/2,height/2);
 

@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Code based on "Scrollbar" by Casey Reas
 
 HScrollbar[] hs = new HScrollbar[5];//

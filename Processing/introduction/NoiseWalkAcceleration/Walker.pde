@@ -1,6 +1,6 @@
-// Random Walker
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A random walker class!
 

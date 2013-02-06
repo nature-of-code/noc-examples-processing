@@ -1,9 +1,9 @@
-/**
- * Additive Wave
- * by Daniel Shiffman. 
- * 
- * Create a more complex wave by adding two waves together. 
- */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Additive Wave
+// Create a more complex wave by adding two waves together. 
  
 // Maybe better for this answer to be OOP???
  
@@ -19,7 +19,6 @@ float[] yvalues;                           // Using an array to store height val
 void setup() {
   size(640,360);
   colorMode(RGB, 255, 255, 255, 100);
-  smooth();
   w = width + 16;
 
   for (int i = 0; i < maxwaves; i++) {

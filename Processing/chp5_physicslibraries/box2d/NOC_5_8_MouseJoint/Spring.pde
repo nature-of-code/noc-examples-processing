@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Class to describe the spring joint (displayed as a line)
 
@@ -58,7 +57,7 @@ class Spring {
     md.target.set(mp);
     // Some stuff about how strong and bouncy the spring should be
     md.maxForce = 1000.0 * box.body.m_mass;
-    md.frequencyHz = 0.1;
+    md.frequencyHz = 5.0;
     md.dampingRatio = 0.9;
 
     // Make the joint!

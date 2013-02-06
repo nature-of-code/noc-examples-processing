@@ -1,5 +1,6 @@
-// Pathfinding w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A class to describe a population of "creatures"
 

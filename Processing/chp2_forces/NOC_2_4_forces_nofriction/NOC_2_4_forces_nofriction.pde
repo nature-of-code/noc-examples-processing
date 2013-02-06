@@ -1,9 +1,12 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 Mover[] movers = new Mover[5];
 
 void setup() {
   size(383, 200);
   randomSeed(1);
-  smooth();
   for (int i = 0; i < movers.length; i++) {
     movers[i] = new Mover(random(1, 4), random(width), 0);
   }

@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Box2D Particle System
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2010
 
 // A class to describe a group of Particles
 // An ArrayList is used to manage the list of Particles 

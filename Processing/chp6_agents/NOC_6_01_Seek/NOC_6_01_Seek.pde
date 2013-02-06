@@ -1,6 +1,6 @@
-// Seek_Arrive
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code, Spring 2011
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Two "vehicles" follow the mouse position
 

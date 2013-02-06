@@ -1,9 +1,9 @@
-/**
- * <p>Force directed graph,
- * heavily based on: <a href="http://code.google.com/p/fidgen/">fid.gen</a><br/>
- * <a href="http://www.shiffman.net/teaching/nature/toxiclibs/">The Nature of Code</a><br/>
- * Spring 2010</p>
- */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Force directed graph,
+// heavily based on: http://code.google.com/p/fidgen/
 
 import toxi.geom.*;
 import toxi.physics2d.*;
@@ -23,7 +23,6 @@ PFont f;
 
 void setup() {
   size(800, 200);
-  smooth();
   frameRate(30);
   f = createFont("Georgia", 12, true);
 

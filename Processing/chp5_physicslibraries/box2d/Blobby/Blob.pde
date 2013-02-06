@@ -1,6 +1,7 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2012
+// Daniel Shiffman
+// http://natureofcode.com
+
 // PBox2D example
 
 // A blob skeleton

@@ -1,5 +1,6 @@
-// Daniel Shiffman, Nature of Code
-// <http://www.shiffman.net>
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Outline for game of life 
 // This is just a grid of hexagons right now
@@ -8,7 +9,6 @@ GOL gol;
 
 void setup() {
   size(600, 600);
-  smooth();
   gol = new GOL();
 }
 

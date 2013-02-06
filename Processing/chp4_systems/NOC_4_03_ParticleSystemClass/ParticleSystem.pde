@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Using Generics now!  comment and annotate, etc.
 
 class ParticleSystem {

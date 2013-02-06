@@ -1,6 +1,6 @@
 // The Nature of Code
 // Daniel Shiffman
-// Draft book
+// http://natureofcode.com
 
 // Example 1-2: Bouncing Ball, with PVector!
 PVector location;
@@ -8,7 +8,6 @@ PVector velocity;
 
 void setup() {
   size(200,200);
-  smooth();
   background(255);
   location = new PVector(100,100);
   velocity = new PVector(2.5,5);

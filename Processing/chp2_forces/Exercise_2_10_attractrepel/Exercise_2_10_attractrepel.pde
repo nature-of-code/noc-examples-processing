@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 Mover[] movers = new Mover[20];
 
 Attractor a;
@@ -6,7 +10,6 @@ float g = 1;
 
 void setup() {
   size(800,200);
-  smooth();
   a = new Attractor();
   for (int i = 0; i < movers.length; i++) {
     movers[i] = new Mover(random(4,12),random(width),random(height)); 

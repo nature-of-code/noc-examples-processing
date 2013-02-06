@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // An animated drawing of a Neural Network
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code
 
 class Connection {
   // Connection is from Neuron A to B

@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Daniel Shiffman, Nature of Code
-// <http://www.shiffman.net>
 
 // A basic implementation of John Conway's Game of Life CA
 // how could this be improved to use object oriented programming?
@@ -13,7 +16,6 @@ GOL gol;
 
 void setup() {
   size(400, 400);
-  smooth();
   gol = new GOL();
 }
 

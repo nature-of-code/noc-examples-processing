@@ -1,13 +1,13 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // An animated drawing of a Neural Network
-// Daniel Shiffman <http://www.shiffman.net>
-// Nature of Code
 
 Network network;
 
 void setup() {
   size(750,200); 
-  smooth();
-
   // Create the Network object
   network = new Network(width/2, height/2);
 

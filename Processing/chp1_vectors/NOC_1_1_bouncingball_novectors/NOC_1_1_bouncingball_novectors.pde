@@ -1,6 +1,6 @@
 // The Nature of Code
 // Daniel Shiffman
-// Draft book
+// http://natureofcode.com
 
 // Example 1-1: Bouncing Ball, no vectors
 float x = 100;

@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2012
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A blob skeleton
 // Could be used to create blobbly characters a la Nokia Friends
@@ -33,8 +32,6 @@ boolean skeleton;
 
 void setup() {
   size(640, 360);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this);
   box2d.createWorld();

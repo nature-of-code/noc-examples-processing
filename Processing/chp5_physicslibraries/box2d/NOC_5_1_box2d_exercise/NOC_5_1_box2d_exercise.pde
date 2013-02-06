@@ -1,9 +1,12 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // A list for all of our rectangles
 ArrayList<Box> boxes;
 
 void setup() {
   size(800,200);
-  smooth();
   // Create ArrayLists
   boxes = new ArrayList<Box>();
 }

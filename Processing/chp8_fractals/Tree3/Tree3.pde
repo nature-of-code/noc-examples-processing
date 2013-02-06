@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Recursive Tree (w/ ArrayList)
-// Daniel Shiffman <http://www.shiffman.net>
 // Nature of Code, Chapter 8
 
 // Recursive branching "structure" without an explicitly recursive function
@@ -13,8 +16,6 @@ ArrayList<Leaf> leaves;
 void setup() {
   size(200,200);
   background(255);
-  smooth();
-
   // Setup the arraylist and add one branch to it
   tree = new ArrayList<Branch>();
   leaves = new ArrayList<Leaf>();

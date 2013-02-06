@@ -1,11 +1,16 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pathfinding Flowfield w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // This example produces an obstacle course with a start and finish
 // Virtual "creatures" are rewarded for making it closer to the finish
 
 // Each creature's DNA is a "flowfield" of PVectors that
 // determine steering vectors for each cell on the screen
+
+import java.awt.Rectangle;
 
 int gridscale = 24;              // Scale of grid is 1/24 of screen size
 
@@ -30,8 +35,6 @@ ArrayList<Obstacle> obstacles;  //an array list to keep track of all the obstacl
 
 void setup() {
   size(640,480);
-  smooth();
-  
   dnasize = (width / gridscale) * (height / gridscale); 
   lifetime = width/2;
 

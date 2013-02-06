@@ -1,8 +1,6 @@
-/* Daniel Shiffman               */
-/* Programming from A to Z       */
-/* Spring 2006                   */
-/* http://www.shiffman.net       */
-/* daniel.shiffman@nyu.edu       */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 /* LSystem Class                 */
 

@@ -1,10 +1,6 @@
-/* Daniel Shiffman               */
-/* Programming from A to Z       */
-/* Spring 2006                   */
-/* http://www.shiffman.net       */
-/* daniel.shiffman@nyu.edu       */
-
-/* LSystem Class                 */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // An LSystem has a starting sentence
 // An a ruleset

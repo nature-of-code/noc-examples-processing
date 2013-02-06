@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Stochastic Tree with angles fluctuating with Perlin noise
-// Daniel Shiffman <http://www.shiffman.net>
 // Nature of Code, Chapter 8
 
 // Perlin noise offset 

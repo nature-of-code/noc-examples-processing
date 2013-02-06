@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 import pbox2d.*;
 import org.jbox2d.collision.shapes.*;
 import org.jbox2d.common.*;
@@ -10,7 +14,6 @@ PBox2D box2d;
 
 void setup() {
   size(800, 200);
-  smooth();
   // Initialize and create the Box2D world
   box2d = new PBox2D(this);	
   box2d.createWorld();

@@ -1,6 +1,8 @@
-// Flow Field Following
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Flow Field Following
 
 // Via Reynolds: http://www.red3d.com/cwr/steer/FlowFollow.html
 
@@ -11,7 +13,6 @@ PImage a;
 
 void setup() {
   size(1800, 60*9);
-  smooth();
   // Make a new flow field with "resolution" of 16
   flowfield = new FlowField(60);
   arrow = loadShape("arrow.svg");

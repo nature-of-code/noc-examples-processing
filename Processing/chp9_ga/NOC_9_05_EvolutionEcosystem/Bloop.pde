@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Evolution EcoSystem
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Creature class
 

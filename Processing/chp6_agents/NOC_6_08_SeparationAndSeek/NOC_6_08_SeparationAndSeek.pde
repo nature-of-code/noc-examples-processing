@@ -1,16 +1,12 @@
-// Separation
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, 2011
-
-// Via Reynolds: http://www.red3d.com/cwr/steer/
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // A list of vehicles
 ArrayList<Vehicle> vehicles;
 
 void setup() {
   size(800,200);
-  smooth();
-
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();
   for (int i = 0; i < 100; i++) {

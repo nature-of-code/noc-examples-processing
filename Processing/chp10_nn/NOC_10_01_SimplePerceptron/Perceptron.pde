@@ -1,6 +1,7 @@
 // Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/teaching/nature
+// http://natureofcode.com
+
 // Simple Perceptron Example
 // See: http://en.wikipedia.org/wiki/Perceptron
 

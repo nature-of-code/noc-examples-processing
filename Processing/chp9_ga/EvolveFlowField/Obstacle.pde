@@ -1,12 +1,13 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pathfinding w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A class for an obstacle, just a simple rectangle that is drawn
 // and can check if a creature touches it
 
 // Also using this class for starting point and target location
-
-import java.awt.Rectangle;
 
 class Obstacle {
 

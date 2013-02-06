@@ -1,10 +1,9 @@
-/**
- * Normalize 
- * by Daniel Shiffman.  
- * 
- * Demonstration of normalizing a vector.
- * Normalizing a vector sets its length to 1.
- */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Demonstration of normalizing a vector.
+// Normalizing a vector sets its length to 1.
 
 void setup() {
   size(800,200);

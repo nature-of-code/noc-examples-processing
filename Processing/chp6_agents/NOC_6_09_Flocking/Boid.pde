@@ -1,6 +1,6 @@
-// Flocking
-// Daniel Shiffman <http://www.shiffman.net>
-// The Nature of Code, Spring 2009
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Boid class
 // Methods for Separation, Cohesion, Alignment added

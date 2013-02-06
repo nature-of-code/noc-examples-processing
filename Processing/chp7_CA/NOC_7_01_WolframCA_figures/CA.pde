@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Wolfram Cellular Automata
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A class to manage the CA
 

@@ -1,6 +1,8 @@
-// Flocking
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Flocking
 
 // Demonstration of Craig Reynolds' "Flocking" behavior
 // See: http://www.red3d.com/cwr/

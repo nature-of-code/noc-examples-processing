@@ -1,6 +1,6 @@
-// Nature of Code
+// The Nature of Code
 // Daniel Shiffman
-// http://www.learningprocessing.com
+// http://natureofcode.com
 
 // A Polar coordinate, radius now starts at 0 to spiral outwards
 float r = 0;

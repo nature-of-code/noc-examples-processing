@@ -1,10 +1,6 @@
-// Nature of Code 2011
+// The Nature of Code
 // Daniel Shiffman
-// Chapter 3: Oscillation
-// Mover attached to spring connection
-// PVector
-// http://www.shiffman.net
-
+// http://natureofcode.com
 
 // Mover object
 Bob bob;
@@ -14,7 +10,6 @@ Spring spring;
 
 void setup() {
   size(800,200);
-  smooth();
   // Create objects at starting location
   // Note third argument in Spring constructor is "rest length"
   spring = new Spring(width/2,10,100); 

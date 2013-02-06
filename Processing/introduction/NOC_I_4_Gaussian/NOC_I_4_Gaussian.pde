@@ -1,6 +1,9 @@
-// Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
+
+// Import the Java Utilities library's Random class.
+import java.util.Random;
 
 // Declare a Random number generator object
 Random generator;

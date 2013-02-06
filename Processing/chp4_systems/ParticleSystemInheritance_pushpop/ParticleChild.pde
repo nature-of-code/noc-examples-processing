@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 class ParticleChild extends Particle {
 
   // We could add variables for only Confetti here if we so

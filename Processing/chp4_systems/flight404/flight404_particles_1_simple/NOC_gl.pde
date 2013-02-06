@@ -1,4 +1,6 @@
-
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 void renderImage(PImage img, Vec3D _loc, float _diam, color _col, float _alpha ) {
   pushMatrix();

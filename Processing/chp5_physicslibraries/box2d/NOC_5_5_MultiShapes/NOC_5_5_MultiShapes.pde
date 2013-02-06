@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2011
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Basic example of falling rectangles
 
@@ -20,8 +19,6 @@ ArrayList<Lollipop> pops;
 
 void setup() {
   size(800,200);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this,20);
   box2d.createWorld();

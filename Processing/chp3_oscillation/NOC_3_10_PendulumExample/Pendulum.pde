@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pendulum
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A Simple Pendulum Class
 // Includes functionality for user can click and drag the pendulum

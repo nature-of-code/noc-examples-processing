@@ -1,6 +1,6 @@
 // Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// http://natureofcode.com
 
 float xoff = 0.0;
 float xincrement = 0.01; 
@@ -8,7 +8,6 @@ float xincrement = 0.01;
 void setup() {
   size(200,200);
   background(0);
-  smooth();
   noStroke();
 }
 

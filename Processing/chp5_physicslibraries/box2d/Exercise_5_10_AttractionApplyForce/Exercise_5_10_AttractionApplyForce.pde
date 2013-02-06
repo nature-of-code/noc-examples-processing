@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2011
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Showing how to use applyForce() with box2d
 
@@ -21,8 +20,6 @@ Attractor a;
 
 void setup() {
   size(800,200);
-  smooth();
-
   box2d = new PBox2D(this);
   box2d.createWorld();
   // No global gravity force

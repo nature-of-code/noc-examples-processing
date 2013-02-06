@@ -1,7 +1,8 @@
-// Path Following
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
+// Path Following
 // Path is a just a straight line in this example
 // Via Reynolds: // http://www.red3d.com/cwr/steer/PathFollow.html
 
@@ -17,8 +18,6 @@ Vehicle car2;
 
 void setup() {
   size(800, 200);
-  smooth();
-
   path = new Path();
 
   // Each vehicle has different maxspeed and maxforce for demo purposes

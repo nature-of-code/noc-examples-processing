@@ -1,6 +1,6 @@
 // The Nature of Code
 // Daniel Shiffman
-// Draft book
+// http://natureofcode.com
 
 // Example 1-3: Vector subtraction
 

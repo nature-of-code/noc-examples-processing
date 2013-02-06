@@ -1,5 +1,6 @@
+// The Nature of Code
 // Daniel Shiffman
-// <http://www.shiffman.net>
+// http://natureofcode.com
 
 // Bin-Lattice Spatial Subdivision
 // http://www.red3d.com/cwr/papers/2000/pip.pdf
@@ -17,8 +18,6 @@ int cols, rows;         // Total coluns and rows
 
 void setup() {
   size(640,360);
-  smooth();
-
   a = new ArrayList<Thing>();  // Create the list
   cols = width/scl;     // Calculate cols & rows
   rows = height/scl;    

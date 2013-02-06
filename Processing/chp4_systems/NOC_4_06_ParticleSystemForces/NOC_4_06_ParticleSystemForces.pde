@@ -1,8 +1,11 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 ParticleSystem ps;
 
 void setup() {
   size(800,200);
-  smooth();
   ps = new ParticleSystem(new PVector(width/2,50));
 }
 

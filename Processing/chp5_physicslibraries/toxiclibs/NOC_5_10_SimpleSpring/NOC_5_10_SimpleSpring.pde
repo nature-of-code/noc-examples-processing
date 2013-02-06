@@ -1,6 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Simple Toxiclibs Spring
 
@@ -16,7 +16,6 @@ Particle p2;
 
 void setup() {
   size(800,200);
-  smooth();
   frameRate(30);
 
   // Initialize the physics

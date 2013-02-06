@@ -1,13 +1,12 @@
-// Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 float[] vals;  // Array to count how often a random # is picked
 float[] norms; // Normalized version of above
 
 void setup() {
   size(200, 200);
-  smooth();
   vals = new float[width];
   norms = new float[width];
 }

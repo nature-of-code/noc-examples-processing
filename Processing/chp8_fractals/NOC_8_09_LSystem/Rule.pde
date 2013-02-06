@@ -1,8 +1,8 @@
-/* Daniel Shiffman               */
-/* http://www.shiffman.net       */
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
-/* A Class to describe an
- LSystem Rule                  */
+// LSystem Rule class
 
 class Rule {
   char a;

@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // A rectangular box
 class Box {
   //  Instead of any of the usual variables, we will store a reference to a Box2D Body

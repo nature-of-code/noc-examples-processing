@@ -1,6 +1,6 @@
-// Daniel Shiffman
 // The Nature of Code
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 int x,y;
 

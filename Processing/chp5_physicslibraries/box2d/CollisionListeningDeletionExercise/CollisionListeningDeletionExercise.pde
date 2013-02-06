@@ -1,7 +1,6 @@
 // The Nature of Code
-// <http://www.shiffman.net/teaching/nature>
-// Spring 2011
-// PBox2D example
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Basic example of controlling an object with our own motion (by attaching a MouseJoint)
 // Also demonstrates how to know which object was hit
@@ -25,8 +24,6 @@ Boundary wall;
 
 void setup() {
   size(400, 300);
-  smooth();
-
   // Initialize box2d physics and create the world
   box2d = new PBox2D(this);
   box2d.createWorld();

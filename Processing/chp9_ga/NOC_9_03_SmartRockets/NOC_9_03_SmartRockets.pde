@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Smart Rockets w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Each Rocket's DNA is an array of PVectors
 // Each PVector acts as a force for each frame of animation
@@ -26,8 +29,6 @@ ArrayList<Obstacle> obstacles;  //an array list to keep track of all the obstacl
 
 void setup() {
   size(800, 200);
-  smooth();
-
   // The number of cycles we will allow a generation to live
   lifetime = 300;
 

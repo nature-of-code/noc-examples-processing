@@ -1,10 +1,12 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 float angle = 0;
 float angleVel = 0.1;
 
 size(800,200);
 background(255);
-smooth();
-
 stroke(0);
 strokeWeight(2);
 noFill();

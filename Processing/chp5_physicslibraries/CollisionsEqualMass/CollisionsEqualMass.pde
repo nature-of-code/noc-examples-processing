@@ -1,6 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Collisions -- Elastic, Equal Mass, Two objects only
-// Nature of Code, Spring 2009
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Based off of Chapter 9: Resolving Collisions
 // Mathematics and Physics for Programmers by Danny Kodicek
@@ -14,7 +16,6 @@ boolean showVectors = true;
 
 void setup() {
   size(200,200);
-  smooth();
   a = new Mover(new PVector(random(5),random(-5,5)),new PVector(10,10));
   b = new Mover(new PVector(-2,1),new PVector(150,150));
 }

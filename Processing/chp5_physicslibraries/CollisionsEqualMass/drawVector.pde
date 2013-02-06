@@ -1,3 +1,7 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 void drawVector(PVector v, PVector loc, float scayl) {
   pushMatrix();
   float arrowsize = 4;

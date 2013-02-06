@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // The Mandelbrot Set
-// Daniel Shiffman <http://www.shiffman.net>
 
 // Simple rendering of the Mandelbrot set
 // c = a + bi
@@ -11,8 +14,6 @@
 // etc.
 
 // c*c = (a+bi) * (a+bi) = a^2 - b^2 + 2abi
-
-// Created 2 May 2005
 
 // Establish a range of values on the complex plane
 double xmin = -2.5; double ymin = -1; double w = 4; double h = 2;

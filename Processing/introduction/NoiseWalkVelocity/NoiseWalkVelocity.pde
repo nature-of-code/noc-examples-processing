@@ -1,12 +1,11 @@
-// Noise Walker
-// Daniel Shiffman <http://www.shiffman.net>
 // The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 Walker w;
 
 void setup() {
   size(400,400);
-  smooth();
   frameRate(30);
 
   // Create a walker object

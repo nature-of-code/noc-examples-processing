@@ -1,7 +1,6 @@
-// Daniel Shiffman
 // The Nature of Code
-// ITP, Spring 2006
-// http://www.shiffman.net/
+// Daniel Shiffman
+// http://natureofcode.com
 
 int x,y;
 

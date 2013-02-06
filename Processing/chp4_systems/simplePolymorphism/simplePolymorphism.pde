@@ -1,16 +1,12 @@
-// Learning Processing
+// The Nature of Code
 // Daniel Shiffman
-// http://www.learningprocessing.com
-
-// Example 22-2: Polymorphism
+// http://natureofcode.com
 
 // One array of Shapes
 Shape[] shapes = new Shape[30];
 
 void setup() {
   size(200,200);
-  smooth();
-  
   for (int i = 0; i < shapes.length; i++ ) {
     int r = int(random(2));
     // Randomly put either circles or squares in our array

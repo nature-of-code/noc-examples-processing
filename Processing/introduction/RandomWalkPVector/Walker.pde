@@ -1,6 +1,7 @@
-// Random Walker (No Vectors)
-// Daniel Shiffman <http://www.shiffman.net>
+// Daniel Shiffman
 // The Nature of Code
+// http://natureofcode.com
+
 // A random walker class!
 
 class Walker {

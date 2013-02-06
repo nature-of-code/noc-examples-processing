@@ -1,5 +1,6 @@
-// Pathfinding w/ Genetic Algorithms
-// Daniel Shiffman <http://www.shiffman.net>
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
 // Rocket class -- this is just like our Boid / Particle class
 // the only difference is that it has DNA & fitness

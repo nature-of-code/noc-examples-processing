@@ -1,5 +1,8 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Pendulum
-// Daniel Shiffman <http://www.shiffman.net>
 
 // A simple pendulum simulation
 // Given a pendulum with an angle theta (0 being the pendulum at rest) and a radius r
@@ -20,8 +23,6 @@ Pendulum p;
 
 void setup() {
   size(800,200);
-  smooth();
- 
   // Make a new Pendulum with an origin location and armlength
   p = new Pendulum(new PVector(width/2,0),175);
 
