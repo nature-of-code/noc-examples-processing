@@ -23,6 +23,7 @@ void draw() {
  
   a.display();
   m.display();
+
 }
 
 void mousePressed() {
