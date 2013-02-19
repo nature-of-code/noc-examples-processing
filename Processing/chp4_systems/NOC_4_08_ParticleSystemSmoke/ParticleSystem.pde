@@ -12,7 +12,7 @@ class ParticleSystem {
   ArrayList<Particle> particles;    // An arraylist for all the particles
   PVector origin;        // An origin point for where particles are birthed
   PImage img;
-  
+
   ParticleSystem(int num, PVector v, PImage img_) {
     particles = new ArrayList<Particle>();              // Initialize the arraylist
     origin = v.get();                        // Store the origin point
@@ -23,27 +23,25 @@ class ParticleSystem {
   }
 
   void run() {
-    Iterator<Particle> it = particles.iterator();
-    while (it.hasNext()) {
-      Particle p = it.next();
+    for (int i = particles.size()-1; i >= 0; i--) {
+      Particle p = particles.get(i);
       p.run();
-      if (p.dead()) {
-        it.remove();
+      if (p.isDead()) {
+        particles.remove(i);
       }
     }
   }
-  
+
   // Method to add a force vector to all particles currently in the system
   void applyForce(PVector dir) {
     // Enhanced loop!!!
     for (Particle p: particles) {
       p.applyForce(dir);
     }
-  
   }  
 
   void addParticle() {
-    particles.add(new Particle(origin,img));
+    particles.add(new Particle(origin, img));
   }
 
   void addParticle(Particle p) {
@@ -54,12 +52,11 @@ class ParticleSystem {
   boolean dead() {
     if (particles.isEmpty()) {
       return true;
-    } else {
+    } 
+    else {
       return false;
     }
   }
-
 }
-
 
 
