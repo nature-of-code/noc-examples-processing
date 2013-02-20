@@ -5,9 +5,11 @@ void setup() {
 
 void draw() {
  background(255);
-  float y = sin(angle);
+  float y = 100*sin(angle);
+  angle += 0.02;
   
   fill(127);
-  line(width/2,height/2,width/2,y);
-  ellipse(width/2,y,16,16);
+  translate(width/2,height/2);
+  line(0,0,0,y);
+  ellipse(0,y,16,16);
 }
