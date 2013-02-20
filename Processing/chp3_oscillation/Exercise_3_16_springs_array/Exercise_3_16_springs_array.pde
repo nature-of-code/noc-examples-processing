@@ -38,14 +38,12 @@ void draw() {
 
 void mousePressed() {
   for (Bob b : bobs) {
-
     b.clicked(mouseX, mouseY);
   }
 }
 
 void mouseReleased() {
   for (Bob b : bobs) {
-
     b.stopDragging();
   }
 }
