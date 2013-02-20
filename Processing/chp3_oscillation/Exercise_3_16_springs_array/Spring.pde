@@ -13,16 +13,21 @@ class Spring {
   // Rest length and spring constant
   float len;
   float k = 0.2;
+  
+  Bob a;
+  Bob b;
 
   // Constructor
-  Spring(int l) {
+  Spring(Bob a_, Bob b_, int l) {
+    a = a_;
+    b = b_;
     len = l;
   } 
 
   // Calculate spring force
-  void connect(Bob b1, Bob b2) {
+  void update() {
     // Vector pointing from anchor to bob location
-    PVector force = PVector.sub(b1.location, b2.location);
+    PVector force = PVector.sub(a.location, b.location);
     // What is distance
     float d = force.mag();
     // Stretch is difference between current distance and rest length
@@ -32,38 +37,16 @@ class Spring {
     // F = k * stretch
     force.normalize();
     force.mult(-1 * k * stretch);
-    b1.applyForce(force);
+    a.applyForce(force);
     force.mult(-1);
-    b2.applyForce(force);
-  }
-
-  // Constrain the distance between bob and anchor between min and max
-  void constrainLength(Bob b, float minlen, float maxlen) {
-    PVector dir = PVector.sub(b.location, anchor);
-    float d = dir.mag();
-    // Is it too short?
-    if (d < minlen) {
-      dir.normalize();
-      dir.mult(minlen);
-      // Reset location and stop from moving (not realistic physics)
-      b.location = PVector.add(anchor, dir);
-      b.velocity.mult(0);
-      // Is it too long?
-    } 
-    else if (d > maxlen) {
-      dir.normalize();
-      dir.mult(maxlen);
-      // Reset location and stop from moving (not realistic physics)
-      b.location = PVector.add(anchor, dir);
-      b.velocity.mult(0);
-    }
+    b.applyForce(force);
   }
 
 
-  void displayLine(Bob b1, Bob b2) {
+  void display() {
     strokeWeight(2);
     stroke(0);
-    line(b1.location.x, b1.location.y, b2.location.x, b2.location.y);
+    line(a.location.x, a.location.y, b.location.x, b.location.y);
   }
 }
 

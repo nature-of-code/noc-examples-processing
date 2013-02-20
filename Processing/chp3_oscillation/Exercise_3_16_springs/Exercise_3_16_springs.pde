@@ -9,6 +9,7 @@ Bob b3;
 
 Spring s1;
 Spring s2;
+Spring s3;
 
 void setup() {
   size(640, 360);
@@ -20,6 +21,7 @@ void setup() {
 
   s1 = new Spring(b1,b2,100);
   s2 = new Spring(b2,b3,100);
+  s3 = new Spring(b1,b3,100);
 }
 
 void draw() {
@@ -27,9 +29,11 @@ void draw() {
 
   s1.update();
   s2.update();
+  s3.update();
   
   s1.display();
   s2.display();
+  s3.display();
 
   b1.update();
   b1.display();
