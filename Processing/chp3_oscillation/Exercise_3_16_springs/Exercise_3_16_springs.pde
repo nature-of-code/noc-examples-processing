@@ -3,61 +3,51 @@
 // http://natureofcode.com
 
 // Mover object
-Bob[] bobs = new Bob[3];
-Spring[] springs = new Spring[bobs.length-1];
+Bob b1;
+Bob b2;
+Bob b3;
+
+Spring s1;
+Spring s2;
 
 void setup() {
   size(640, 360);
   // Create objects at starting location
   // Note third argument in Spring constructor is "rest length"
-  for (int i = 0; i < bobs.length; i++) {
-    bobs[i] = new Bob(width/2, 100+i*100); 
-    if (i < bobs.length-1) {
-      springs[i] = new Spring(100);
-    }
-  }
+  b1 = new Bob(width/2, 100);
+  b2 = new Bob(width/2, 200);
+  b3 = new Bob(width/2, 300);
+
+  s1 = new Spring(b1,b2,100);
+  s2 = new Spring(b2,b3,100);
 }
 
 void draw() {
   background(255); 
 
+  s1.update();
+  s2.update();
+  
+  s1.display();
+  s2.display();
 
-  for (int i = 0; i < bobs.length; i++) {
-    // Connect the bob to the spring (this calculates the force)
-    if (i < bobs.length-1) {
-      springs[i].connect(bobs[i], bobs[i+1]);
-      springs[i].displayLine(bobs[i], bobs[i+1]); // Draw a line between spring and bob
-    }
-    // Constrain spring distance between min and max
-    //spring.constrainLength(bob,30,200);
+  b1.update();
+  b1.display();
+  b2.update();
+  b2.display();
+  b3.update();
+  b3.display();
 
-    // Update bob
-    bobs[i].update();
-    // Draw everything
-
-    //bobs[i].display();
-
-    bobs[i].drag(mouseX, mouseY);
-  }
-
-
-  fill(0);
-  text("click on bob to drag", 10, height-5);
+  b1.drag(mouseX, mouseY);
 }
 
 
-// For mouse interaction with bob
 
 void mousePressed() {
-  for (Bob b : bobs) {
-    b.clicked(mouseX, mouseY);
-  }
+  b1.clicked(mouseX, mouseY);
 }
 
 void mouseReleased() {
-  for (Bob b : bobs) {
-    b.stopDragging();
-  }
-  //bob.stopDragging();
+  b1.stopDragging();
 }
 
