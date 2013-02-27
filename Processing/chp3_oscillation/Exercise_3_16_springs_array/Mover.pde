@@ -8,10 +8,8 @@ class Bob {
   PVector location;
   PVector velocity;
   PVector acceleration;
-  float mass = 4;
-
-  boolean lock = false;
-
+  float mass = 8;
+  
   // Arbitrary damping to simulate friction / drag 
   float damping = 0.95;
 
@@ -21,7 +19,7 @@ class Bob {
 
   // Constructor
   Bob(float x, float y) {
-    location = new PVector(x, y);
+    location = new PVector(x,y);
     velocity = new PVector();
     acceleration = new PVector();
     dragOffset = new PVector();
@@ -29,12 +27,10 @@ class Bob {
 
   // Standard Euler integration
   void update() { 
-    if (!lock) {
-      velocity.add(acceleration);
-      velocity.mult(damping);
-      location.add(velocity);
-      acceleration.mult(0);
-    }
+    velocity.add(acceleration);
+    velocity.mult(damping);
+    location.add(velocity);
+    acceleration.mult(0);
   }
 
   // Newton's law: F = M * A
@@ -49,18 +45,18 @@ class Bob {
   void display() { 
     stroke(0);
     strokeWeight(2);
-    fill(175);
+    fill(175,120);
     if (dragging) {
       fill(50);
     }
-    ellipse(location.x, location.y, mass*3, mass*3);
+    ellipse(location.x,location.y,mass*2,mass*2);
   } 
 
   // The methods below are for mouse interaction
 
   // This checks to see if we clicked on the mover
   void clicked(int mx, int my) {
-    float d = dist(mx, my, location.x, location.y);
+    float d = dist(mx,my,location.x,location.y);
     if (d < mass) {
       dragging = true;
       dragOffset.x = location.x-mx;

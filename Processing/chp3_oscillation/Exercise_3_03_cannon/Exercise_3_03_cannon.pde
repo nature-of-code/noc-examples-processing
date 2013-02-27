@@ -30,7 +30,7 @@ void draw() {
     ball.update();
   }
   ball.display();
-  
+
   if (ball.location.y > height) {
     ball = new CannonBall(location.x, location.y);  
     shot = false;
@@ -43,13 +43,12 @@ void keyPressed() {
   } 
   else if (key == CODED && keyCode == LEFT) {
     angle -= 0.1;
+  } 
+  else if (key == ' ') {
+    shot = true;
+    PVector force = PVector.fromAngle(angle);
+    force.mult(10);
+    ball.applyForce(force);
   }
-}
-
-void mousePressed() {
-  shot = true;
-  PVector force = PVector.fromAngle(angle);
-  force.mult(10);
-  ball.applyForce(force);
 }
 
