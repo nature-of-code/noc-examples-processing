@@ -106,7 +106,7 @@ class Rocket {
 
       // Get the steering vector out of our genes in the right spot
       // We could do (desired - velocity) to be more in line with the Reynolds flow field following
-      acceleration.add(dna.genes[x+y*width/gridscale]);
+      acceleration.add(dna.genes[x+y*(width/gridscale)]);
 
       // This is all the same stuff we've done before
       acceleration.mult(maxforce);
