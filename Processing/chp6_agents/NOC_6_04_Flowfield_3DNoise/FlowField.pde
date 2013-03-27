@@ -11,6 +11,8 @@ class FlowField {
   int cols, rows; // Columns and Rows
   int resolution; // How large is each "cell" of the flow field
 
+  float zoff = 0.0;
+  
   FlowField(int r) {
     resolution = r;
     // Determine the number of columns and rows based on sketch's width and height
@@ -22,18 +24,19 @@ class FlowField {
 
   void init() {
     // Reseed noise so we get a new flow field every time
-    noiseSeed((int)random(10000));
+    //noiseSeed((int)random(10000));
     float xoff = 0;
     for (int i = 0; i < cols; i++) {
       float yoff = 0;
       for (int j = 0; j < rows; j++) {
-        float theta = map(noise(xoff,yoff),0,1,0,TWO_PI);
+        float theta = map(noise(xoff,yoff,zoff),0,1,0,TWO_PI);
         // Polar to cartesian coordinate transformation to get x and y components of the vector
         field[i][j] = PVector.fromAngle(theta);
         yoff += 0.1;
       }
       xoff += 0.1;
     }
+    zoff += 0.01;
   }
 
   // Draw every vector
@@ -52,7 +55,7 @@ class FlowField {
     float arrowsize = 4;
     // Translate to location to render vector
     translate(x,y);
-    stroke(0,100);
+    stroke(0);
     // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
     rotate(v.heading2D());
     // Calculate length of vector & scale it to be bigger or smaller if necessary

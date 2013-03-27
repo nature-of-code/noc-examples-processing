@@ -26,6 +26,8 @@ void setup() {
 
 void draw() {
   background(255);
+    flowfield.init();
+
   // Display the flowfield in "debug" mode
   if (debug) flowfield.display();
   // Tell all the vehicles to follow the flow field
