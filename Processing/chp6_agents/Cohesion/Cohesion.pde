@@ -2,7 +2,7 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Separation
+// Cohesion
 
 // Via Reynolds: http://www.red3d.com/cwr/steer/
 

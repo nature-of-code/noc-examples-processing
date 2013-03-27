@@ -31,7 +31,7 @@ class Boid {
   }
 
   void run(ArrayList<Boid> boids) {
-    flock(boids);
+    //flock(boids);
     update();
     borders();
     render();
