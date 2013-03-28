@@ -10,7 +10,7 @@ class CA {
 
   int generation;  // How many generations?
   int[] ruleset;   // An array to store the ruleset, for example {0,1,1,0,1,1,0,1}
-  int w = 5;
+  int w = 4;
   int[][] matrix;  // Store a history of generations in 2D array, not just one
 
   int cols;
