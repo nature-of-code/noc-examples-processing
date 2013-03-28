@@ -105,8 +105,7 @@ void networkStatus() {
   }
 
   float rmse = sqrt(mse/4.0);
-  DecimalFormat df = new DecimalFormat("0.000");
-  text("Root mean squared error: " + df.format(rmse), 10,60);
+  text("Root mean squared error: " + nf(rmse,1,5), 10,60);
 
 }
 
