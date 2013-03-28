@@ -52,7 +52,7 @@ void mousePressed() {
   if (counter < 5) {
     pushMatrix();
     lsys.generate();
-    println(lsys.getSentence());
+    //println(lsys.getSentence());
     turtle.setToDo(lsys.getSentence());
     turtle.changeLen(0.5);
     popMatrix();
