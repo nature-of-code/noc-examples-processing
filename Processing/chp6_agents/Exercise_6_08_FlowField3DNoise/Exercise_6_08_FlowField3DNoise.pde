@@ -26,7 +26,7 @@ void setup() {
 
 void draw() {
   background(255);
-    flowfield.init();
+  flowfield.update();
 
   // Display the flowfield in "debug" mode
   if (debug) flowfield.display();
@@ -46,11 +46,6 @@ void keyPressed() {
   if (key == ' ') {
     debug = !debug;
   }
-}
-
-// Make a new flowfield
-void mousePressed() {
-  flowfield.init();
 }
 
 
