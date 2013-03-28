@@ -8,7 +8,7 @@
 GOL gol;
 
 void setup() {
-  size(800, 200);
+  size(640, 360);
   gol = new GOL();
 }
 
