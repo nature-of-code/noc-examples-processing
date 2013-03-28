@@ -9,17 +9,12 @@
 
 /* @pjs preload="processingjs/chapter04/_4_08_ParticleSystemSmoke/data/texture.png"; */
 
-import java.util.Random;
-
 ParticleSystem ps;
-Random generator;
 
 void setup() {
   size(640,360);
-  generator = new Random();
   PImage img = loadImage("texture.png");
   ps = new ParticleSystem(0,new PVector(width/2,height-75),img);
-  smooth();
 }
 
 void draw() {
