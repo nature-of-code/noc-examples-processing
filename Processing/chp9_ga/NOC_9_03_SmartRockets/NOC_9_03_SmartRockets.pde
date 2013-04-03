@@ -44,7 +44,7 @@ void setup() {
 
   // Create the obstacle course  
   obstacles = new ArrayList<Obstacle>();
-  obstacles.add(new Obstacle(300, height/2, width-600, 10));
+  obstacles.add(new Obstacle(width/2-100, height/2, 200, 10));
 }
 
 void draw() {
