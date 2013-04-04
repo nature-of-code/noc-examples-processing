@@ -13,10 +13,9 @@ class Boid {
   float r;
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
-  
-  float periphery;
 
-  color col;
+
+    color col;
   Boid(float x, float y) {
     acceleration = new PVector(0, 0);
     velocity = new PVector(random(-1, 1), random(-1, 1));
@@ -24,7 +23,6 @@ class Boid {
     r = 5.0;
     maxspeed = 3;
     maxforce = 0.05;
-    periphery= PI/4;
 
     col = color(175);
   }
@@ -46,15 +44,15 @@ class Boid {
     PVector sep = separate(boids);   // Separation
     PVector ali = align(boids);      // Alignment
     PVector coh = cohesion(boids);   // Cohesion
-    
+
     // Not for every boid yet
     // PVector view = view(boids);      // view
-    
+
     // Arbitrarily weight these forces
     sep.mult(1.5);
     ali.mult(1.0);
     coh.mult(1.0);
-    
+
     // Not for every boid yet
     // view.mult(1.0);
 
@@ -62,7 +60,7 @@ class Boid {
     applyForce(sep);
     applyForce(ali);
     applyForce(coh);
-    
+
     // Not for every boid yet
     // applyForce(view);
   }
@@ -202,32 +200,31 @@ class Boid {
   // move laterally away from any boid that blocks the view
   // Right now we are just drawing the view and highlighting boids
   PVector view (ArrayList<Boid> boids) {
-    
+
     // How far can it see?
     float sightDistance = 100;
-    // What is its current heading
-    float currentHeading = velocity.heading();
+    float periphery = PI/4;
 
     for (Boid other : boids) {
       // A vector that points to another boid and that angle
       PVector comparison = PVector.sub(other.location, location);
-      float relativeHeading = comparison.heading();
-      
-      // How far is it?
+
+      // How far is it
       float d = PVector.dist(location, other.location);
-      
-      // How different are the angles
-      float diff = abs(relativeHeading-currentHeading);
-      
+
+      // What is the angle between the other boid and this one's current direction
+      float diff = PVector.angleBetween(comparison, velocity);
+
       // If it's within the periphery and close enough to see it
       if (diff < periphery && d > 0 && d < sightDistance) {
         // Just change its color
         other.highlight();
       }
     }
-    
-    
+
+
     // Debug Drawing
+    float currentHeading = velocity.heading();
     pushMatrix();
     translate(location.x, location.y);
     rotate(currentHeading);
