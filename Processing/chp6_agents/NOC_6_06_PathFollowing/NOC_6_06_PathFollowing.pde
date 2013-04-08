@@ -21,8 +21,8 @@ void setup() {
   newPath();
 
   // Each vehicle has different maxspeed and maxforce for demo purposes
-  car1 = new Vehicle(new PVector(0, height/2), 3, 0.1);
-  car2 = new Vehicle(new PVector(0, height/2), 5, 0.2);
+  car1 = new Vehicle(new PVector(0, height/2), 2, 0.04);
+  car2 = new Vehicle(new PVector(0, height/2), 3, 0.1);
 }
 
 void draw() {
