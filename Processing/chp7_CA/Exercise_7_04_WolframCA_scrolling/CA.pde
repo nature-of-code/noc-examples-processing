@@ -66,10 +66,12 @@ class CA {
       for (int j = 0; j < rows; j++) {
         int y = j - offset;
         if (y <= 0) y = rows + y;
-        if (matrix[i][j] == 1) fill(0);
-        else                   fill(255);
-        noStroke();
-        rect(i*w, (y-1)*w, w, w);
+        // Only draw if cell state is 1
+        if (matrix[i][j] == 1) {
+          fill(0);
+          noStroke();
+          rect(i*w, (y-1)*w, w, w);
+        }
       }
     }
   }
