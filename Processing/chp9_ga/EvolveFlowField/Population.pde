@@ -34,7 +34,7 @@ class Population {
 
 
 
-    float record = 100000;
+    float record = displayHeight*2;
     int closest = 0;
 
     for (int i = 0; i < population.length; i++) {
