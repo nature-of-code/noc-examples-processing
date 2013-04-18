@@ -28,11 +28,18 @@ class Population {
 
   void live (ArrayList<Obstacle> os) {
     // For every creature
+    float record = displayHeight*2;
+    int closest = 0;
     for (int i = 0; i < population.length; i++) {
       // If it finishes, mark it down as done!
       population[i].checkTarget();
       population[i].run(os);
+      if (population[i].recordDist < record) {// && !population[i].dead) {
+        record = population[i].recordDist;
+        closest = i;
+      }
     }
+    population[closest].highlight();
   }
 
   // Did anything finish?
