@@ -133,6 +133,14 @@ class Rocket {
     popMatrix();
   }
 
+  void highlight() {
+    stroke(0);
+    line(location.x,location.y,target.location.x,target.location.y);
+    fill(255,0,0,100);
+    ellipse(location.x,location.y,16,16);
+ 
+  }
+
   float getFitness() {
     return fitness;
   }
