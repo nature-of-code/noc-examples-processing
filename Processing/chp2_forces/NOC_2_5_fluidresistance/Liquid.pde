@@ -22,12 +22,7 @@
   // Is the Mover in the Liquid?
   boolean contains(Mover m) {
     PVector l = m.location;
-    if (l.x > x && l.x < x + w && l.y > y && l.y < y + h) {
-      return true;
-    }  
-    else {
-      return false;
-    }
+    return l.x > x && l.x < x + w && l.y > y && l.y < y + h;
   }
   
   // Calculate drag force
