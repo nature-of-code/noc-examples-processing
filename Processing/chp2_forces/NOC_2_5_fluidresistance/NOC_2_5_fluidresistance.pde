@@ -9,13 +9,13 @@
 // Bodies experience fluid resistance when in "water"
 
 // Five moving bodies
-Mover[] movers = new Mover[11];
+Mover[] movers = new Mover[9];
 
 // Liquid
 Liquid liquid;
 
 void setup() {
-  size(800, 200);
+  size(640, 360);
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);
