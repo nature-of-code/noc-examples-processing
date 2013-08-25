@@ -16,20 +16,17 @@ FlowField flowfield;
 ArrayList<Vehicle> vehicles;
 
 void setup() {
-  size(600, 568);
-  img = loadImage("sil.jpg");
+  size(500, 500);
+  img = loadImage("face.jpg");
   // Make a new flow field with "resolution" of 16
-  flowfield = new FlowField(20);
+  flowfield = new FlowField(16);
   vehicles = new ArrayList<Vehicle>();
   // Make a whole bunch of vehicles with random maxspeed and maxforce values
-  for (int i = 0; i < 120; i++) {
-    vehicles.add(new Vehicle(new PVector(random(width), random(height)), random(2, 5), random(0.1, 0.5)));
-  }
 }
 
 void draw() {
   background(255);
-  image(img,0,0);
+  image(img, 0, 0);
   // Display the flowfield in "debug" mode
   if (debug) flowfield.display();
   // Tell all the vehicles to follow the flow field
@@ -40,7 +37,7 @@ void draw() {
 
   // Instructions
   fill(0);
-  text("Hit space bar to toggle debugging lines.\nClick the mouse to generate a new flow field.",10,height-20);
+  text("Hit space bar to toggle debugging lines.\nClick the mouse to generate a new flow field.", 10, height-20);
 }
 
 
@@ -50,10 +47,8 @@ void keyPressed() {
   }
 }
 
-// Make a new flowfield
-void mousePressed() {
-  flowfield.init();
+void mouseDragged() {
+  vehicles.add(new Vehicle(new PVector(mouseX, mouseY), 3, 0.3));
 }
-
 
 
