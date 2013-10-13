@@ -53,7 +53,7 @@ class FlowField {
     // Translate to location to render vector
     translate(x,y);
     stroke(0,100);
-    // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
+    // Call vector heading function to get direction (note that pointing to the right is a heading of 0) and rotate
     rotate(v.heading2D());
     // Calculate length of vector & scale it to be bigger or smaller if necessary
     float len = v.mag()*scayl;
