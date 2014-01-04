@@ -16,7 +16,6 @@ void draw() {
   float mean = width/2;         // Define a mean value (middle of the screen along the x-axis)
   xloc = ( xloc * sd ) + mean;  // Scale the gaussian random number by standard deviation and mean
 
-  noStroke();
   fill(0, 10);
   noStroke();
   ellipse(xloc, height/2, 16, 16);   // Draw an ellipse at our "normal" random location
