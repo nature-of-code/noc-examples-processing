@@ -25,7 +25,7 @@ class GOL {
     for (int i = 0; i < columns; i++) {
       for (int j = 0; j < rows; j++) {
         if (j % 2 == 0) board[i][j] = new Cell(i*w*3, j*h,w);
-        else board[i][j] = new Cell(i*w*3+w+h/2, j*h, w);
+        else board[i][j] = new Cell(i*w*3+w+w/2, j*h, w);
       }
     }
   }
