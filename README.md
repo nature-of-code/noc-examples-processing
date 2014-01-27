@@ -15,9 +15,11 @@ This is the repository for example [Processing](http://processing.org) code from
 * [Greg Kepler's Cinder examples](https://github.com/gregkepler/The-Nature-of-Code-Examples)
 
 ### JavaScript and family
+* [p5.js port](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js)
 * [wonderino's d3.js port](https://github.com/wonderino/natureOfCode_d3)
 * [eskimoblood's Plask port](https://github.com/eskimoblood/The-Nature-of-Code-Examples)
 * [edsilv's TypeScript port of examples](https://github.com/edsilv/processing-ts)
+* [Path Following using canvas by roman01la](https://github.com/roman01la/path-following)
 
 ### Other
 * [Clojure / Quil](https://github.com/sjl/The-Nature-of-Code-Examples)
