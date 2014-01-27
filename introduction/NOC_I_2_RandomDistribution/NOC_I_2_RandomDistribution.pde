@@ -6,7 +6,7 @@
 float[] randomCounts;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   randomCounts = new float[20];
 }
 

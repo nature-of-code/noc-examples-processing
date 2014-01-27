@@ -5,8 +5,7 @@
 // Example 1-3: Vector subtraction
 
 void setup() {
-  size(800,200);
-  smooth();
+  size(640,360);
 }
 
 void draw() {
