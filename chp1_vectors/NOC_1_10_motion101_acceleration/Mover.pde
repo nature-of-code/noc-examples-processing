@@ -24,9 +24,7 @@ class Mover {
     PVector mouse = new PVector(mouseX,mouseY);
     PVector acceleration = PVector.sub(mouse,location);
     // Set magnitude of acceleration
-    //acceleration.setMag(0.2);
-    acceleration.normalize();
-    acceleration.mult(0.2);
+    acceleration.setMag(0.2);
     
     // Velocity changes according to acceleration
     velocity.add(acceleration);
