@@ -3,8 +3,7 @@ float startAngle = 0;
 float angleVel = 0.23;
 
 void setup() {
-  size(800,200);
-  smooth();
+  size(640,360);
 }
 
 void draw() {

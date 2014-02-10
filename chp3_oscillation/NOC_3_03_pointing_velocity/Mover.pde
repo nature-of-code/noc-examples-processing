@@ -35,7 +35,7 @@ class Mover {
   }
 
   void display() {
-    float theta = velocity.heading2D();
+    float theta = velocity.heading();
 
     stroke(0);
     strokeWeight(2);

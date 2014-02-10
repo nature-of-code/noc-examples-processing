@@ -5,7 +5,7 @@
 Mover mover;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   mover = new Mover(); 
 }
 
