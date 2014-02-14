@@ -19,7 +19,7 @@ Mover[] movers = new Mover[25];
 Attractor a;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   box2d = new PBox2D(this);
   box2d.createWorld();
   // No global gravity force
