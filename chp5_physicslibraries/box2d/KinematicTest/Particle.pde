@@ -1,7 +1,7 @@
 // The Nature of Code
 // <http://www.shiffman.net/teaching/nature>
 // Spring 2010
-// PBox2D example
+// Box2DProcessing example
 
 // A circular particle
 

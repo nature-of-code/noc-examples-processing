@@ -2,7 +2,7 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// PBox2D example
+// Box2DProcessing example
 
 // A blob skeleton
 // Could be used to create blobbly characters a la Nokia Friends

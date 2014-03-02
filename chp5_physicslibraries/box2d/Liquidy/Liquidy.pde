@@ -4,7 +4,7 @@
 
 // Box2D particle system example
 
-import pbox2d.*;
+import shiffman.box2d.*;
 import org.jbox2d.collision.shapes.*;
 import org.jbox2d.common.*;
 import org.jbox2d.dynamics.*;
@@ -12,7 +12,7 @@ import org.jbox2d.dynamics.*;
 
 
 // A reference to our box2d world
-PBox2D box2d;
+Box2DProcessing box2d;
 
 // A list we'll use to track fixed objects
 ArrayList<Boundary> boundaries;
@@ -23,7 +23,7 @@ ArrayList<ParticleSystem> systems;
 void setup() {
   size(400,300);
   // Initialize box2d physics and create the world
-  box2d = new PBox2D(this);
+  box2d = new Box2DProcessing(this);
   box2d.createWorld();
 
   // We are setting a custom gravity
