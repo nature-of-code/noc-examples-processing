@@ -5,7 +5,7 @@
 // Example 1-4: Vector multiplication
 
 void setup() {
-  size(800,200);
+  size(640,360);
   smooth();
 }
 

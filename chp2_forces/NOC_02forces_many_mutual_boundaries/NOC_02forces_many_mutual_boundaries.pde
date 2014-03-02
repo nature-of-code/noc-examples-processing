@@ -17,6 +17,8 @@ void draw() {
   background(255);
 
 
+
+
   for (int i = 0; i < movers.length; i++) {
     for (int j = 0; j < movers.length; j++) {
       if (i != j) {
@@ -26,7 +28,6 @@ void draw() {
     }
    
     movers[i].boundaries();
-    
     movers[i].update();
     movers[i].display();
   }

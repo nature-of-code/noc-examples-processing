@@ -23,5 +23,6 @@ This is the repository for example [Processing](http://processing.org) code from
 
 ### Other
 * [Clojure / Quil](https://github.com/sjl/The-Nature-of-Code-Examples)
+* [More Clojure / Quil](https://github.com/mudphone/natureofclojure)
 
 

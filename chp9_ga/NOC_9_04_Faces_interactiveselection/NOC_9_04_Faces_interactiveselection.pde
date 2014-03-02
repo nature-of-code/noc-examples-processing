@@ -9,7 +9,7 @@ Population population;
 Button button;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   colorMode(RGB,1.0);
   int popmax = 10;
   float mutationRate = 0.05;  // A pretty high mutation rate here, our population is rather small we need to enforce variety

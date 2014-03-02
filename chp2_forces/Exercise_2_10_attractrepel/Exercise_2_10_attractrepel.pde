@@ -9,7 +9,7 @@ Attractor a;
 float g = 1;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   a = new Attractor();
   for (int i = 0; i < movers.length; i++) {
     movers[i] = new Mover(random(4,12),random(width),random(height)); 

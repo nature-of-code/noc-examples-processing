@@ -5,7 +5,7 @@
 float increment = 0.02;
 
 void setup() {
-  size(800,200);
+  size(640,360);
   noLoop();
 }
 

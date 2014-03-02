@@ -5,7 +5,7 @@
 float angle = 0;
 float angleVel = 0.1;
 
-size(800,200);
+size(640,360);
 background(255);
 stroke(0);
 strokeWeight(2);

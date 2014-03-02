@@ -10,9 +10,8 @@
 float r;
 float theta;
 
-
 void setup() {
-  size(800, 200);
+  size(640, 360);
   // Initialize all values
   r = height * 0.45;
   theta = 0;
@@ -39,6 +38,7 @@ void draw() {
   
   // Increase the angle over time
   theta += 0.02;
+
   
 
 }
