@@ -19,7 +19,6 @@ ArrayList<Boundary> boundaries;
 ArrayList<Box> boxes;
 
 
-ParticleGroup pg;
 void setup() {
   size(640, 360,P2D);
   // Initialize box2d physics and create the world
@@ -31,7 +30,7 @@ void setup() {
   // Create ArrayLists	
   boundaries = new ArrayList<Boundary>();
   boxes = new ArrayList<Box>();
-  
+
   box2d.world.setParticleRadius(0.15f);
   box2d.world.setParticleDamping(0.2f);
 
@@ -42,16 +41,15 @@ void setup() {
 }
 
 void mousePressed() {
-   Box b = new Box(mouseX,mouseY);
-   boxes.add(b); 
-  
+  Box b = new Box(mouseX, mouseY);
+  boxes.add(b);
 }
 
 
 void draw() {
   background(255);
-  
-  
+
+
 
   // We must always step through time!
   box2d.step();
@@ -61,11 +59,21 @@ void draw() {
     wall.display();
   }
   for (Box b: boxes) {
-    b.display();
+    //b.display();
   }
-  
-  fill(0);
-  text(frameRate,10,60);
 
+
+  Vec2[] positionBuffer = box2d.world.getParticlePositionBuffer();
+  if (positionBuffer != null) {
+    for (int i = 0; i < positionBuffer.length; i++) {
+      Vec2 pos = box2d.coordWorldToPixels(positionBuffer[i]);
+      stroke(0);
+      strokeWeight(2);
+      point(pos.x, pos.y);
+    }
+  }
+
+  fill(0);
+  text(frameRate, 10, 60);
 }
 

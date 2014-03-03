@@ -9,6 +9,8 @@ class Box {
   Body body;
   float w;
   float h;
+  
+  ParticleGroup pg;
 
   // Constructor
   Box(float x, float y) {
@@ -25,13 +27,7 @@ class Box {
 
   // Drawing the box
   void display() {
-    Vec2[] positionBuffer = box2d.world.getParticlePositionBuffer();
-    for (int i = 0; i < positionBuffer.length; i++) {
-      Vec2 pos = box2d.coordWorldToPixels(positionBuffer[i]);
-      noStroke();
-      fill(0);
-      rect(pos.x, pos.y,4,4);
-    }
+
   }
 }
 
