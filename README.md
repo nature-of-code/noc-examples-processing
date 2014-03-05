@@ -9,6 +9,7 @@ This is the repository for example [Processing](http://processing.org) code from
 * [tecnecollective's port of examples](https://github.com/tecnecollective/The-Nature-of-Code-Examples)
 * [emmanuelgeoffray book translation](https://github.com/emmanuelgeoffray/The-Nature-of-Code)
 * [itpresidents' port of examples](https://github.com/itpresidents/The-Nature-of-Code-Examples)
+* [GPU Flocking](https://github.com/robotconscience/OF-GPU-Flocking)
 
 ### Cinder
 * [Learning Cinder tutorial](http://www.iamnayr.com/tutorials/learn-cinder-tutorial-part-1/)
