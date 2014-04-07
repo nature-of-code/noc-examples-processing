@@ -45,7 +45,7 @@ class KochLine {
     v.div(3);
     a.add(v);  // Move to point B
 
-    rotate(v, -radians(60)); // Rotate 60 degrees
+    v.rotate(-radians(60)); // Rotate 60 degrees
     a.add(v);  // Move to point C
 
     return a;
@@ -63,11 +63,3 @@ class KochLine {
     return end.get();
   }
 }
-
-public void rotate(PVector v, float theta) {
-  float xTemp = v.x;
-  // Might need to check for rounding errors like with angleBetween function?
-  v.x = v.x*PApplet.cos(theta) - v.y*PApplet.sin(theta);
-  v.y = xTemp*PApplet.sin(theta) + v.y*PApplet.cos(theta);
-}
-
