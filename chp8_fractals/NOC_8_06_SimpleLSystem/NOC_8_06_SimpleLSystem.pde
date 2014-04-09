@@ -43,6 +43,5 @@ void mousePressed() {
   count++;
   // Print to message console
   println("Generation " + count + ": " + current);
-  println(count + " " + current.length());
 }
 

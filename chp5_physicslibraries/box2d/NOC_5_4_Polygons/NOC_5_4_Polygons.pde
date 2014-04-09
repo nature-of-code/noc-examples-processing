@@ -2,7 +2,7 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Basic example of falling rectangles
+// How to make a custom *convex* polygon
 
 import shiffman.box2d.*;
 import org.jbox2d.collision.shapes.*;

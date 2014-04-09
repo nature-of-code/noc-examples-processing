@@ -2,11 +2,10 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Two "vehicles" follow the mouse position
+// Seeking "vehicle" follows the mouse position
 
 // Implements Craig Reynold's autonomous steering behaviors
 // One vehicle "seeks"
-// One vehicle "arrives"
 // See: http://www.red3d.com/cwr/
 
 Vehicle v;
