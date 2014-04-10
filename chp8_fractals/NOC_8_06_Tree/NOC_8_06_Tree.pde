@@ -20,7 +20,7 @@ void draw() {
   // Start the tree from the bottom of the screen
   translate(width/2, height);
   stroke(0);
-  branch(60);
+  branch(120);
 }
 
 void branch(float len) {

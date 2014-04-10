@@ -7,7 +7,7 @@
 // Angles and number of branches are random
 
 void setup() {
-  size(800, 200);
+  size(640, 360);
   newTree();
 }
 
@@ -30,7 +30,7 @@ void newTree() {
   // Start the tree from the bottom of the screen
   translate(width/2, height);
   // Start the recursive branching!
-  branch(80);
+  branch(120);
   popMatrix();
 }
 
