@@ -29,10 +29,6 @@ void setup() {
   ruleset[0] = new Rule('F', "FF+[+F-F-F]-[-F+F+F]");
   lsys = new LSystem("F", ruleset);
   turtle = new Turtle(lsys.getSentence(), height/3, radians(25));
-
-
-
-  smooth();
 }
 
 void draw() {
