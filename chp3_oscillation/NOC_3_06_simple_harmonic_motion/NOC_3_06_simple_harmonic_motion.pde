@@ -15,7 +15,7 @@ void draw() {
   background(255);
   
   float amplitude = 300;
-  float x = amplitude * cos(angle);
+  float x = amplitude * sin(angle);
   angle += aVelocity;
   
   ellipseMode(CENTER);
