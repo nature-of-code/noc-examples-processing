@@ -15,7 +15,7 @@ void draw() {
   background(100);
 
   // Pick a random number between 0 and 1 based on custom probability function
-  float n = montecarlo();
+  float n = acceptreject();
 
   // What spot in the array did we pick
   int index = int(n*width);
@@ -43,7 +43,7 @@ void draw() {
 
 // An algorithm for picking a random number based on monte carlo method
 // Here probability is determined by formula y = x
-float montecarlo() {
+float acceptreject() {
   // Have we found one yet
   boolean foundone = false;
   int hack = 0;  // let's count just so we don't get stuck in an infinite loop by accident
