@@ -50,10 +50,8 @@ class Vehicle {
     }
     // Average -- divide by how many
     if (count > 0) {
-      sum.div(count);
-      // Our desired vector is the average scaled to maximum speed
-      sum.normalize();
-      sum.mult(maxspeed);
+      // Our desired vector is moving away maximum speed
+      sum.setMag(maxspeed);
       // Implement Reynolds: Steering = Desired - Velocity
       PVector steer = PVector.sub(sum, velocity);
       steer.limit(maxforce);
