@@ -35,9 +35,9 @@ void setup() {
 
 void draw() {
   // If the mouse is pressed, we make new particles
-  if (random(1) < 0.5) {
+  if (mousePressed) {
     float sz = random(2,6);
-    particles.add(new Particle(width/2,10,sz));
+    particles.add(new Particle(mouseX,mouseY,sz));
   }
 
   // We must always step through time!
