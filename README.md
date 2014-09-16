@@ -23,6 +23,9 @@ This is the repository for example [Processing](http://processing.org) code from
 * [edsilv's TypeScript port of examples](https://github.com/edsilv/processing-ts)
 * [Path Following using canvas by roman01la](https://github.com/roman01la/path-following)
 
+### Ruby
+* [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby)
+
 ### Other
 * [Clojure / Quil](https://github.com/sjl/The-Nature-of-Code-Examples)
 * [More Clojure / Quil](https://github.com/mudphone/natureofclojure)
