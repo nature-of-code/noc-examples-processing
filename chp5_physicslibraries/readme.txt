@@ -1,3 +1,3 @@
-For the box2d examples you will need PBox2D!
+For the box2d examples you will need Box2D For Processing!
 
-https://github.com/shiffman/PBox2D
+https://github.com/shiffman/Box2D-for-Processing/
