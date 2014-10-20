@@ -22,6 +22,7 @@ This is the repository for example [Processing](http://processing.org) code from
 * [dead_horse's Raphael.js port](https://github.com/dead-horse/the-nature-of-code-raphael)([online demo](http://deadhorse.me/the-nature-of-code-raphael/))
 * [edsilv's TypeScript port of examples](https://github.com/edsilv/processing-ts)
 * [Path Following using canvas by roman01la](https://github.com/roman01la/path-following)
+* [hardmaru's paper.js port of box2d physics lib examples](https://github.com/hardmaru/paperjs_box2d)([online demo](http://otoro.net/paperbox/))
 
 ### Ruby
 * [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby)
