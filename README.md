@@ -25,7 +25,8 @@ This is the repository for example [Processing](http://processing.org) code from
 * [hardmaru's paper.js port of box2d physics lib examples](https://github.com/hardmaru/paperjs_box2d)([online demo](http://otoro.net/paperbox/))
 
 ### Ruby
-* [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby)
+* [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby) for processing-2.2.1
+* [JRubyArt port](https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt) for processing-3.0+
 
 ### Other
 * [Clojure / Quil](https://github.com/sjl/The-Nature-of-Code-Examples)
