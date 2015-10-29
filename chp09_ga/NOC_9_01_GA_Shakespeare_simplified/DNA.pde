@@ -47,7 +47,7 @@ class DNA {
   // Crossover
   DNA crossover(DNA partner) {
     // A new child
-    DNA child = new DNA(genes.length);
+    final DNA child = new DNA(genes.length);
     
     int midpoint = int(random(genes.length)); // Pick a midpoint
     
