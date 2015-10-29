@@ -16,9 +16,9 @@
 class DNA {
 
   // The genetic sequence
-  char[] genes;
+  private char[] genes;
   
-  float fitness;
+  private float fitness;
   
   // Constructor (makes a random DNA)
   DNA(int num) {
