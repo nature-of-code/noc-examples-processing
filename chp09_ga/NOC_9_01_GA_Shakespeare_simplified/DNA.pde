@@ -30,7 +30,7 @@ class DNA {
   
   // Converts character array to a String
   String getPhrase() {
-    return new String(genes);
+    return String.valueOf(genes);
   }
   
   // Fitness function (returns floating point % of "correct" characters)
