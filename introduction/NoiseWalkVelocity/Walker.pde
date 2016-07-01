@@ -5,7 +5,7 @@
 // A random walker class!
 
 class Walker {
-  PVector location;
+  PVector position;
   PVector velocity;
 
   ArrayList<PVector> history;
@@ -14,7 +14,7 @@ class Walker {
 
 
   Walker() {
-    location = new PVector(width/2, height/2);
+    position = new PVector(width/2, height/2);
     history = new ArrayList<PVector>();
     noff = new PVector(random(1000), random(1000));
     velocity = new PVector();
@@ -24,7 +24,7 @@ class Walker {
     stroke(0);
     fill(175);
     rectMode(CENTER);
-    rect(location.x, location.y, 16, 16);
+    rect(position.x, position.y, 16, 16);
 
     beginShape();
     stroke(0);
@@ -45,16 +45,16 @@ class Walker {
 
     noff.add(0.01, 0.01, 0);
 
-    location.add(velocity);
+    position.add(velocity);
 
-    history.add(location.get());
+    history.add(position.get());
     if (history.size() > 1000) {
       history.remove(0);
     }
 
     // Stay on the screen
-    location.x = constrain(location.x, 0, width-1);
-    location.y = constrain(location.y, 0, height-1);
+    position.x = constrain(position.x, 0, width-1);
+    position.y = constrain(position.y, 0, height-1);
   }
 }
 

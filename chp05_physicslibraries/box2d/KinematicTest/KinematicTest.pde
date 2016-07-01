@@ -69,9 +69,9 @@ void draw() {
 
   // Instead update the spring which pulls the mouse along
   if (mousePressed) {
-    box.setLocation(mouseX,mouseY);
+    box.setposition(mouseX,mouseY);
   } else {
-    //box.setLocation(x,y);
+    //box.setposition(x,y);
   }
 
   // Look at all particles

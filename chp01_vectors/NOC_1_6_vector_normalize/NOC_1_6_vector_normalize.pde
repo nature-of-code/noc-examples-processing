@@ -12,7 +12,7 @@ void setup() {
 void draw() {
   background(255);
   
-    // A vector that points to the mouse location
+    // A vector that points to the mouse position
     PVector mouse = new PVector(mouseX,mouseY);
     // A vector that points to the center of the window
     PVector center = new PVector(width/2,height/2);

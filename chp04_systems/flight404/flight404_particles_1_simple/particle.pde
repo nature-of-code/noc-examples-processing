@@ -3,7 +3,7 @@ General Structure notes.
  My classes tend to have a similar naming scheme and flow. I start with the 'exist' method.
  Exist is what an object needs to do every frame. Usually 'existing' consists of four main things.
  1) Find the velocity. This involves determining what influences there are on the velocity.
- 2) Apply the velocity to the location.
+ 2) Apply the velocity to the position.
  3) Render the object.
  4) Age the object.
  
@@ -41,11 +41,11 @@ class Particle {
     // Next, you multiply that vector by a random number from 0.0 to 5.0.
     // scaleSelf( 5.0 );
     // Finally, you add this new vector to the original sent vector.
-    // _loc.add( );
+    // _pos.add( );
     // This is just a way to make sure all the particles made this frame
     // don't all start on the exact same pixel. This staggering will be useful
     // when we incorporate magnetic repulsion in a later tutorial.
-    startLoc    = new Vec3D( _loc.add( new Vec3D().randomVector().scaleSelf( random( 5.0 ) ) ) ); 
+    startLoc    = new Vec3D( _pos.add( new Vec3D().randomVector().scaleSelf( random( 5.0 ) ) ) ); 
 
     for( int i=0; i<len; i++ ) {
       loc[i]    = new Vec3D( startLoc );
@@ -116,13 +116,13 @@ class Particle {
   }
 
   void setPosition() {
-    // Every frame, the current location will be passed on to
-    // the next element in the location array. Think 'cursor trail effect'.
+    // Every frame, the current position will be passed on to
+    // the next element in the position array. Think 'cursor trail effect'.
     for( int i=len-1; i>0; i-- ) {
       loc[i].set( loc[i-1] );
     }
 
-    // Set the initial location.
+    // Set the initial position.
     // loc[0] represents the current position of the particle.
     loc[0].addSelf( vel );
   }
@@ -148,7 +148,7 @@ class Particle {
         // This is one of those things that I was taught and though I can picture in my mind
         // what the following 4 lines of code does, I doubt I can explain it.  In short,
         // I am using the cross product (wikipedia it) of the vector between adjacent
-        // location array elements (perp0), and finding two vectors that are at right angles to 
+        // position array elements (perp0), and finding two vectors that are at right angles to 
         // it (perp1 and perp2). I then use perp1 to allow me to draw a ribbon with controllable
         // widths.
         // 

@@ -46,11 +46,11 @@ class FlowField {
 
   }
 
-  // Renders a vector object 'v' as an arrow and a location 'x,y'
+  // Renders a vector object 'v' as an arrow and a position 'x,y'
   void drawVector(PVector v, float x, float y, float scayl) {
     pushMatrix();
     float arrowsize = 4;
-    // Translate to location to render vector
+    // Translate to position to render vector
     translate(x,y);
     stroke(0,100);
     // Call vector heading function to get direction (note that pointing to the right is a heading of 0) and rotate

@@ -8,7 +8,7 @@ class Vehicle {
   // Vehicle now has a brain!
   Perceptron brain;
   
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -19,24 +19,24 @@ class Vehicle {
     brain = new Perceptron(n,0.001);
     acceleration = new PVector(0,0);
     velocity = new PVector(0,0);
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     r = 3.0;
     maxspeed = 4;
     maxforce = 0.1;
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelerationelertion to 0 each cycle
     acceleration.mult(0);
     
-    location.x = constrain(location.x,0,width);
-    location.y = constrain(location.y,0,height);
+    position.x = constrain(position.x,0,width);
+    position.y = constrain(position.y,0,height);
   }
 
   void applyForce(PVector force) {
@@ -61,7 +61,7 @@ class Vehicle {
     applyForce(result);
     
     // Train the brain according to the error
-    PVector error = PVector.sub(desired, location);
+    PVector error = PVector.sub(desired, position);
     brain.train(forces,error);
     
   }
@@ -69,7 +69,7 @@ class Vehicle {
   // A method that calculates a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   PVector seek(PVector target) {
-    PVector desired = PVector.sub(target,location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target,position);  // A vector pointing from the position to the target
     
     // Normalize desired and scale to maximum speed
     desired.normalize();
@@ -89,7 +89,7 @@ class Vehicle {
     stroke(0);
     strokeWeight(1);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(theta);
     beginShape();
     vertex(0, -r*2);

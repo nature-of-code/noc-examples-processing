@@ -10,7 +10,7 @@
 class Rocket {
 
   // All of our physics stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -32,7 +32,7 @@ class Rocket {
   Rocket(PVector l, DNA dna_) {
     acceleration = new PVector();
     velocity = new PVector();
-    location = l.get();
+    position = l.get();
     r = 2;
     dna = dna_;
     stopped = false;
@@ -77,7 +77,7 @@ class Rocket {
 
    // Did I hit an edge?
    boolean borders() {
-    if ((location.x < 0) || (location.y < 0) || (location.x > width) || (location.y > height)) {
+    if ((position.x < 0) || (position.y < 0) || (position.x > width) || (position.y > height)) {
       return true;
     } else {
       return false;
@@ -86,11 +86,11 @@ class Rocket {
 
   // Did I make it to the target?
   boolean finished() {
-    float d = dist(location.x,location.y,target.r.x,target.r.y);
+    float d = dist(position.x,position.y,target.r.x,target.r.y);
     if (d < recordDist) {
       recordDist = d;
     }
-    if (target.contains(location)) {
+    if (target.contains(position)) {
       stopped = true;
       return true;
     }
@@ -100,7 +100,7 @@ class Rocket {
   // Did I hit an obstacle?
   boolean obstacles(ArrayList<Obstacle> o) {
     for (Obstacle obs : o) {
-      if (obs.contains(location)) {
+      if (obs.contains(position)) {
         return true;
       }
     }
@@ -109,9 +109,9 @@ class Rocket {
 
   void update() {
     if (!finished()) {
-      // Where are we?  Our location will tell us what steering vector to look up in our DNA;
-      int x = (int) location.x/gridscale;
-      int y = (int) location.y/gridscale;
+      // Where are we?  Our position will tell us what steering vector to look up in our DNA;
+      int x = (int) position.x/gridscale;
+      int y = (int) position.y/gridscale;
       x = constrain(x,0,width/gridscale-1);  // Make sure we are not off the edge
       y = constrain(y,0,height/gridscale-1); // Make sure we are not off the edge
 
@@ -125,7 +125,7 @@ class Rocket {
       
       velocity.add(acceleration);
       velocity.limit(maxspeed);
-      location.add(velocity);
+      position.add(velocity);
       acceleration.mult(0);
     }
   }
@@ -133,12 +133,12 @@ class Rocket {
   void display() {
     //fill(0,150);
     //stroke(0);
-    //ellipse(location.x,location.y,r,r);
+    //ellipse(position.x,position.y,r,r);
     float theta = velocity.heading() + PI/2;
     fill(200,100);
     stroke(0);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);
@@ -150,9 +150,9 @@ class Rocket {
   
   void highlight() {
     stroke(0);
-    line(location.x,location.y,target.r.x,target.r.y);
+    line(position.x,position.y,target.r.x,target.r.y);
     fill(255,0,0,100);
-    ellipse(location.x,location.y,16,16);
+    ellipse(position.x,position.y,16,16);
  
   }
 

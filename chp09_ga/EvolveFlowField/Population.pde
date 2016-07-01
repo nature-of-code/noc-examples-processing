@@ -23,8 +23,8 @@ class Population {
     generations = 0;
     //make a new set of creatures
     for (int i = 0; i < population.length; i++) {
-      PVector location = new PVector(start.r.x+start.r.width/2, start.r.y+start.r.height/2);
-      population[i] = new Rocket(location, new DNA(dnasize));
+      PVector position = new PVector(start.r.x+start.r.width/2, start.r.y+start.r.height/2);
+      population[i] = new Rocket(position, new DNA(dnasize));
     }
     order = 1;  // The first one to finish will be #1
   }
@@ -120,8 +120,8 @@ class Population {
       // Mutate their genes
       child.mutate(mutationRate);
       // Fill the new population with the new child
-      PVector location = new PVector(start.r.x+start.r.width/2, start.r.y+start.r.height/2);
-      population[i] = new Rocket(location, child);
+      PVector position = new PVector(start.r.x+start.r.width/2, start.r.y+start.r.height/2);
+      population[i] = new Rocket(position, child);
     }
     generations++;
   }

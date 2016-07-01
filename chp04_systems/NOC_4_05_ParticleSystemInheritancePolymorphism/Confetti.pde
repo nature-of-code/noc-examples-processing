@@ -19,8 +19,8 @@ class Confetti extends Particle {
     stroke(0,lifespan);
     strokeWeight(2);
     pushMatrix();
-    translate(location.x,location.y);
-    float theta = map(location.x,0,width,0,TWO_PI*2);
+    translate(position.x,position.y);
+    float theta = map(position.x,0,width,0,TWO_PI*2);
     rotate(theta);
     rect(0,0,12,12);
     popMatrix();

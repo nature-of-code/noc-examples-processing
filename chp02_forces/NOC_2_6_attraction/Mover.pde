@@ -4,13 +4,13 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float mass;
 
   Mover() {
-    location = new PVector(400,50);
+    position = new PVector(400,50);
     velocity = new PVector(1,0);
     acceleration = new PVector(0,0);
     mass = 1;
@@ -23,7 +23,7 @@ class Mover {
   
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -31,20 +31,20 @@ class Mover {
     stroke(0);
     strokeWeight(2);
     fill(127);
-    ellipse(location.x,location.y,16,16);
+    ellipse(position.x,position.y,16,16);
   }
 
   void checkEdges() {
 
-    if (location.x > width) {
-      location.x = 0;
-    } else if (location.x < 0) {
-      location.x = width;
+    if (position.x > width) {
+      position.x = 0;
+    } else if (position.x < 0) {
+      position.x = width;
     }
 
-    if (location.y > height) {
+    if (position.y > height) {
       velocity.y *= -1;
-      location.y = height;
+      position.y = height;
     }
 
   }

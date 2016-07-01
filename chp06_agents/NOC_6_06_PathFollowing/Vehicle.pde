@@ -9,7 +9,7 @@
 class Vehicle {
 
   // All the usual stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -18,7 +18,7 @@ class Vehicle {
 
     // Constructor initialize all values
   Vehicle( PVector l, float ms, float mf) {
-    location = l.get();
+    position = l.get();
     r = 4.0;
     maxspeed = ms;
     maxforce = mf;
@@ -37,14 +37,14 @@ class Vehicle {
   // http://www.red3d.com/cwr/steer/PathFollow.html
   void follow(Path p) {
 
-    // Predict location 50 (arbitrary choice) frames ahead
+    // Predict position 50 (arbitrary choice) frames ahead
     // This could be based on speed 
     PVector predict = velocity.get();
     predict.normalize();
     predict.mult(50);
-    PVector predictLoc = PVector.add(location, predict);
+    PVector predictLoc = PVector.add(position, predict);
 
-    // Now we must find the normal to the path from the predicted location
+    // Now we must find the normal to the path from the predicted position
     // We look at the normal for each line segment and pick out the closest one
 
     PVector normal = null;
@@ -95,18 +95,18 @@ class Vehicle {
 
     // Draw the debugging stuff
     if (debug) {
-      // Draw predicted future location
+      // Draw predicted future position
       stroke(0);
       fill(0);
-      line(location.x, location.y, predictLoc.x, predictLoc.y);
-      ellipse(predictLoc.x, predictLoc.y, 4, 4);
+      line(position.x, position.y, predictpos.x, predictpos.y);
+      ellipse(predictpos.x, predictpos.y, 4, 4);
 
-      // Draw normal location
+      // Draw normal position
       stroke(0);
       fill(0);
       ellipse(normal.x, normal.y, 4, 4);
       // Draw actual target (red if steering towards it)
-      line(predictLoc.x, predictLoc.y, normal.x, normal.y);
+      line(predictpos.x, predictpos.y, normal.x, normal.y);
       if (worldRecord > p.radius) fill(255, 0, 0);
       noStroke();
       ellipse(target.x, target.y, 8, 8);
@@ -129,13 +129,13 @@ class Vehicle {
   }
 
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -149,7 +149,7 @@ class Vehicle {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   void seek(PVector target) {
-    PVector desired = PVector.sub(target, location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target, position);  // A vector pointing from the position to the target
 
     // If the magnitude of desired equals 0, skip out of here
     // (We could optimize this to check if x and y are 0 to avoid mag() square root
@@ -171,7 +171,7 @@ class Vehicle {
     fill(175);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
     beginShape(PConstants.TRIANGLES);
     vertex(0, -r*2);
@@ -183,9 +183,9 @@ class Vehicle {
 
   // Wraparound
   void borders(Path p) {
-    if (location.x > p.getEnd().x + r) {
-      location.x = p.getStart().x - r;
-      location.y = p.getStart().y + (location.y-p.getEnd().y);
+    if (position.x > p.getEnd().x + r) {
+      position.x = p.getStart().x - r;
+      position.y = p.getStart().y + (position.y-p.getEnd().y);
     }
   }
 }

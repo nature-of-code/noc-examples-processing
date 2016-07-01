@@ -7,7 +7,7 @@
 
 class Spring { 
 
-  // Location
+  // position
   PVector anchor;
 
   // Rest length and spring constant
@@ -26,8 +26,8 @@ class Spring {
 
   // Calculate spring force
   void update() {
-    // Vector pointing from anchor to bob location
-    PVector force = PVector.sub(a.location, b.location);
+    // Vector pointing from anchor to bob position
+    PVector force = PVector.sub(a.position, b.position);
     // What is distance
     float d = force.mag();
     // Stretch is difference between current distance and rest length
@@ -46,7 +46,7 @@ class Spring {
   void display() {
     strokeWeight(2);
     stroke(0);
-    line(a.location.x, a.location.y, b.location.x, b.location.y);
+    line(a.position.x, a.position.y, b.position.x, b.position.y);
   }
 }
 

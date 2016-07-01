@@ -5,7 +5,7 @@
 // Additive Wave
 // Create a more complex wave by adding two waves together. 
  
-int xspacing = 8;   // How far apart should each horizontal location be spaced
+int xspacing = 8;   // How far apart should each horizontal position be spaced
 int w;              // Width of entire wave
 int maxwaves = 5;   // total # of waves to add together
 
@@ -55,7 +55,7 @@ void calcWave() {
 }
 
 void renderWave() {
-  // A simple way to draw the wave with an ellipse at each location
+  // A simple way to draw the wave with an ellipse at each position
   stroke(0);
   fill(127,50);
   ellipseMode(CENTER);

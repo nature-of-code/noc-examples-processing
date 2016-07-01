@@ -15,7 +15,7 @@ void draw() {
   fill(0,1);
   rect(0,0,width,height);
   
-  //calculate a probability between 0 and 100% based on mouseX location
+  //calculate a probability between 0 and 100% based on mouseX position
   float prob = (mouseX / (float) width);     
   
   //get a random floating point value between 0 and 1

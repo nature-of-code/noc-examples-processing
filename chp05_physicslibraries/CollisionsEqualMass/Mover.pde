@@ -6,7 +6,7 @@
 
 class Mover {
 
-  PVector loc;
+  PVector pos;
   PVector vel;
   float bounce = 1.0;
   float r = 20;
@@ -24,28 +24,28 @@ class Mover {
     display();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
-    loc.add(vel);
+    pos.add(vel);
   }
 
   // Check for bouncing off borders
   void borders() {
-    if (loc.y > height) {
+    if (pos.y > height) {
       vel.y *= -bounce;
-      loc.y = height;
+      pos.y = height;
     } 
-    else if (loc.y < 0) {
+    else if (pos.y < 0) {
       vel.y *= -bounce;
-      loc.y = 0;
+      pos.y = 0;
     } 
-    if (loc.x > width) {
+    if (pos.x > width) {
       vel.x *= -bounce;
-      loc.x = width;
+      pos.x = width;
     }  
-    else if (loc.x < 0) {
+    else if (pos.x < 0) {
       vel.x *= -bounce;
-      loc.x = 0;
+      pos.x = 0;
     }
   }  
 
@@ -54,7 +54,7 @@ class Mover {
     ellipseMode(CENTER);
     stroke(0);
     fill(175,200);
-    ellipse(loc.x,loc.y,r*2,r*2);
+    ellipse(pos.x,pos.y,r*2,r*2);
     if (showVectors) {
       drawVector(vel,loc,10);
     }

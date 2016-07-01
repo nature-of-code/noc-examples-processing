@@ -6,7 +6,7 @@
 // http://www.red3d.com/cwr/papers/2000/pip.pdf
 
 // Example demonstrating optimized intersection test for large # of objects
-// Each object registers its location in a virtual grid
+// Each object registers its position in a virtual grid
 // Only the objects in neighboring cells on the grid are tested against each other
 
 int totalThings = 2000;
@@ -47,7 +47,7 @@ void draw() {
     }
   }
 
-  // Register every Thing object in the grid according to it's location
+  // Register every Thing object in the grid according to it's position
   for (Thing t : a) {
     t.highlight = false;
     int x = int(t.x) / scl; 

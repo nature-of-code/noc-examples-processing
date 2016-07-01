@@ -6,7 +6,7 @@
 
 class Vehicle {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -17,7 +17,7 @@ class Vehicle {
   Vehicle(float x, float y) {
     acceleration = new PVector(0,0);
     velocity = new PVector(0,0);
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     r = 6;
     wandertheta = 0;
     maxspeed = 2;
@@ -30,13 +30,13 @@ class Vehicle {
     display();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -47,11 +47,11 @@ class Vehicle {
     float change = 0.3;
     wandertheta += random(-change,change);     // Randomly change wander theta
 
-    // Now we have to calculate the new location to steer towards on the wander circle
+    // Now we have to calculate the new position to steer towards on the wander circle
     PVector circleloc = velocity.get();    // Start with velocity
-    circleloc.normalize();            // Normalize to get heading
-    circleloc.mult(wanderD);          // Multiply by distance
-    circleloc.add(location);               // Make it relative to boid's location
+    circlepos.normalize();            // Normalize to get heading
+    circlepos.mult(wanderD);          // Multiply by distance
+    circlepos.add(position);               // Make it relative to boid's position
     
     float h = velocity.heading2D();        // We need to know the heading to offset wandertheta
 
@@ -60,7 +60,7 @@ class Vehicle {
     seek(target);
 
     // Render wandering circle, etc. 
-    if (debug) drawWanderStuff(location,circleloc,target,wanderR);
+    if (debug) drawWanderStuff(position,circleloc,target,wanderR);
   }  
 
   void applyForce(PVector force) {
@@ -72,7 +72,7 @@ class Vehicle {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   void seek(PVector target) {
-    PVector desired = PVector.sub(target,location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target,position);  // A vector pointing from the position to the target
 
     // Normalize desired and scale to maximum speed
     desired.normalize();
@@ -90,7 +90,7 @@ class Vehicle {
     fill(127);
     stroke(0);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);
@@ -102,22 +102,22 @@ class Vehicle {
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    if (position.y > height+r) position.y = -r;
   }
 }
 
 
 // A method just to draw the circle associated with wandering
-void drawWanderStuff(PVector location, PVector circle, PVector target, float rad) {
+void drawWanderStuff(PVector position, PVector circle, PVector target, float rad) {
   stroke(0); 
   noFill();
   ellipseMode(CENTER);
   ellipse(circle.x,circle.y,rad*2,rad*2);
   ellipse(target.x,target.y,4,4);
-  line(location.x,location.y,circle.x,circle.y);
+  line(position.x,position.y,circle.x,circle.y);
   line(circle.x,circle.y,target.x,target.y);
 }
 

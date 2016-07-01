@@ -5,21 +5,21 @@
 
 // All of this stuff should go into a Cannon class
 float angle = -PI/4;
-PVector location = new PVector(50, 300);
+PVector position = new PVector(50, 300);
 boolean shot = false;
 
 CannonBall ball;
 
 void setup() {
   size(640, 360);
-  ball = new CannonBall(location.x, location.y);
+  ball = new CannonBall(position.x, position.y);
 }
 
 void draw() {
   background(255); 
 
   pushMatrix();
-  translate(location.x, location.y);
+  translate(position.x, position.y);
   rotate(angle);
   rect(0, -5, 50, 10);
   popMatrix();
@@ -31,8 +31,8 @@ void draw() {
   }
   ball.display();
 
-  if (ball.location.y > height) {
-    ball = new CannonBall(location.x, location.y);  
+  if (ball.position.y > height) {
+    ball = new CannonBall(position.x, position.y);  
     shot = false;
   }
 }

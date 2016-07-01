@@ -40,7 +40,7 @@ class Box {
   }
 
   void display() {
-    // We need the Body’s location and angle
+    // We need the Body’s position and angle
     Vec2 pos = box2d.getBodyPixelCoord(body);		
     float a = body.getAngle();
 

@@ -2,11 +2,11 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-void drawVector(PVector v, PVector loc, float scayl) {
+void drawVector(PVector v, PVector pos, float scayl) {
   pushMatrix();
   float arrowsize = 4;
-  // Translate to location to render vector
-  translate(loc.x,loc.y);
+  // Translate to position to render vector
+  translate(pos.x,pos.y);
   stroke(0);
   // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
   rotate(v.heading2D());

@@ -7,7 +7,7 @@
 class ParticleSystem {
   ArrayList<Particle> particles;
 
-  ParticleSystem(PVector location) {
+  ParticleSystem(PVector position) {
     particles = new ArrayList<Particle>();
   }
 

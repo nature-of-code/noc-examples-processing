@@ -3,12 +3,12 @@
 // http://natureofcode.com
 
 class Neuron {
-  PVector location;
+  PVector position;
 
   ArrayList<Connection> connections;
 
   Neuron(float x, float y) {
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     connections = new ArrayList<Connection>();
   }
 
@@ -21,7 +21,7 @@ class Neuron {
     stroke(0);
     strokeWeight(1);
     fill(0);
-    ellipse(location.x, location.y, 16, 16);
+    ellipse(position.x, position.y, 16, 16);
 
     for (Connection c : connections) {
       c.display();

@@ -7,7 +7,7 @@
 // Creature class
 
 class Bloop {
-  PVector location; // Location
+  PVector position; // position
   DNA dna;          // DNA
   float health;     // Life timer
   float xoff;       // For perlin noise
@@ -18,7 +18,7 @@ class Bloop {
 
   // Create a "bloop" creature
   Bloop(PVector l, DNA dna_) {
-    location = l.get();
+    position = l.get();
     health = 200;
     xoff = random(1000);
     yoff = random(1000);
@@ -40,8 +40,8 @@ class Bloop {
     ArrayList<PVector> food = f.getFood();
     // Are we touching any food objects?
     for (int i = food.size()-1; i >= 0; i--) {
-      PVector foodLocation = food.get(i);
-      float d = PVector.dist(location, foodLocation);
+      PVector foodposition = food.get(i);
+      float d = PVector.dist(position, foodposition);
       // If we are, juice up our strength!
       if (d < r/2) {
         health += 100; 
@@ -58,14 +58,14 @@ class Bloop {
       DNA childDNA = dna.copy();
       // Child DNA can mutate
       childDNA.mutate(0.01);
-      return new Bloop(location, childDNA);
+      return new Bloop(position, childDNA);
     } 
     else {
       return null;
     }
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Simple movement based on perlin noise
     float vx = map(noise(xoff),0,1,-maxspeed,maxspeed);
@@ -74,17 +74,17 @@ class Bloop {
     xoff += 0.01;
     yoff += 0.01;
 
-    location.add(velocity);
+    position.add(velocity);
     // Death always looming
     health -= 0.2;
   }
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    if (position.y > height+r) position.y = -r;
   }
 
   // Method to display
@@ -92,7 +92,7 @@ class Bloop {
     ellipseMode(CENTER);
     stroke(0,health);
     fill(0, health);
-    ellipse(location.x, location.y, r, r);
+    ellipse(position.x, position.y, r, r);
   }
 
   // Death

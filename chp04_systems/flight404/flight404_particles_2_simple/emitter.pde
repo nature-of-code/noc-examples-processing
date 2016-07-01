@@ -35,16 +35,16 @@ class Emitter{
   }
   
   void findVelocity(){
-    Vec3D dirToMouse = new Vec3D( mouse.loc.sub( loc ).scale( .15 ) );
+    Vec3D dirToMouse = new Vec3D( mouse.pos.sub( loc ).scale( .15 ) );
     vel.set( dirToMouse );
   }
   
   void setPosition(){
-    loc.addSelf( vel );
+    pos.addSelf( vel );
     
     if( ALLOWFLOOR ){
-      if( loc.y > floorLevel ){
-        loc.y = floorLevel;
+      if( pos.y > floorLevel ){
+        pos.y = floorLevel;
         vel.y = 0;
       }
     }
@@ -108,15 +108,15 @@ class Emitter{
   }
   
   void renderReflection(PImage img){
-    float altitude           = floorLevel - loc.y;
+    float altitude           = floorLevel - pos.y;
     float reflectMaxAltitude = 300.0;
     float yPer               = 1.0 - altitude/reflectMaxAltitude;
     
     if( yPer > .05 )
-      renderImageOnFloor(img, new Vec3D( loc.x, floorLevel, loc.z ), radius * 10.0, color( 0.5, 1.0, yPer*.25 ), yPer );
+      renderImageOnFloor(img, new Vec3D( pos.x, floorLevel, pos.z ), radius * 10.0, color( 0.5, 1.0, yPer*.25 ), yPer );
       
     if( mousePressed )
-      renderImageOnFloor(img, new Vec3D( loc.x, floorLevel, loc.z ), radius + ( yPer + 1.0 ) * radius * random( 2.0, 3.5 ), color( 1.0, 0, 0 ), yPer );
+      renderImageOnFloor(img, new Vec3D( pos.x, floorLevel, pos.z ), radius + ( yPer + 1.0 ) * radius * random( 2.0, 3.5 ), color( 1.0, 0, 0 ), yPer );
   }
   
   void iterateListRenderTrails(){

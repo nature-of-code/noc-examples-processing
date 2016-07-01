@@ -4,7 +4,7 @@
 
 class CannonBall { 
   // All of our regular motion stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
 
@@ -14,7 +14,7 @@ class CannonBall {
   float topspeed = 10;
 
   CannonBall(float x, float y) {
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     velocity = new PVector();
     acceleration = new PVector();
   } 
@@ -23,7 +23,7 @@ class CannonBall {
   void update() { 
     velocity.add(acceleration);
     velocity.limit(topspeed);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -36,7 +36,7 @@ class CannonBall {
     stroke(0);
     strokeWeight(2);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     ellipse(0,0,r*2,r*2);
     popMatrix();
   }

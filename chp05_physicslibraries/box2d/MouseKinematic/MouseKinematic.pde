@@ -45,7 +45,7 @@ void draw() {
   // We must always step through time!
     
   //if (box.dragged) {
-    box.setLocation(mouseX,mouseY);
+    box.setposition(mouseX,mouseY);
   //}
   
   box2d.step();

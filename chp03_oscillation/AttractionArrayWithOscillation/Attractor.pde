@@ -9,7 +9,7 @@
 class Attractor {
   float mass;    // Mass, tied to size
   float G;       // Gravitational Constant
-  PVector loc;   // Location
+  PVector pos;   // position
   boolean dragging = false; // Is the object being dragged?
   boolean rollover = false; // Is the mouse over the ellipse?
   PVector drag;  // holds the offset for when object is clicked on
@@ -43,21 +43,21 @@ class Attractor {
     if (dragging) fill (50);
     else if (rollover) fill(100);
     else fill(175,50);
-    ellipse(loc.x,loc.y,mass*2,mass*2);
+    ellipse(pos.x,pos.y,mass*2,mass*2);
   }
 
   // The methods below are for mouse interaction
   void clicked(int mx, int my) {
-    float d = dist(mx,my,loc.x,loc.y);
+    float d = dist(mx,my,pos.x,pos.y);
     if (d < mass) {
       dragging = true;
-      drag.x = loc.x-mx;
-      drag.y = loc.y-my;
+      drag.x = pos.x-mx;
+      drag.y = pos.y-my;
     }
   }
 
   void rollover(int mx, int my) {
-    float d = dist(mx,my,loc.x,loc.y);
+    float d = dist(mx,my,pos.x,pos.y);
     if (d < mass) {
       rollover = true;
     } else {
@@ -73,8 +73,8 @@ class Attractor {
 
   void drag() {
     if (dragging) {
-      loc.x = mouseX + drag.x;
-      loc.y = mouseY + drag.y;
+      pos.x = mouseX + drag.x;
+      pos.y = mouseY + drag.y;
     }
   }
 

@@ -5,7 +5,7 @@
 // Simple Particle System
 
 class Particle {
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float lifespan;
@@ -16,7 +16,7 @@ class Particle {
   Particle(float x, float y) {
     acceleration = new PVector();
     velocity = PVector.random2D();
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     lifespan = 255.0;
   }
 
@@ -28,7 +28,7 @@ class Particle {
   void intersects(ArrayList<Particle> particles) {
     for (Particle other : particles) {
       if (other != this) {
-        PVector dir = PVector.sub(location, other.location);
+        PVector dir = PVector.sub(position, other.position);
         if (dir.mag() < r*2) {
           dir.setMag(0.5); 
           applyForce(dir);
@@ -41,10 +41,10 @@ class Particle {
     acceleration.add(f);
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
     lifespan -= 0.5;
   }
@@ -54,7 +54,7 @@ class Particle {
     stroke(0, lifespan);
     strokeWeight(2);
     fill(127, lifespan);
-    ellipse(location.x, location.y, r*2, r*2);
+    ellipse(position.x, position.y, r*2, r*2);
   }
 
   // Is the particle still useful?

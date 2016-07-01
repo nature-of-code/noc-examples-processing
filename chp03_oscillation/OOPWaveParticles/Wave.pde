@@ -4,7 +4,7 @@
 
 class Wave {
   
-  int xspacing = 8; // How far apart should each horizontal location be spaced
+  int xspacing = 8; // How far apart should each horizontal position be spaced
   int w;            // Width of entire wave
   
   PVector origin;          // Where does the wave's first point start
@@ -35,7 +35,7 @@ class Wave {
     // For every x value, calculate a y value with sine function
     float x = theta;
     for (int i = 0; i < particles.length; i++) {
-      particles[i].setLocation(origin.x+i*xspacing,origin.y+sin(x)*amplitude);
+      particles[i].setposition(origin.x+i*xspacing,origin.y+sin(x)*amplitude);
       x+=dx;
     }
   }
@@ -47,7 +47,7 @@ class Wave {
 
   void display() {
     
-    // A simple way to draw the wave with an ellipse at each location
+    // A simple way to draw the wave with an ellipse at each position
     for (int i = 0; i < particles.length; i++) {
       particles[i].display();
     }

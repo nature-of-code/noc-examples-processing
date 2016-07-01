@@ -15,7 +15,7 @@ void setup() {
 void draw() {
   background(255); 
   
-  // Update location
+  // Update position
   ship.update();
   // Wrape edges
   ship.wrapEdges();

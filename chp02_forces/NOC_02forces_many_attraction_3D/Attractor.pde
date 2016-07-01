@@ -8,18 +8,18 @@
 
 class Attractor {
   float mass;         // Mass, tied to size
-  PVector location;   // Location
+  PVector position;   // position
   float g;
 
   Attractor() {
-    location = new PVector(0,0);
+    position = new PVector(0,0);
     mass = 20;
     g = 0.4;
   }
 
 
   PVector attract(Mover m) {
-    PVector force = PVector.sub(location,m.location);             // Calculate direction of force
+    PVector force = PVector.sub(position,m.position);             // Calculate direction of force
     float distance = force.mag();                                 // Distance between objects
     distance = constrain(distance,5.0,25.0);                             // Limiting the distance to eliminate "extreme" results for very close or very far objects
     force.normalize();                                            // Normalize vector (distance doesn't matter here, we just want this vector for direction)
@@ -33,7 +33,7 @@ class Attractor {
     stroke(255);
     noFill();
     pushMatrix();
-    translate(location.x,location.y,location.z);
+    translate(position.x,position.y,position.z);
     sphere(mass*2);
     popMatrix();
   }

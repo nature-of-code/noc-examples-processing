@@ -29,10 +29,10 @@ void draw() {
   //m.shake();
   
   // Boundary force
-  if (m.location.x > width - 50) {
+  if (m.position.x > width - 50) {
     PVector boundary = new PVector(-1,0);
     m.applyForce(boundary);
-  } else if (m.location.x < 50) {
+  } else if (m.position.x < 50) {
     PVector boundary = new PVector(1,0);
     m.applyForce(boundary);
   }

@@ -8,7 +8,7 @@
 class Rocket {
 
   // All of our physics stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
 
@@ -32,7 +32,7 @@ class Rocket {
   Rocket(PVector l, DNA dna_, int totalRockets) {
     acceleration = new PVector();
     velocity = new PVector();
-    location = l.get();
+    position = l.get();
     r = 4;
     dna = dna_;
     finishTime = 0;          // We're going to count how long it takes to reach target
@@ -75,10 +75,10 @@ class Rocket {
 
   // Did I make it to the target?
   void checkTarget() {
-    float d = dist(location.x, location.y, target.location.x, target.location.y);
+    float d = dist(position.x, position.y, target.position.x, target.position.y);
     if (d < recordDist) recordDist = d;
 
-    if (target.contains(location) && !hitTarget) {
+    if (target.contains(position) && !hitTarget) {
       hitTarget = true;
     } 
     else if (!hitTarget) {
@@ -89,7 +89,7 @@ class Rocket {
   // Did I hit an obstacle?
   void obstacles(ArrayList<Obstacle> os) {
     for (Obstacle obs : os) {
-      if (obs.contains(location)) {
+      if (obs.contains(position)) {
         hitObstacle = true;
       }
     }
@@ -102,7 +102,7 @@ class Rocket {
 
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -113,7 +113,7 @@ class Rocket {
     stroke(0);
     strokeWeight(1);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
 
     // Thrusters

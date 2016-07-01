@@ -7,7 +7,7 @@
 
 class Boid {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -19,7 +19,7 @@ class Boid {
   Boid(float x, float y) {
     acceleration = new PVector(0, 0);
     velocity = new PVector(random(-1, 1), random(-1, 1));
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     r = 5.0;
     maxspeed = 3;
     maxforce = 0.05;
@@ -65,13 +65,13 @@ class Boid {
     // applyForce(view);
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -79,7 +79,7 @@ class Boid {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   PVector seek(PVector target) {
-    PVector desired = PVector.sub(target, location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target, position);  // A vector pointing from the position to the target
     // Normalize desired and scale to maximum speed
     desired.normalize();
     desired.mult(maxspeed);
@@ -95,7 +95,7 @@ class Boid {
     fill(col);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);
@@ -107,10 +107,10 @@ class Boid {
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    if (position.y > height+r) position.y = -r;
   }
 
   // Separation
@@ -121,11 +121,11 @@ class Boid {
     int count = 0;
     // For every boid in the system, check if it's too close
     for (Boid other : boids) {
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
       // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
       if ((d > 0) && (d < desiredseparation)) {
         // Calculate vector pointing away from neighbor
-        PVector diff = PVector.sub(location, other.location);
+        PVector diff = PVector.sub(position, other.position);
         diff.normalize();
         diff.div(d);        // Weight by distance
         steer.add(diff);
@@ -155,7 +155,7 @@ class Boid {
     PVector sum = new PVector(0, 0);
     int count = 0;
     for (Boid other : boids) {
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
       if ((d > 0) && (d < neighbordist)) {
         sum.add(other.velocity);
         count++;
@@ -175,21 +175,21 @@ class Boid {
   }
 
   // Cohesion
-  // For the average location (i.e. center) of all nearby boids, calculate steering vector towards that location
+  // For the average position (i.e. center) of all nearby boids, calculate steering vector towards that position
   PVector cohesion (ArrayList<Boid> boids) {
     float neighbordist = 50;
-    PVector sum = new PVector(0, 0);   // Start with empty vector to accumulate all locations
+    PVector sum = new PVector(0, 0);   // Start with empty vector to accumulate all positions
     int count = 0;
     for (Boid other : boids) {
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
       if ((d > 0) && (d < neighbordist)) {
-        sum.add(other.location); // Add location
+        sum.add(other.position); // Add position
         count++;
       }
     }
     if (count > 0) {
       sum.div(count);
-      return seek(sum);  // Steer towards the location
+      return seek(sum);  // Steer towards the position
     } 
     else {
       return new PVector(0, 0);
@@ -207,10 +207,10 @@ class Boid {
 
     for (Boid other : boids) {
       // A vector that points to another boid and that angle
-      PVector comparison = PVector.sub(other.location, location);
+      PVector comparison = PVector.sub(other.position, position);
 
       // How far is it
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
 
       // What is the angle between the other boid and this one's current direction
       float diff = PVector.angleBetween(comparison, velocity);
@@ -226,7 +226,7 @@ class Boid {
     // Debug Drawing
     float currentHeading = velocity.heading();
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(currentHeading);
     fill(0, 100);
     arc(0, 0, sightDistance*2, sightDistance*2, -periphery, periphery);

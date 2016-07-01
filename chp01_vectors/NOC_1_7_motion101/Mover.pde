@@ -4,39 +4,39 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
 
   Mover() {
-    location = new PVector(random(width), random(height));
+    position = new PVector(random(width), random(height));
     velocity = new PVector(random(-2, 2), random(-2, 2));
   }
 
   void update() {
-    location.add(velocity);
+    position.add(velocity);
   }
 
   void display() {
     stroke(0);
     strokeWeight(2);
     fill(127);
-    ellipse(location.x, location.y, 48, 48);
+    ellipse(position.x, position.y, 48, 48);
   }
 
   void checkEdges() {
 
-    if (location.x > width) {
-      location.x = 0;
+    if (position.x > width) {
+      position.x = 0;
     } 
-    else if (location.x < 0) {
-      location.x = width;
+    else if (position.x < 0) {
+      position.x = width;
     }
 
-    if (location.y > height) {
-      location.y = 0;
+    if (position.y > height) {
+      position.y = 0;
     } 
-    else if (location.y < 0) {
-      location.y = height;
+    else if (position.y < 0) {
+      position.y = height;
     }
   }
 }

@@ -15,40 +15,33 @@ class Turtle {
   } 
 
   void render() {
-    stroke(0,175);
+    stroke(0, 175);
     for (int i = 0; i < todo.length(); i++) {
       char c = todo.charAt(i);
       if (c == 'F' || c == 'G') {
-        line(0,0,len,0);
-        translate(len,0);
-      } 
-      else if (c == '+') {
+        line(0, 0, len, 0);
+        translate(len, 0);
+      } else if (c == '+') {
         rotate(theta);
-      } 
-      else if (c == '-') {
+      } else if (c == '-') {
         rotate(-theta);
-      } 
-      else if (c == '[') {
+      } else if (c == '[') {
         pushMatrix();
-      } 
-      else if (c == ']') {
+      } else if (c == ']') {
         popMatrix();
       }
-    } 
+    }
   }
 
   void setLen(float l) {
-    len = l; 
+    len = l;
   } 
 
   void changeLen(float percent) {
-    len *= percent; 
+    len *= percent;
   }
 
   void setToDo(String s) {
-    todo = s; 
+    todo = s;
   }
-
 }
-
-

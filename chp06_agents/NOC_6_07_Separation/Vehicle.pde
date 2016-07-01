@@ -7,7 +7,7 @@
 class Vehicle {
 
   // All the usual stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -16,7 +16,7 @@ class Vehicle {
 
     // Constructor initialize all values
   Vehicle(float x, float y) {
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     r = 12;
     maxspeed = 3;
     maxforce = 0.2;
@@ -37,11 +37,11 @@ class Vehicle {
     int count = 0;
     // For every boid in the system, check if it's too close
     for (Vehicle other : vehicles) {
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
       // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
       if ((d > 0) && (d < desiredseparation)) {
         // Calculate vector pointing away from neighbor
-        PVector diff = PVector.sub(location, other.location);
+        PVector diff = PVector.sub(position, other.position);
         diff.normalize();
         diff.div(d);        // Weight by distance
         sum.add(diff);
@@ -61,13 +61,13 @@ class Vehicle {
 
 
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -76,17 +76,17 @@ class Vehicle {
     fill(175);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     ellipse(0, 0, r, r);
     popMatrix();
   }
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    if (position.y > height+r) position.y = -r;
   }
 }
 

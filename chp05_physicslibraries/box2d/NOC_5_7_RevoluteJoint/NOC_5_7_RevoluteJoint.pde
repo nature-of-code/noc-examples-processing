@@ -28,7 +28,7 @@ void setup() {
   box2d = new Box2DProcessing(this);
   box2d.createWorld();
 
-  // Make the windmill at an x,y location
+  // Make the windmill at an x,y position
   windmill = new Windmill(width/2,175);
 
   // Create the empty list

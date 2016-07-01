@@ -13,7 +13,7 @@ Spring s3;
 
 void setup() {
   size(640, 360);
-  // Create objects at starting location
+  // Create objects at starting position
   // Note third argument in Spring constructor is "rest length"
   b1 = new Bob(width/2, 100);
   b2 = new Bob(width/2, 200);

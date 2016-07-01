@@ -39,12 +39,12 @@ void draw() {
 
 }
 
-// Renders a vector object 'v' as an arrow and a location 'loc'
-void drawVector(PVector v, PVector loc, float scayl) {
+// Renders a vector object 'v' as an arrow and a position 'loc'
+void drawVector(PVector v, PVector pos, float scayl) {
   pushMatrix();
   float arrowsize = 4;
-  // Translate to location to render vector
-  translate(loc.x,loc.y);
+  // Translate to position to render vector
+  translate(pos.x,pos.y);
   stroke(255);
   // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
   rotate(v.heading2D());

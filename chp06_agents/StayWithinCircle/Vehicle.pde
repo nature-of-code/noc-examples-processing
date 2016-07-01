@@ -4,7 +4,7 @@
 
 class Vehicle {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -16,7 +16,7 @@ class Vehicle {
     acceleration = new PVector(0, 0);
     velocity = new PVector(1,0);
     velocity.mult(5);
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     r = 3;
     maxspeed = 3;
     maxforce = 0.15;
@@ -27,13 +27,13 @@ class Vehicle {
     display();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -42,14 +42,14 @@ class Vehicle {
 
     PVector desired = null;
     
-    // Predict location 25 (arbitrary choice) frames ahead
+    // Predict position 25 (arbitrary choice) frames ahead
     PVector predict = velocity.get();
     predict.mult(25);
-    PVector futureLocation = PVector.add(location, predict);
-    float distance = PVector.dist(futureLocation,circleLocation);
+    PVector futureposition = PVector.add(position, predict);
+    float distance = PVector.dist(futureposition,circleposition);
     
     if (distance > circleRadius) {
-      PVector toCenter = PVector.sub(circleLocation,location);
+      PVector toCenter = PVector.sub(circleposition,position);
       toCenter.normalize();
       toCenter.mult(velocity.mag());
       desired = PVector.add(velocity,toCenter);
@@ -64,7 +64,7 @@ class Vehicle {
     }
     
     fill(255,0,0);
-    ellipse(futureLocation.x,futureLocation.y,4,4);
+    ellipse(futureposition.x,futureposition.y,4,4);
     
   }  
 
@@ -80,7 +80,7 @@ class Vehicle {
     fill(175);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);

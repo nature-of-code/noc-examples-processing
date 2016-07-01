@@ -23,7 +23,7 @@ class Particle{
     
     len         = (int)( radius*.5 );
     loc         = new Vec3D[ len ];
-    startLoc    = new Vec3D( _loc.add( new Vec3D().randomVector().scaleSelf( random( 1.0 ) ) ) ); 
+    startLoc    = new Vec3D( _pos.add( new Vec3D().randomVector().scaleSelf( random( 1.0 ) ) ) ); 
     
     for( int i=0; i<len; i++ ){
       loc[i]    = new Vec3D( startLoc );

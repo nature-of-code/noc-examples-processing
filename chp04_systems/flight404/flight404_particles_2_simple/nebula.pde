@@ -39,7 +39,7 @@ class Nebula{
   
   void move(){
     radius *= scaleFac;
-    loc.addSelf( vel );
+    pos.addSelf( vel );
   }
   
   void render(){

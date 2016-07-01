@@ -37,7 +37,7 @@ class Chain {
 
     // Here is the real work, go through and add particles to the chain itself
     for(int i=0; i < numPoints; i++) {
-      // Make a new particle with an initial starting location
+      // Make a new particle with an initial starting position
       Particle particle=new Particle(width/2,i*len);
 
       // Redundancy, we put the particles both in physics and in our own ArrayList
@@ -80,7 +80,7 @@ class Chain {
     dragged = false;
   }
 
-  // Update tail location if being dragged
+  // Update tail position if being dragged
   void updateTail(int x, int y) {
     if (dragged) {
       tail.set(x+offset.x,y+offset.y);

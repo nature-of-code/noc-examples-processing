@@ -18,7 +18,7 @@ void draw() {
 
   fill(0, 10);
   noStroke();
-  ellipse(xloc, height/2, 16, 16);   // Draw an ellipse at our "normal" random location
+  ellipse(xloc, height/2, 16, 16);   // Draw an ellipse at our "normal" random position
 }
 
 

@@ -9,7 +9,7 @@ Spring[] springs = new Spring[4];
 
 void setup() {
   size(640, 360);
-  // Create objects at starting location
+  // Create objects at starting position
   // Note third argument in Spring constructor is "rest length"
   for (int i = 0; i < bobs.length; i++) {
     bobs[i] = new Bob(width/2, i*40);

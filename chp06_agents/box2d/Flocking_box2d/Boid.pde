@@ -17,11 +17,11 @@ class Boid {
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
 
-  Boid(PVector loc) {
+  Boid(PVector pos) {
     w = 12;
     h = 12;
     // Add the box to the box2d world
-    makeBody(new Vec2(loc.x,loc.y),w,h,new Vec2(0,0),0);
+    makeBody(new Vec2(pos.x,pos.y),w,h,new Vec2(0,0),0);
     maxspeed = 20;
     maxforce = 10;
   }
@@ -57,7 +57,7 @@ class Boid {
   // STEER = DESIRED MINUS VELOCITY
   Vec2 seek(Vec2 target) {
     Vec2 loc = body.getWorldCenter();
-    Vec2 desired = target.sub(loc);  // A vector pointing from the location to the target
+    Vec2 desired = target.sub(loc);  // A vector pointing from the position to the target
 
     // If the magnitude of desired equals 0, skip out of here
     // (We could optimize this to check if x and y are 0 to avoid mag() square root
@@ -105,18 +105,18 @@ class Boid {
     Vec2 loc = box2d.getBodyPixelCoord(body); 
     Vec2 vel = body.getLinearVelocity();
     float a = body.getAngularVelocity();
-    if (loc.x < -w) {
+    if (pos.x < -w) {
        killBody();
-       makeBody(new Vec2(width+w,loc.y),w,h,vel,a);
-    } else if (loc.y < -w) {
+       makeBody(new Vec2(width+w,pos.y),w,h,vel,a);
+    } else if (pos.y < -w) {
        killBody();
-       makeBody(new Vec2(loc.x,height+w),w,h,vel,a);
-    } else if (loc.x > width+w) {
+       makeBody(new Vec2(pos.x,height+w),w,h,vel,a);
+    } else if (pos.x > width+w) {
        killBody();
-       makeBody(new Vec2(-w,loc.y),w,h,vel,a);
-    } else if (loc.y > height+w) {
+       makeBody(new Vec2(-w,pos.y),w,h,vel,a);
+    } else if (pos.y > height+w) {
        killBody();
-       makeBody(new Vec2(loc.x,-w),w,h,vel,a);  
+       makeBody(new Vec2(pos.x,-w),w,h,vel,a);  
     }
   }
 
@@ -200,10 +200,10 @@ class Boid {
   }
 
   // Cohesion
-  // For the average location (i.e. center) of all nearby boids, calculate steering vector towards that location
+  // For the average position (i.e. center) of all nearby boids, calculate steering vector towards that position
   Vec2 cohesion (ArrayList<Boid> boids) {
     float neighbordist = box2d.scalarPixelsToWorld(50);
-    Vec2 sum = new Vec2(0,0);   // Start with empty vector to accumulate all locations
+    Vec2 sum = new Vec2(0,0);   // Start with empty vector to accumulate all positions
     int count = 0;
     Vec2 locA = body.getWorldCenter();
     for (Boid other : boids) {
@@ -211,13 +211,13 @@ class Boid {
       
       float d = dist(locA.x,locA.y,locB.x,locB.y);
       if ((d > 0) && (d < neighbordist)) {
-        sum.addLocal(locB); // Add location
+        sum.addLocal(locB); // Add position
         count++;
       }
     }
     if (count > 0) {
       sum.mulLocal(1.0/count);
-      return seek(sum);  // Steer towards the location
+      return seek(sum);  // Steer towards the position
     }
     return sum;
   }

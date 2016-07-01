@@ -5,7 +5,7 @@
 
 class Particle {
   
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float lifespan;
@@ -13,7 +13,7 @@ class Particle {
   Particle(PVector l) {
     acceleration = new PVector(0,0.05);
     velocity = new PVector(random(-1,1),random(-2,0));
-    location = l.get();
+    position = l.get();
     lifespan = 255.0;
   }
 
@@ -24,10 +24,10 @@ class Particle {
     pop();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     lifespan -= 2.0;
   }
 
@@ -44,7 +44,7 @@ class Particle {
   void display() {
     stroke(0,lifespan);
     fill(0,lifespan);
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     ellipse(0,0,8,8);
   }
   

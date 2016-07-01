@@ -19,7 +19,7 @@ void draw() {
 
   PVector mouse = new PVector(mouseX, mouseY);
 
-  // Draw an ellipse at the mouse location
+  // Draw an ellipse at the mouse position
   fill(200);
   stroke(0);
   strokeWeight(2);

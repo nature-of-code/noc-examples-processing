@@ -13,7 +13,7 @@ void setup() {
 void draw() {
   background(255);
   
-  // Update the location
+  // Update the position
   mover.update();
   // Display the Mover
   mover.display(); 

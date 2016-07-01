@@ -21,7 +21,7 @@ Population population;  // Population
 int lifecycle;          // Timer for cycle of generation
 int recordtime;         // Fastest time to target
 
-Obstacle target;        // Target location
+Obstacle target;        // Target position
 
 //int diam = 24;          // Size of target
 
@@ -50,7 +50,7 @@ void setup() {
 void draw() {
   background(255);
 
-  // Draw the start and target locations
+  // Draw the start and target positions
   target.display();
 
 
@@ -87,8 +87,8 @@ void draw() {
 // Move the target if the mouse is pressed
 // System will adapt to new target
 void mousePressed() {
-  target.location.x = mouseX;
-  target.location.y = mouseY;
+  target.position.x = mouseX;
+  target.position.y = mouseY;
   recordtime = lifetime;
 }
 

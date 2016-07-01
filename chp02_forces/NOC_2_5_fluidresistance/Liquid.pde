@@ -21,7 +21,7 @@
   
   // Is the Mover in the Liquid?
   boolean contains(Mover m) {
-    PVector l = m.location;
+    PVector l = m.position;
     return l.x > x && l.x < x + w && l.y > y && l.y < y + h;
   }
   

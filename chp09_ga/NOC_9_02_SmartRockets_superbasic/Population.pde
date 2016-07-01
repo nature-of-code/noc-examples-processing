@@ -21,8 +21,8 @@ class Population {
     generations = 0;
     //make a new set of creatures
     for (int i = 0; i < population.length; i++) {
-      PVector location = new PVector(width/2,height+20);
-      population[i] = new Rocket(location, new DNA());
+      PVector position = new PVector(width/2,height+20);
+      population[i] = new Rocket(position, new DNA());
     }
   }
 
@@ -79,8 +79,8 @@ class Population {
       // Mutate their genes
       child.mutate(mutationRate);
       // Fill the new population with the new child
-      PVector location = new PVector(width/2,height+20);
-      population[i] = new Rocket(location, child);
+      PVector position = new PVector(width/2,height+20);
+      population[i] = new Rocket(position, child);
     }
     generations++;
   }

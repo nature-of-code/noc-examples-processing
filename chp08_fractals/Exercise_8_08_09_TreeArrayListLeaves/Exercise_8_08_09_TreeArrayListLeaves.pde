@@ -19,7 +19,7 @@ void setup() {
   // Setup the arraylist and add one branch to it
   tree = new ArrayList<Branch>();
   leaves = new ArrayList<Leaf>();
-  // A branch has a starting location, a starting "velocity", and a starting "timer" 
+  // A branch has a starting position, a starting "velocity", and a starting "timer" 
   Branch b = new Branch(new PVector(width/2,height),new PVector(0,-1),100);
   // Add to arraylist
   tree.add(b);

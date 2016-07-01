@@ -29,7 +29,7 @@ void draw() {
   sd = 50; mean = 0;
   b = constrain((b * sd) + mean,0,255);
 
-  //get more gaussian numbers, this time for location
+  //get more gaussian numbers, this time for position
   float xloc = randomGaussian();
   float yloc = randomGaussian();
   sd = width/10;
@@ -37,7 +37,7 @@ void draw() {
   xloc = ( xloc * sd ) + mean;
   yloc = ( yloc * sd ) + mean;
 
-  //draw an ellipse with gaussian generated color and location
+  //draw an ellipse with gaussian generated color and position
   noStroke();
   fill(r,g,b);
   ellipse(xloc,yloc,8,8);

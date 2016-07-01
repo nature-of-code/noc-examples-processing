@@ -7,7 +7,7 @@
 class Vehicle {
     ArrayList<PVector> history = new ArrayList<PVector>();
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -17,23 +17,23 @@ class Vehicle {
   Vehicle(float x, float y) {
     acceleration = new PVector(0,0);
     velocity = new PVector(0,-2);
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     r = 6;
     maxspeed = 4;
     maxforce = 0.1;
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelerationelertion to 0 each cycle
     acceleration.mult(0);
     
-        history.add(location.get());
+        history.add(position.get());
     if (history.size() > 100) {
       history.remove(0);
     }
@@ -47,7 +47,7 @@ class Vehicle {
   // A method that calculates a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   void seek(PVector target) {
-    PVector desired = PVector.sub(target,location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target,position);  // A vector pointing from the position to the target
     
     // Normalize desired and scale to maximum speed
     desired.normalize();
@@ -76,7 +76,7 @@ class Vehicle {
     stroke(0);
     strokeWeight(1);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(theta);
     beginShape();
     vertex(0, -r*2);

@@ -53,7 +53,7 @@ void mouseReleased() {
 void mousePressed() {
   // Check to see if the mouse was clicked on the box
   if (box.contains(mouseX, mouseY)) {
-    // And if so, bind the mouse location to the box with a spring
+    // And if so, bind the mouse position to the box with a spring
     spring.bind(mouseX,mouseY,box);
   }
 }
@@ -64,7 +64,7 @@ void draw() {
   // We must always step through time!
   box2d.step();
 
-  // Always alert the spring to the new mouse location
+  // Always alert the spring to the new mouse position
   spring.update(mouseX,mouseY);
 
   // Draw the boundaries

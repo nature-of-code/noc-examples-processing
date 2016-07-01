@@ -4,14 +4,14 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float mass;
 
   Mover(float m, float x, float y, float z) {
     mass = m;
-    location = new PVector(x,y,z);
+    position = new PVector(x,y,z);
     velocity = new PVector(1,0);
     acceleration = new PVector(0,0);
   }
@@ -23,7 +23,7 @@ class Mover {
 
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -31,23 +31,23 @@ class Mover {
     noStroke();
     fill(255);
     pushMatrix();
-    translate(location.x,location.y,location.z);
+    translate(position.x,position.y,position.z);
     sphere(mass*8);
     popMatrix();
   }
 
   void checkEdges() {
 
-    if (location.x > width) {
-      location.x = 0;
+    if (position.x > width) {
+      position.x = 0;
     } 
-    else if (location.x < 0) {
-      location.x = width;
+    else if (position.x < 0) {
+      position.x = width;
     }
 
-    if (location.y > height) {
+    if (position.y > height) {
       velocity.y *= -1;
-      location.y = height;
+      position.y = height;
     }
   }
 }

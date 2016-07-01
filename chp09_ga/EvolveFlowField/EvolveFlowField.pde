@@ -24,8 +24,8 @@ int lifetime;  // How long should each generation live
 Population population;  // Population
 int lifecycle;          // Timer for cycle of generation
 int recordtime;         // Fastest time to target
-Obstacle target;        // Target location
-Obstacle start;         // Start location
+Obstacle target;        // Target position
+Obstacle start;         // Start position
 int diam = 24;          // Size of target
 
 ArrayList<Obstacle> obstacles;  //an array list to keep track of all the obstacles!
@@ -63,7 +63,7 @@ void setup() {
 void draw() {
   background(255);
 
- // Draw the target locations
+ // Draw the target positions
  target.display();
   
   // Draw the obstacles

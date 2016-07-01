@@ -7,7 +7,7 @@
 // A class for an obstacle, just a simple rectangle that is drawn
 // and can check if a creature touches it
 
-// Also using this class for starting point and target location
+// Also using this class for starting point and target position
 
 class Obstacle {
 

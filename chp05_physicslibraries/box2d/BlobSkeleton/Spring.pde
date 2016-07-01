@@ -14,7 +14,7 @@ class Spring {
     mouseJoint = null;
   }
 
-  // If it exists we set its target to the mouse location 
+  // If it exists we set its target to the mouse position 
   void update(float x, float y) {
     if (mouseJoint != null) {
       // Always convert to world coordinates!
@@ -42,8 +42,8 @@ class Spring {
 
 
   // This is the key function where
-  // we attach the spring to an x,y location
-  // and the Box object's location
+  // we attach the spring to an x,y position
+  // and the Box object's position
   void bind(float x, float y, Box box) {
     // Define the joint
     MouseJointDef md = new MouseJointDef();
@@ -51,7 +51,7 @@ class Spring {
     md.bodyA = box2d.getGroundBody();
     // Body 2 is the box's boxy
     md.bodyB = box.body;
-    // Get the mouse location in world coordinates
+    // Get the mouse position in world coordinates
     Vec2 mp = box2d.coordPixelsToWorld(x,y);
     // And that's the target
     md.target.set(mp);

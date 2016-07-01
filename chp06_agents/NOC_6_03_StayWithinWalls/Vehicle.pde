@@ -6,7 +6,7 @@
 
 class Vehicle {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -18,7 +18,7 @@ class Vehicle {
     acceleration = new PVector(0, 0);
     velocity = new PVector(3, -2);
     velocity.mult(5);
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     r = 6;
     maxspeed = 3;
     maxforce = 0.15;
@@ -29,13 +29,13 @@ class Vehicle {
     display();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -44,17 +44,17 @@ class Vehicle {
 
     PVector desired = null;
 
-    if (location.x < d) {
+    if (position.x < d) {
       desired = new PVector(maxspeed, velocity.y);
     } 
-    else if (location.x > width -d) {
+    else if (position.x > width -d) {
       desired = new PVector(-maxspeed, velocity.y);
     } 
 
-    if (location.y < d) {
+    if (position.y < d) {
       desired = new PVector(velocity.x, maxspeed);
     } 
-    else if (location.y > height-d) {
+    else if (position.y > height-d) {
       desired = new PVector(velocity.x, -maxspeed);
     } 
 
@@ -79,7 +79,7 @@ class Vehicle {
     fill(127);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);

@@ -40,7 +40,7 @@ class Boundary {
     b.createFixture(sd,1);
   }
 
-  // Draw the boundary, it doesn't move so we don't have to ask the Body for location
+  // Draw the boundary, it doesn't move so we don't have to ask the Body for position
   void display() {
     fill(0);
     stroke(0);

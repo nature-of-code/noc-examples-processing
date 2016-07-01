@@ -8,7 +8,7 @@
 class Vehicle {
 
   // All the usual stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -17,7 +17,7 @@ class Vehicle {
 
     // Constructor initialize all values
   Vehicle( PVector l, float ms, float mf) {
-    location = l.get();
+    position = l.get();
     r = 12;
     maxspeed = ms;
     maxforce = mf;
@@ -58,13 +58,13 @@ class Vehicle {
   // http://www.red3d.com/cwr/steer/PathFollow.html
   PVector follow(Path p) {
 
-    // Predict location 25 (arbitrary choice) frames ahead
+    // Predict position 25 (arbitrary choice) frames ahead
     PVector predict = velocity.get();
     predict.normalize();
     predict.mult(25);
-    PVector predictLoc = PVector.add(location, predict);
+    PVector predictLoc = PVector.add(position, predict);
 
-    // Now we must find the normal to the path from the predicted location
+    // Now we must find the normal to the path from the predicted position
     // We look at the normal for each line segment and pick out the closest one
     PVector normal = null;
     PVector target = null;
@@ -112,18 +112,18 @@ class Vehicle {
 
     // Draw the debugging stuff
     if (debug) {
-      // Draw predicted future location
+      // Draw predicted future position
       stroke(0);
       fill(0);
-      line(location.x, location.y, predictLoc.x, predictLoc.y);
-      ellipse(predictLoc.x, predictLoc.y, 4, 4);
+      line(position.x, position.y, predictpos.x, predictpos.y);
+      ellipse(predictpos.x, predictpos.y, 4, 4);
 
-      // Draw normal location
+      // Draw normal position
       stroke(0);
       fill(0);
       ellipse(normal.x, normal.y, 4, 4);
       // Draw actual target (red if steering towards it)
-      line(predictLoc.x, predictLoc.y, target.x, target.y);
+      line(predictpos.x, predictpos.y, target.x, target.y);
       if (worldRecord > p.radius) fill(255, 0, 0);
       noStroke();
       ellipse(target.x, target.y, 8, 8);
@@ -162,11 +162,11 @@ class Vehicle {
     // For every boid in the system, check if it's too close
     for (int i = 0 ; i < boids.size(); i++) {
       Vehicle other = (Vehicle) boids.get(i);
-      float d = PVector.dist(location, other.location);
+      float d = PVector.dist(position, other.position);
       // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
       if ((d > 0) && (d < desiredseparation)) {
         // Calculate vector pointing away from neighbor
-        PVector diff = PVector.sub(location, other.location);
+        PVector diff = PVector.sub(position, other.position);
         diff.normalize();
         diff.div(d);        // Weight by distance
         steer.add(diff);
@@ -190,13 +190,13 @@ class Vehicle {
   }
 
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -204,12 +204,12 @@ class Vehicle {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   PVector seek(PVector target) {
-    PVector desired = PVector.sub(target, location);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target, position);  // A vector pointing from the position to the target
 
     // Normalize desired and scale to maximum speed
     desired.normalize();
     desired.mult(maxspeed);
-    // Steering = Desired minus Velocationity
+    // Steering = Desired minus Vepositionity
     PVector steer = PVector.sub(desired, velocity);
     steer.limit(maxforce);  // Limit to maximum steering force
 
@@ -222,17 +222,17 @@ class Vehicle {
     fill(75);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     ellipse(0, 0, r, r);
     popMatrix();
   }
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    //if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    //if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    //if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    //if (position.y > height+r) position.y = -r;
   }
 }
 

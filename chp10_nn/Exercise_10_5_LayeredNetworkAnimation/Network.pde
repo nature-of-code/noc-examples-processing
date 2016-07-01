@@ -12,10 +12,10 @@ class Network {
   // The Network now keeps a duplicate list of all Connection objects.
   // This makes it easier to draw everything in this class
   ArrayList<Connection> connections;
-  PVector location;
+  PVector position;
 
   Network(float x, float y) {
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     neurons = new ArrayList<Neuron>();
     connections = new ArrayList<Connection>();
   }
@@ -54,7 +54,7 @@ class Network {
   // Draw everything
   void display() {
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     for (Neuron n : neurons) {
       n.display();
     }

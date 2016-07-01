@@ -7,7 +7,7 @@
 // A class for one branch in the system
 
 class Branch {
-  // Each has a location, velocity, and timer 
+  // Each has a position, velocity, and timer 
   // We could implement this same idea with different data
   PVector start;
   PVector end;
@@ -25,14 +25,14 @@ class Branch {
     timer = timerstart;
   }
 
-  // Move location
+  // Move position
   void update() {
     if (growing) {
       end.add(vel);
     }
   }
 
-  // Draw a dot at location
+  // Draw a dot at position
   void render() {
     stroke(0);
     line(start.x,start.y,end.x,end.y);
@@ -50,7 +50,7 @@ class Branch {
     }
   }
 
-  // Create a new branch at the current location, but change direction by a given angle
+  // Create a new branch at the current position, but change direction by a given angle
   Branch branch(float angle) {
     // What is my current heading
     float theta = vel.heading2D();

@@ -5,8 +5,8 @@
 // An animated drawing of a Neural Network
 
 class Neuron {
-  // Neuron has a location
-  PVector location;
+  // Neuron has a position
+  PVector position;
 
   // Neuron has a list of connections
   ArrayList<Connection> connections;
@@ -18,7 +18,7 @@ class Neuron {
   float r = 32;
   
   Neuron(float x, float y) {
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     connections = new ArrayList<Connection>();
   }
 
@@ -55,7 +55,7 @@ class Neuron {
     // Brightness is mapped to sum
     float b = map(sum,0,1,255,0);
     fill(b);
-    ellipse(location.x, location.y, r, r);
+    ellipse(position.x, position.y, r, r);
     
     // Size shrinks down back to original dimensions
     r = lerp(r,32,0.1);

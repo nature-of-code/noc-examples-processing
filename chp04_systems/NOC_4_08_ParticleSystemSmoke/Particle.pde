@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 class Particle {
-  PVector loc;
+  PVector pos;
   PVector vel;
   PVector acc;
   float lifespan;
@@ -30,10 +30,10 @@ class Particle {
     acc.add(f);
   }  
 
-  // Method to update location
+  // Method to update position
   void update() {
     vel.add(acc);
-    loc.add(vel);
+    pos.add(vel);
     lifespan -= 2.5;
     acc.mult(0); // clear Acceleration
   }
@@ -42,11 +42,11 @@ class Particle {
   void render() {
     imageMode(CENTER);
     tint(255,lifespan);
-    image(img,loc.x,loc.y);
+    image(img,pos.x,pos.y);
     // Drawing a circle instead
     // fill(255,lifespan);
     // noStroke();
-    // ellipse(loc.x,loc.y,img.width,img.height);
+    // ellipse(pos.x,pos.y,img.width,img.height);
   }
 
   // Is the particle still useful?

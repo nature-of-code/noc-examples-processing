@@ -4,7 +4,7 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float topspeed;
@@ -14,7 +14,7 @@ class Mover {
   float r = 16;
 
   Mover() {
-    location = new PVector(width/2, height/2);
+    position = new PVector(width/2, height/2);
     velocity = new PVector(0, 0);
     topspeed = 4;
     xoff = 1000;
@@ -24,14 +24,14 @@ class Mover {
   void update() {
 
     PVector mouse = new PVector(mouseX, mouseY);
-    PVector dir = PVector.sub(mouse, location);
+    PVector dir = PVector.sub(mouse, position);
     dir.normalize();
     dir.mult(0.5);
     acceleration = dir;
 
     velocity.add(acceleration);
     velocity.limit(topspeed);
-    location.add(velocity);
+    position.add(velocity);
   }
 
   void display() {
@@ -42,7 +42,7 @@ class Mover {
     fill(127);
     pushMatrix();
     rectMode(CENTER);
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
     rect(0, 0, 30, 10);
     popMatrix();
@@ -50,18 +50,18 @@ class Mover {
 
   void checkEdges() {
 
-    if (location.x > width) {
-      location.x = 0;
+    if (position.x > width) {
+      position.x = 0;
     } 
-    else if (location.x < 0) {
-      location.x = width;
+    else if (position.x < 0) {
+      position.x = width;
     }
 
-    if (location.y > height) {
-      location.y = 0;
+    if (position.y > height) {
+      position.y = 0;
     } 
-    else if (location.y < 0) {
-      location.y = height;
+    else if (position.y < 0) {
+      position.y = height;
     }
   }
 }

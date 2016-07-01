@@ -5,7 +5,7 @@
 // Simple Particle System
 
 class Particle {
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float lifespan;
@@ -16,7 +16,7 @@ class Particle {
     acceleration = new PVector(0,0.01);
     velocity = PVector.random2D();
     velocity.mult(0.5);
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     lifespan = 255.0;
     r = r_;
   }
@@ -26,10 +26,10 @@ class Particle {
     display();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     lifespan -= 2.0;
   }
 
@@ -38,7 +38,7 @@ class Particle {
     stroke(0);
     fill(0);
     rectMode(CENTER);
-    rect(location.x,location.y,r,r);
+    rect(position.x,position.y,r,r);
   }
   
   // Is the particle still useful?

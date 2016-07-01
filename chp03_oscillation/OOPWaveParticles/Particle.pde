@@ -3,20 +3,20 @@
 // http://natureofcode.com
 
 class Particle {
-  PVector location;
+  PVector position;
   
   Particle() {
-    location = new PVector(); 
+    position = new PVector(); 
   }
   
-  void setLocation(float x, float y) {
-    location.x = x;
-    location.y = y; 
+  void setposition(float x, float y) {
+    position.x = x;
+    position.y = y; 
   }
   
   void display() {
     fill(random(255));
-    ellipse(location.x,location.y,16,16); 
+    ellipse(position.x,position.y,16,16); 
   }
   
   

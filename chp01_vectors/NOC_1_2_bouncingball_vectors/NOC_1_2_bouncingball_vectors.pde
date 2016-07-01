@@ -3,13 +3,13 @@
 // http://natureofcode.com
 
 // Example 1-2: Bouncing Ball, with PVector!
-PVector location;
+PVector position;
 PVector velocity;
 
 void setup() {
   size(200,200);
   background(255);
-  location = new PVector(100,100);
+  position = new PVector(100,100);
   velocity = new PVector(2.5,5);
 }
 
@@ -18,20 +18,20 @@ void draw() {
   fill(255,10);
   rect(0,0,width,height);
   
-  // Add the current speed to the location.
-  location.add(velocity);
+  // Add the current speed to the position.
+  position.add(velocity);
 
-  if ((location.x > width) || (location.x < 0)) {
+  if ((position.x > width) || (position.x < 0)) {
     velocity.x = velocity.x * -1;
   }
-  if ((location.y > height) || (location.y < 0)) {
+  if ((position.y > height) || (position.y < 0)) {
     velocity.y = velocity.y * -1;
   }
 
-  // Display circle at x location
+  // Display circle at x position
   stroke(0);
   fill(175);
-  ellipse(location.x,location.y,16,16);
+  ellipse(position.x,position.y,16,16);
 }
 
 

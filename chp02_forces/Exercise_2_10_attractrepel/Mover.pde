@@ -4,14 +4,14 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float mass;
 
   Mover(float m, float x , float y) {
     mass = m;
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     velocity = new PVector(0,0);
     acceleration = new PVector(0,0);
   }
@@ -23,18 +23,18 @@ class Mover {
 
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
   void display() {
     stroke(0);
     fill(175,200);
-    ellipse(location.x,location.y,mass*2,mass*2);
+    ellipse(position.x,position.y,mass*2,mass*2);
   }
 
   PVector repel(Mover m) {
-    PVector force = PVector.sub(location,m.location);             // Calculate direction of force
+    PVector force = PVector.sub(position,m.position);             // Calculate direction of force
     float distance = force.mag();                                 // Distance between objects
     distance = constrain(distance,1.0,10000.0);                             // Limiting the distance to eliminate "extreme" results for very close or very far objects
     force.normalize();                                            // Normalize vector (distance doesn't matter here, we just want this vector for direction
@@ -46,21 +46,21 @@ class Mover {
 
   void checkEdges() {
 
-    if (location.x > width) {
-      location.x = width;
+    if (position.x > width) {
+      position.x = width;
       velocity.x *= -1;
     } 
-    else if (location.x < 0) {
-      location.x = 0;
+    else if (position.x < 0) {
+      position.x = 0;
       velocity.x *= -1;
     }
 
-    if (location.y > height) {
-      location.y = height;
+    if (position.y > height) {
+      position.y = height;
       velocity.y *= -1;
     } 
-    else if (location.y < 0) {
-      location.y = 0;
+    else if (position.y < 0) {
+      position.y = 0;
       velocity.y *= -1;
     }
 

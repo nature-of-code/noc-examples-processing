@@ -9,7 +9,7 @@ Vehicle v;
 boolean debug = true;
 
 
-PVector circleLocation;
+PVector circleposition;
 float circleRadius;
 
 
@@ -18,7 +18,7 @@ void setup() {
   size(640, 360);
   v = new Vehicle(width/2, height/4);
   
-  circleLocation = new PVector(width/2,height/2);
+  circleposition = new PVector(width/2,height/2);
   circleRadius = height/2-25;
 }
 
@@ -28,7 +28,7 @@ void draw() {
   if (debug) {
     stroke(175);
     noFill();
-    ellipse(circleLocation.x,circleLocation.y, circleRadius*2,circleRadius*2);
+    ellipse(circleposition.x,circleposition.y, circleRadius*2,circleRadius*2);
   }
 
   v.boundaries();

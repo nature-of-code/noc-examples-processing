@@ -16,7 +16,7 @@ void initGL(){
 
 void renderImage( Vec3D _loc, float _diam, color _col, float _alpha ){
   gl.glPushMatrix();
-  gl.glTranslatef( _loc.x, -_loc.y, _loc.z );
+  gl.glTranslatef( _pos.x, -_pos.y, _pos.z );
   pov.glReverseCamera();
   gl.glScalef( _diam, _diam, _diam );
   gl.glColor4f( red(_col), green(_col), blue(_col), _alpha );
@@ -27,7 +27,7 @@ void renderImage( Vec3D _loc, float _diam, color _col, float _alpha ){
 // This will allow you to draw images that are oriented to the floor plane.
 void renderImageOnFloor( Vec3D _loc, float _diam, color _col, float _aa ){
   gl.glPushMatrix();
-  gl.glTranslatef( _loc.x, -_loc.y, _loc.z );
+  gl.glTranslatef( _pos.x, -_pos.y, _pos.z );
   gl.glScalef( _diam, _diam, _diam );
   gl.glRotatef( 90, 1.0, 0.0, 0.0 );
   gl.glColor4f( red(_col), green(_col), blue(_col), _aa );
@@ -39,7 +39,7 @@ void renderImageOnFloor( Vec3D _loc, float _diam, color _col, float _aa ){
 // which is the vector pointing from the camera's eye to the camera's point of interest.
 void renderImageAndRotate( Vec3D _loc, float _diam, color _col, float _aa, float _rot ){
   gl.glPushMatrix();
-  gl.glTranslatef( _loc.x, -_loc.y, _loc.z );
+  gl.glTranslatef( _pos.x, -_pos.y, _pos.z );
   gl.glRotatef( degrees( _rot ), pov.eyeNormal.x, pov.eyeNormal.y, pov.eyeNormal.z );
   pov.glReverseCamera();
   gl.glScalef( _diam, _diam, _diam );

@@ -15,7 +15,7 @@ class Circle extends Shape {
   // Call the parent jiggle, but do some more stuff too
   void jiggle() {
     super.jiggle();
-    // The Circle jiggles its size as well as its x,y location.
+    // The Circle jiggles its size as well as its x,y position.
     r += random(-1,1); 
     r = constrain(r,0,100);
   }

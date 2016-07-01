@@ -6,8 +6,8 @@ class ParticleSystem {
   ArrayList<Particle> particles;
   PVector origin;
 
-  ParticleSystem(PVector location) {
-    origin = location.get();
+  ParticleSystem(PVector position) {
+    origin = position.get();
     particles = new ArrayList<Particle>();
   }
 

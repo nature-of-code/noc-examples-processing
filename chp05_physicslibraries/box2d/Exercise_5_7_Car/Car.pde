@@ -11,9 +11,9 @@ class Car {
   Particle wheel2;
 
   Car(float x, float y) {
-    // Initialize location of the box
+    // Initialize position of the box
     box = new Box(x, y, 100, 30, false);
-    // Initialize location of two wheels
+    // Initialize position of two wheels
     wheel1 = new Particle(x-28, y+16, 12);
     wheel2 = new Particle(x+28, y+16, 12);
 

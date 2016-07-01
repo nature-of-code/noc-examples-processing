@@ -43,7 +43,7 @@ class Box {
      body.setLinearVelocity(v);
   }
   
-  void setLocation(float x, float y) {
+  void setposition(float x, float y) {
     Vec2 pos = body.getWorldCenter();
     Vec2 target = box2d.coordPixelsToWorld(x,y);
     Vec2 diff = new Vec2(target.x-pos.x,target.y-pos.y);

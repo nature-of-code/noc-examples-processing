@@ -2,7 +2,7 @@
 /*
 The emitter is just an object that follows the cursor and
 can spawn new particle objects. It would be easier to just make
-the location vector match the cursor position but I have opted
+the position vector match the cursor position but I have opted
 to use a velocity vector because later I will be allowing for 
 multiple emitters.
 */
@@ -40,7 +40,7 @@ class Emitter{
   }
   
   void setVelToMouse(){
-    velToMouse.set( mouseX - loc.x, mouseY - loc.y, 0 );
+    velToMouse.set( mouseX - pos.x, mouseY - pos.y, 0 );
   }
   
   void findVelocity(){
@@ -48,11 +48,11 @@ class Emitter{
   }
   
   void setPosition(){
-    loc.addSelf( vel );
+    pos.addSelf( vel );
     
     if( ALLOWFLOOR ){
-      if( loc.y > floorLevel ){
-        loc.y = floorLevel;
+      if( pos.y > floorLevel ){
+        pos.y = floorLevel;
         vel.y = 0;
       }
     }

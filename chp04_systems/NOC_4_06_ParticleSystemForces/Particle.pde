@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 class Particle {
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float lifespan;
@@ -13,7 +13,7 @@ class Particle {
   Particle(PVector l) {
     acceleration = new PVector(0,0);
     velocity = new PVector(random(-1,1),random(-2,0));
-    location = l.get();
+    position = l.get();
     lifespan = 255.0;
   }
 
@@ -28,10 +28,10 @@ class Particle {
     acceleration.add(f);
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
     lifespan -= 2.0;
   }
@@ -41,7 +41,7 @@ class Particle {
     stroke(0,lifespan);
     strokeWeight(2);
     fill(127,lifespan);
-    ellipse(location.x,location.y,12,12);
+    ellipse(position.x,position.y,12,12);
   }
 
   // Is the particle still useful?

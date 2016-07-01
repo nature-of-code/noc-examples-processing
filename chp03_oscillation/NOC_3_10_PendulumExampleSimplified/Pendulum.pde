@@ -9,8 +9,8 @@
 
 class Pendulum  {
 
-  PVector location;    // Location of pendulum ball
-  PVector origin;      // Location of arm origin
+  PVector position;    // position of pendulum ball
+  PVector origin;      // position of arm origin
   float r;             // Length of arm
   float angle;         // Pendulum arm angle
   float aVelocity;     // Angle velocity
@@ -21,7 +21,7 @@ class Pendulum  {
   Pendulum(PVector origin_, float r_) {
     // Fill all variables
     origin = origin_.get();
-    location = new PVector();
+    position = new PVector();
     r = r_;
     angle = PI/4;
 
@@ -35,7 +35,7 @@ class Pendulum  {
     display();
   }
 
-  // Function to update location
+  // Function to update position
   void update() {
     float gravity = 0.4;                              // Arbitrary constant
     aAcceleration = (-1 * gravity / r) * sin(angle);  // Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
@@ -45,17 +45,17 @@ class Pendulum  {
   }
 
   void display() {
-    location.set(r*sin(angle), r*cos(angle), 0);         // Polar to cartesian conversion
-    location.add(origin);                              // Make sure the location is relative to the pendulum's origin
+    position.set(r*sin(angle), r*cos(angle), 0);         // Polar to cartesian conversion
+    position.add(origin);                              // Make sure the position is relative to the pendulum's origin
 
     stroke(0);
     strokeWeight(2);
     // Draw the arm
-    line(origin.x, origin.y, location.x, location.y);
+    line(origin.x, origin.y, position.x, position.y);
     ellipseMode(CENTER);
     fill(175);
     // Draw the ball
-    ellipse(location.x, location.y, 48, 48);
+    ellipse(position.x, position.y, 48, 48);
   }
 
 }

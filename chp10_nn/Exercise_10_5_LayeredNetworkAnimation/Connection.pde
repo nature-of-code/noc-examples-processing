@@ -29,7 +29,7 @@ class Connection {
   // The Connection is active
   void feedforward(float val) {
     output = val*weight;        // Compute output
-    sender = a.location.get();  // Start animation at Neuron A
+    sender = a.position.get();  // Start animation at Neuron A
     sending = true;             // Turn on sending
   }
   
@@ -37,9 +37,9 @@ class Connection {
   void update() {
     if (sending) {
       // Use a simple interpolation
-      sender.x = lerp(sender.x, b.location.x, 0.1);
-      sender.y = lerp(sender.y, b.location.y, 0.1);
-      float d = PVector.dist(sender, b.location);
+      sender.x = lerp(sender.x, b.position.x, 0.1);
+      sender.y = lerp(sender.y, b.position.y, 0.1);
+      float d = PVector.dist(sender, b.position);
       // If we've reached the end
       if (d < 1) {
         // Pass along the output!
@@ -53,7 +53,7 @@ class Connection {
   void display() {
     stroke(0);
     strokeWeight(1+weight*4);
-    line(a.location.x, a.location.y, b.location.x, b.location.y);
+    line(a.position.x, a.position.y, b.position.x, b.position.y);
 
     if (sending) {
       fill(0);

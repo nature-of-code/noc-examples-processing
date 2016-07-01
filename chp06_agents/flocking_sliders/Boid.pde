@@ -18,7 +18,7 @@ float maxforce = 0.025;
 
 class Boid {
 
-  PVector loc;
+  PVector pos;
   PVector vel;
   PVector acc;
   float r;
@@ -57,13 +57,13 @@ class Boid {
     applyForce(coh);
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     vel.add(acc);
     // Limit speed
     vel.limit(maxspeed);
-    loc.add(vel);
+    pos.add(vel);
     // Reset accelertion to 0 each cycle
     acc.mult(0);
   }
@@ -71,7 +71,7 @@ class Boid {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   PVector seek(PVector target) {
-    PVector desired = PVector.sub(target,loc);  // A vector pointing from the location to the target
+    PVector desired = PVector.sub(target,loc);  // A vector pointing from the position to the target
 
     // Normalize desired and scale to maximum speed
     desired.normalize();
@@ -89,7 +89,7 @@ class Boid {
     fill(175);
     stroke(0);
     pushMatrix();
-    translate(loc.x,loc.y);
+    translate(pos.x,pos.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);
@@ -101,10 +101,10 @@ class Boid {
 
   // Wraparound
   void borders() {
-    if (loc.x < -r) loc.x = width+r;
-    if (loc.y < -r) loc.y = height+r;
-    if (loc.x > width+r) loc.x = -r;
-    if (loc.y > height+r) loc.y = -r;
+    if (pos.x < -r) pos.x = width+r;
+    if (pos.y < -r) pos.y = height+r;
+    if (pos.x > width+r) pos.x = -r;
+    if (pos.y > height+r) pos.y = -r;
   }
 
   // Separation
@@ -163,21 +163,21 @@ class Boid {
   }
 
   // Cohesion
-  // For the average location (i.e. center) of all nearby boids, calculate steering vector towards that location
+  // For the average position (i.e. center) of all nearby boids, calculate steering vector towards that position
   PVector cohesion (ArrayList<Boid> boids) {
     float neighbordist = 50.0;
-    PVector sum = new PVector(0,0);   // Start with empty vector to accumulate all locations
+    PVector sum = new PVector(0,0);   // Start with empty vector to accumulate all positions
     int count = 0;
     for (Boid other : boids) {
       float d = PVector.dist(loc,other.loc);
       if ((d > 0) && (d < neighbordist)) {
-        sum.add(other.loc); // Add location
+        sum.add(other.loc); // Add position
         count++;
       }
     }
     if (count > 0) {
       sum.div((float)count);
-      return seek(sum);  // Steer towards the location
+      return seek(sum);  // Steer towards the position
     }
     return sum;
   }

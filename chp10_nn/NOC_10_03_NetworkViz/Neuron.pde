@@ -6,14 +6,14 @@
 
 class Neuron {
   
-  // Neuron has a location
-  PVector location;
+  // Neuron has a position
+  PVector position;
 
   // Neuron has a list of connections
   ArrayList<Connection> connections;
   
   Neuron(float x, float y) {
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     connections = new ArrayList<Connection>();
   }
   
@@ -27,7 +27,7 @@ class Neuron {
     stroke(0);
     strokeWeight(1);
     fill(0);
-    ellipse(location.x, location.y, 16, 16);
+    ellipse(position.x, position.y, 16, 16);
     
     // Draw all its connections
     for (Connection c : connections) {

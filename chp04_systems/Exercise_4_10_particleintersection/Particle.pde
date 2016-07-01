@@ -5,7 +5,7 @@
 // Simple Particle System
 
 class Particle {
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float lifespan;
@@ -16,7 +16,7 @@ class Particle {
   Particle(float x, float y) {
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-2, 0));
-    location = new PVector(x, y);
+    position = new PVector(x, y);
     lifespan = 255.0;
   }
 
@@ -29,7 +29,7 @@ class Particle {
     highlight = false;
     for (Particle other : particles) {
       if (other != this) {
-        float d = PVector.dist(other.location, location);
+        float d = PVector.dist(other.position, position);
         if (d < r + other.r) {
           highlight = true;
         }
@@ -41,10 +41,10 @@ class Particle {
     acceleration.add(f); 
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
     lifespan -= 2.0;
   }
@@ -57,7 +57,7 @@ class Particle {
     if (highlight) {
       fill(127,0,0);
     }
-    ellipse(location.x, location.y, r*2, r*2);
+    ellipse(position.x, position.y, r*2, r*2);
   }
 
   // Is the particle still useful?

@@ -4,9 +4,9 @@
 
 class Network {
   ArrayList<Neuron> neurons;
-  PVector location;
+  PVector position;
   Network(int layers, int inputs, int outputs) {
-    location = new PVector(width/2, height/2);
+    position = new PVector(width/2, height/2);
 
     neurons = new ArrayList<Neuron>();
     
@@ -37,7 +37,7 @@ class Network {
 
   void display() {
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     for (Neuron n : neurons) {
       n.display();
     }

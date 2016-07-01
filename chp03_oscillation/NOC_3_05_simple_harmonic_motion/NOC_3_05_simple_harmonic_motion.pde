@@ -11,7 +11,7 @@ void draw() {
 
   float period = 120;
   float amplitude = 300;
-  // Calculating horizontal location according to formula for simple harmonic motion
+  // Calculating horizontal position according to formula for simple harmonic motion
   float x = amplitude * sin(TWO_PI * frameCount / period);  
   stroke(0);
   strokeWeight(2);

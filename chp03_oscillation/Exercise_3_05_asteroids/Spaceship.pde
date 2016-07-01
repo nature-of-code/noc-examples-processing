@@ -6,7 +6,7 @@
 
 class Spaceship { 
   // All of our regular motion stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
 
@@ -24,7 +24,7 @@ class Spaceship {
   boolean thrusting = false;
 
   Spaceship() {
-    location = new PVector(width/2,height/2);
+    position = new PVector(width/2,height/2);
     velocity = new PVector();
     acceleration = new PVector();
   } 
@@ -34,7 +34,7 @@ class Spaceship {
     velocity.add(acceleration);
     velocity.mult(damping);
     velocity.limit(topspeed);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -64,10 +64,10 @@ class Spaceship {
 
   void wrapEdges() {
     float buffer = r*2;
-    if (location.x > width +  buffer) location.x = -buffer;
-    else if (location.x <    -buffer) location.x = width+buffer;
-    if (location.y > height + buffer) location.y = -buffer;
-    else if (location.y <    -buffer) location.y = height+buffer;
+    if (position.x > width +  buffer) position.x = -buffer;
+    else if (position.x <    -buffer) position.x = width+buffer;
+    if (position.y > height + buffer) position.y = -buffer;
+    else if (position.y <    -buffer) position.y = height+buffer;
   }
 
 
@@ -76,7 +76,7 @@ class Spaceship {
     stroke(0);
     strokeWeight(2);
     pushMatrix();
-    translate(location.x,location.y+r);
+    translate(position.x,position.y+r);
     rotate(heading);
     fill(175);
     if (thrusting) fill(255,0,0);

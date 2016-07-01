@@ -8,10 +8,10 @@ class Network {
   
   // The Network has a list of neurons
   ArrayList<Neuron> neurons;
-  PVector location;
+  PVector position;
 
   Network(float x, float y) {
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     neurons = new ArrayList<Neuron>();
   }
   
@@ -29,7 +29,7 @@ class Network {
   // We can draw the network
   void display() {
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     for (Neuron n : neurons) {
       n.display();
     }

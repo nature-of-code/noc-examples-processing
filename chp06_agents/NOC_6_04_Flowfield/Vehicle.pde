@@ -7,7 +7,7 @@
 class Vehicle {
 
   // The usual stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float r;
@@ -15,7 +15,7 @@ class Vehicle {
   float maxspeed;    // Maximum speed
 
     Vehicle(PVector l, float ms, float mf) {
-    location = l.get();
+    position = l.get();
     r = 3.0;
     maxspeed = ms;
     maxforce = mf;
@@ -34,7 +34,7 @@ class Vehicle {
   // http://www.red3d.com/cwr/steer/FlowFollow.html
   void follow(FlowField flow) {
     // What is the vector at that spot in the flow field?
-    PVector desired = flow.lookup(location);
+    PVector desired = flow.lookup(position);
     // Scale it up by maxspeed
     desired.mult(maxspeed);
     // Steering is desired minus velocity
@@ -48,13 +48,13 @@ class Vehicle {
     acceleration.add(force);
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     // Update velocity
     velocity.add(acceleration);
     // Limit speed
     velocity.limit(maxspeed);
-    location.add(velocity);
+    position.add(velocity);
     // Reset accelertion to 0 each cycle
     acceleration.mult(0);
   }
@@ -65,7 +65,7 @@ class Vehicle {
     fill(175);
     stroke(0);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(theta);
     beginShape(TRIANGLES);
     vertex(0, -r*2);
@@ -77,10 +77,10 @@ class Vehicle {
 
   // Wraparound
   void borders() {
-    if (location.x < -r) location.x = width+r;
-    if (location.y < -r) location.y = height+r;
-    if (location.x > width+r) location.x = -r;
-    if (location.y > height+r) location.y = -r;
+    if (position.x < -r) position.x = width+r;
+    if (position.y < -r) position.y = height+r;
+    if (position.x > width+r) position.x = -r;
+    if (position.y > height+r) position.y = -r;
   }
 }
 

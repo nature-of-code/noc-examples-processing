@@ -5,7 +5,7 @@
 // Simple Particle System
 
 class Particle {
-  PVector loc;
+  PVector pos;
   PVector vel;
   PVector acc;
   float lifespan;
@@ -25,10 +25,10 @@ class Particle {
     render();
   }
 
-  // Method to update location
+  // Method to update position
   void update() {
     vel.add(acc);
-    loc.add(vel);
+    pos.add(vel);
     lifespan -= 2.0;
   }
 
@@ -36,7 +36,7 @@ class Particle {
   void render() {
     imageMode(CENTER);
     tint(lifespan);
-    image(img,loc.x,loc.y);
+    image(img,pos.x,pos.y);
   }
   
   // Is the particle still useful?

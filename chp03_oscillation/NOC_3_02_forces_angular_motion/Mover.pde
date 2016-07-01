@@ -4,7 +4,7 @@
 
 class Mover {
 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float mass;
@@ -15,7 +15,7 @@ class Mover {
 
   Mover(float m, float x, float y) {
     mass = m;
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     velocity = new PVector(random(-1,1),random(-1,1));
     acceleration = new PVector(0,0);
   }
@@ -28,7 +28,7 @@ class Mover {
   void update() {
 
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
 
     aAcceleration = acceleration.x / 10.0;
     aVelocity += aAcceleration;
@@ -43,7 +43,7 @@ class Mover {
     fill(175,200);
     rectMode(CENTER);
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x,position.y);
     rotate(angle);
     rect(0,0,mass*16,mass*16);
     popMatrix();

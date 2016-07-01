@@ -14,7 +14,7 @@ class Windmill {
 
   Windmill(float x, float y) {
 
-    // Initialize locations of two boxes
+    // Initialize positions of two boxes
     box1 = new Box(x, y-20, 120, 10, false); 
     box2 = new Box(x, y, 10, 40, true); 
 

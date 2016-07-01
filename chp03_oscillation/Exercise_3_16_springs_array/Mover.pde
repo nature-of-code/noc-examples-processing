@@ -2,10 +2,10 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Bob class, just like our regular Mover (location, velocity, acceleration, mass)
+// Bob class, just like our regular Mover (position, velocity, acceleration, mass)
 
 class Bob { 
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
   float mass = 8;
@@ -19,7 +19,7 @@ class Bob {
 
   // Constructor
   Bob(float x, float y) {
-    location = new PVector(x,y);
+    position = new PVector(x,y);
     velocity = new PVector();
     acceleration = new PVector();
     dragOffset = new PVector();
@@ -29,7 +29,7 @@ class Bob {
   void update() { 
     velocity.add(acceleration);
     velocity.mult(damping);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -49,18 +49,18 @@ class Bob {
     if (dragging) {
       fill(50);
     }
-    ellipse(location.x,location.y,mass*2,mass*2);
+    ellipse(position.x,position.y,mass*2,mass*2);
   } 
 
   // The methods below are for mouse interaction
 
   // This checks to see if we clicked on the mover
   void clicked(int mx, int my) {
-    float d = dist(mx,my,location.x,location.y);
+    float d = dist(mx,my,position.x,position.y);
     if (d < mass) {
       dragging = true;
-      dragOffset.x = location.x-mx;
-      dragOffset.y = location.y-my;
+      dragOffset.x = position.x-mx;
+      dragOffset.y = position.y-my;
     }
   }
 
@@ -70,8 +70,8 @@ class Bob {
 
   void drag(int mx, int my) {
     if (dragging) {
-      location.x = mx + dragOffset.x;
-      location.y = my + dragOffset.y;
+      position.x = mx + dragOffset.x;
+      position.y = my + dragOffset.y;
     }
   }
 }

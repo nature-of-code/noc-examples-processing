@@ -45,7 +45,7 @@ class World {
       // If it's dead, kill it and make food
       if (b.dead()) {
         bloops.remove(i);
-        food.add(b.location);
+        food.add(b.position);
       }
       // Perhaps this bloop would like to make a baby?
       Bloop child = b.reproduce();

@@ -20,7 +20,7 @@ Population population;  // Population
 
 int lifeCounter;          // Timer for cycle of generation
 
-PVector target;        // Target location
+PVector target;        // Target position
 
 void setup() {
   size(640, 360);
@@ -41,7 +41,7 @@ void setup() {
 void draw() {
   background(255);
 
-  // Draw the start and target locations
+  // Draw the start and target positions
   fill(0);
   ellipse(target.x,target.y,24,24);
 

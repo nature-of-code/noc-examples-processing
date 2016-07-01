@@ -10,7 +10,7 @@
 class Rocket {
 
   // All of our physics stuff
-  PVector location;
+  PVector position;
   PVector velocity;
   PVector acceleration;
 
@@ -29,7 +29,7 @@ class Rocket {
   Rocket(PVector l, DNA dna_) {
     acceleration = new PVector();
     velocity = new PVector();
-    location = l.get();
+    position = l.get();
     r = 4;
     dna = dna_;
   }
@@ -37,7 +37,7 @@ class Rocket {
   // Fitness function
   // fitness = one divided by distance squared
   void fitness() {
-    float d = dist(location.x, location.y, target.x, target.y);
+    float d = dist(position.x, position.y, target.x, target.y);
     fitness = pow(1/d, 2);
   }
 
@@ -55,7 +55,7 @@ class Rocket {
 
   // Did I make it to the target?
   void checkTarget() {
-    float d = dist(location.x, location.y, target.x, target.y);
+    float d = dist(position.x, position.y, target.x, target.y);
     if (d < 12) {
       hitTarget = true;
     } 
@@ -67,7 +67,7 @@ class Rocket {
 
   void update() {
     velocity.add(acceleration);
-    location.add(velocity);
+    position.add(velocity);
     acceleration.mult(0);
   }
 
@@ -76,7 +76,7 @@ class Rocket {
     fill(200, 100);
     stroke(0);
     pushMatrix();
-    translate(location.x, location.y);
+    translate(position.x, position.y);
     rotate(theta);
 
     // Thrusters

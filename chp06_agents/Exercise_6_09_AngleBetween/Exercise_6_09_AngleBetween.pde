@@ -12,7 +12,7 @@ void setup() {
 void draw() {
   background(255);
 
-  // A "vector" (really a point) to store the mouse location and screen center location
+  // A "vector" (really a point) to store the mouse position and screen center position
   PVector mouseLoc = new PVector(mouseX, mouseY);
   PVector centerLoc = new PVector(width/2, height/2);  
 
@@ -33,12 +33,12 @@ void draw() {
   text(int(degrees(theta)) + " degrees\n" + theta + " radians", 10, 160);
 }
 
-// Renders a vector object 'v' as an arrow and a location 'loc'
-void drawVector(PVector v, PVector loc, float scayl) {
+// Renders a vector object 'v' as an arrow and a position 'loc'
+void drawVector(PVector v, PVector pos, float scayl) {
   pushMatrix();
   float arrowsize = 6;
-  // Translate to location to render vector
-  translate(loc.x, loc.y);
+  // Translate to position to render vector
+  translate(pos.x, pos.y);
   stroke(0);
   strokeWeight(2);
   // Call vector heading function to get direction (pointing up is a heading of 0)

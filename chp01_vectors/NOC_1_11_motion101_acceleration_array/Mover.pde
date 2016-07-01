@@ -4,8 +4,8 @@
 
 class Mover {
 
-  // The Mover tracks location, velocity, and acceleration 
-  PVector location;
+  // The Mover tracks position, velocity, and acceleration 
+  PVector position;
   PVector velocity;
   PVector acceleration;
   // The Mover's maximum speed
@@ -13,16 +13,16 @@ class Mover {
 
   Mover() {
     // Start in the center
-    location = new PVector(random(width),random(height));
+    position = new PVector(random(width),random(height));
     velocity = new PVector(0,0);
     topspeed = 5;
   }
 
   void update() {
     
-    // Compute a vector that points from location to mouse
+    // Compute a vector that points from position to mouse
     PVector mouse = new PVector(mouseX,mouseY);
-    acceleration = PVector.sub(mouse,location);
+    acceleration = PVector.sub(mouse,position);
     // Set magnitude of acceleration
     //acceleration.setMag(0.2);
     acceleration.normalize();
@@ -32,15 +32,15 @@ class Mover {
     velocity.add(acceleration);
     // Limit the velocity by topspeed
     velocity.limit(topspeed);
-    // Location changes by velocity
-    location.add(velocity);
+    // position changes by velocity
+    position.add(velocity);
   }
 
   void display() {
     stroke(0);
     strokeWeight(2);
     fill(127,200);
-    ellipse(location.x,location.y,48,48);
+    ellipse(position.x,position.y,48,48);
   }
 
 }

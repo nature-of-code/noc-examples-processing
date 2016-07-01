@@ -17,7 +17,7 @@ void draw() {
   background(255);
 
 
-  // Add the current speed to the location.
+  // Add the current speed to the position.
   x = x + xspeed;
   y = y + yspeed;
 
@@ -29,7 +29,7 @@ void draw() {
   }
 
 
-  // Display circle at x location
+  // Display circle at x position
   stroke(0);
   strokeWeight(2);
   fill(127);

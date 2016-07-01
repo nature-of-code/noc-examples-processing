@@ -23,7 +23,7 @@ class Connection {
   void display() {
     stroke(0);
     strokeWeight(weight*4);
-    line(a.location.x, a.location.y, b.location.x, b.location.y);
+    line(a.position.x, a.position.y, b.position.x, b.position.y);
   }
 }
 
