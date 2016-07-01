@@ -8,7 +8,7 @@ class Mover {
   PVector position;
   PVector velocity;
   PVector acceleration;
-  
+
   // Mass is tied to size
   float mass;
 
@@ -29,7 +29,7 @@ class Mover {
   }
 
   void update() {
-    
+
     // Velocity changes according to acceleration
     velocity.add(acceleration);
     // position changes by velocity
@@ -37,7 +37,7 @@ class Mover {
     // We must clear acceleration each frame
     acceleration.mult(0);
   }
-  
+
   // Draw Mover
   void display() {
     stroke(0);
@@ -45,7 +45,7 @@ class Mover {
     fill(127, 200);
     ellipse(position.x, position.y, mass*16, mass*16);
   }
-  
+
   // Bounce off bottom of window
   void checkEdges() {
     if (position.y > height) {
@@ -54,5 +54,3 @@ class Mover {
     }
   }
 }
-
-
