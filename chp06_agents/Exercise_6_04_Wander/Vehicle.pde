@@ -49,9 +49,9 @@ class Vehicle {
 
     // Now we have to calculate the new position to steer towards on the wander circle
     PVector circleloc = velocity.get();    // Start with velocity
-    circlepos.normalize();            // Normalize to get heading
-    circlepos.mult(wanderD);          // Multiply by distance
-    circlepos.add(position);               // Make it relative to boid's position
+    circleloc.normalize();            // Normalize to get heading
+    circleloc.mult(wanderD);          // Multiply by distance
+    circleloc.add(position);               // Make it relative to boid's position
     
     float h = velocity.heading2D();        // We need to know the heading to offset wandertheta
 
