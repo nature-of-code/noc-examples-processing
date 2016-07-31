@@ -18,7 +18,7 @@ class Crawler {
   Crawler() {
     acc = new PVector();
     vel = new PVector(random(-1,1),random(-1,1));
-    loc = new PVector(random(width),random(height));
+    pos = new PVector(random(width),random(height));
     mass = random(8,16);
     osc = new Oscillator(mass*2);
   }
@@ -50,7 +50,7 @@ class Crawler {
     fill(175,100);
     ellipse(0,0,mass*2,mass*2);
     
-    osc.display(loc);
+    osc.display(pos);
     popMatrix();
     
   }
