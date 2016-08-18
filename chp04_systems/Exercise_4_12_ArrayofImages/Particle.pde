@@ -17,7 +17,7 @@ class Particle {
     // Boring example with constant acceleration
     acc = new PVector(0, 0);
     vel = PVector.random2D();
-    loc = new PVector(x, y);
+    pos = new PVector(x, y);
     lifespan = 255;
     img = img_;
   }
