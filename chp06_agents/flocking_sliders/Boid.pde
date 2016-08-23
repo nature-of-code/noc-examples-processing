@@ -26,7 +26,7 @@ class Boid {
   Boid(float x, float y) {
     acc = new PVector(0,0);
     vel = new PVector(random(-1,1),random(-1,1));
-    loc = new PVector(x,y);
+    pos = new PVector(x,y);
     r = 2.0;
   }
 
@@ -71,7 +71,7 @@ class Boid {
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   PVector seek(PVector target) {
-    PVector desired = PVector.sub(target,loc);  // A vector pointing from the position to the target
+    PVector desired = PVector.sub(target,pos);  // A vector pointing from the position to the target
 
     // Normalize desired and scale to maximum speed
     desired.normalize();
@@ -82,7 +82,7 @@ class Boid {
 
     return steer;
   }
-  
+
   void render() {
     // Draw a triangle rotated in the direction of velocity
     float theta = vel.heading2D() + radians(90);
@@ -115,11 +115,11 @@ class Boid {
     int count = 0;
     // For every boid in the system, check if it's too close
     for (Boid other : boids) {
-      float d = PVector.dist(loc,other.loc);
+      float d = PVector.dist(pos,other.pos);
       // If the distance is greater than 0 and less than an arbitrary amount (0 when you are yourself)
       if ((d > 0) && (d < desiredseparation)) {
         // Calculate vector pointing away from neighbor
-        PVector diff = PVector.sub(loc,other.loc);
+        PVector diff = PVector.sub(pos,other.pos);
         diff.normalize();
         diff.div(d);        // Weight by distance
         steer.add(diff);
@@ -145,7 +145,7 @@ class Boid {
     PVector steer = new PVector();
     int count = 0;
     for (Boid other : boids) {
-      float d = PVector.dist(loc,other.loc);
+      float d = PVector.dist(pos,other.pos);
       if ((d > 0) && (d < neighbordist)) {
         steer.add(other.vel);
         count++;
@@ -169,9 +169,9 @@ class Boid {
     PVector sum = new PVector(0,0);   // Start with empty vector to accumulate all positions
     int count = 0;
     for (Boid other : boids) {
-      float d = PVector.dist(loc,other.loc);
+      float d = PVector.dist(pos,other.pos);
       if ((d > 0) && (d < neighbordist)) {
-        sum.add(other.loc); // Add position
+        sum.add(other.pos); // Add position
         count++;
       }
     }
