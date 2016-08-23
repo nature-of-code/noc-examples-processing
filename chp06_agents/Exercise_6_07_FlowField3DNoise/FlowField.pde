@@ -19,7 +19,23 @@ class FlowField {
     cols = width/resolution;
     rows = height/resolution;
     field = new PVector[cols][rows];
-    update();
+    init();
+  }
+
+  void init() {
+    // Reseed noise so we get a new flow field every time
+    noiseSeed((int)random(10000));
+    float xoff = 0;
+    for (int i = 0; i < cols; i++) {
+      float yoff = 0;
+      for (int j = 0; j < rows; j++) {
+        float theta = map(noise(xoff,yoff),0,1,0,TWO_PI);
+        // Polar to cartesian coordinate transformation to get x and y components of the vector
+        field[i][j] = new PVector(cos(theta),sin(theta));
+        yoff += 0.1;
+      }
+      xoff += 0.1;
+    }
   }
 
   void update() {
@@ -74,8 +90,3 @@ class FlowField {
 
 
 }
-
-
-
-
-

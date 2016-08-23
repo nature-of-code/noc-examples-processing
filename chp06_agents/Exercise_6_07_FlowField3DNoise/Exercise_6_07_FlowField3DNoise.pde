@@ -48,5 +48,7 @@ void keyPressed() {
   }
 }
 
-
-
+// Make a new flowfield
+void mousePressed() {
+  flowfield.init();
+}

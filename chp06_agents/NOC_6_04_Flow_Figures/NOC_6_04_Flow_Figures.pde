@@ -12,7 +12,7 @@ PShape arrow;
 PImage a;
 
 void setup() {
-  size(1800, 60*9);
+  size(1800, 540);
   // Make a new flow field with "resolution" of 16
   flowfield = new FlowField(60);
   arrow = loadShape("arrow.svg");

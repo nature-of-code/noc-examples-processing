@@ -52,16 +52,16 @@ class Vehicle {
     circlepos.normalize();            // Normalize to get heading
     circlepos.mult(wanderD);          // Multiply by distance
     circlepos.add(position);               // Make it relative to boid's position
-    
+
     float h = velocity.heading2D();        // We need to know the heading to offset wandertheta
 
     PVector circleOffSet = new PVector(wanderR*cos(wandertheta+h),wanderR*sin(wandertheta+h));
-    PVector target = PVector.add(circleloc,circleOffSet);
+    PVector target = PVector.add(circlepos,circleOffSet);
     seek(target);
 
-    // Render wandering circle, etc. 
-    if (debug) drawWanderStuff(position,circleloc,target,wanderR);
-  }  
+    // Render wandering circle, etc.
+    if (debug) drawWanderStuff(position,circlepos,target,wanderR);
+  }
 
   void applyForce(PVector force) {
     // We could add mass here if we want A = F / M
@@ -112,7 +112,7 @@ class Vehicle {
 
 // A method just to draw the circle associated with wandering
 void drawWanderStuff(PVector position, PVector circle, PVector target, float rad) {
-  stroke(0); 
+  stroke(0);
   noFill();
   ellipseMode(CENTER);
   ellipse(circle.x,circle.y,rad*2,rad*2);
