@@ -56,11 +56,11 @@ class Vehicle {
     float h = velocity.heading2D();        // We need to know the heading to offset wandertheta
 
     PVector circleOffSet = new PVector(wanderR*cos(wandertheta+h),wanderR*sin(wandertheta+h));
-    PVector target = PVector.add(circleloc,circleOffSet);
+    PVector target = PVector.add(circlepos,circleOffSet);
     seek(target);
 
     // Render wandering circle, etc. 
-    if (debug) drawWanderStuff(position,circleloc,target,wanderR);
+    if (debug) drawWanderStuff(position,circlepos,target,wanderR);
   }  
 
   void applyForce(PVector force) {
