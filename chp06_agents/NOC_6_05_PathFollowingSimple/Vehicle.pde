@@ -39,14 +39,14 @@ class Vehicle {
     PVector predict = velocity.get();
     predict.normalize();
     predict.mult(50);
-    PVector predictLoc = PVector.add(position, predict);
+    PVector predictpos = PVector.add(position, predict);
 
     // Look at the line segment
     PVector a = p.start;
     PVector b = p.end;
 
     // Get the normal point to that line
-    PVector normalPoint = getNormalPoint(predictLoc, a, b);
+    PVector normalPoint = getNormalPoint(predictpos, a, b);
 
     // Find target point a little further ahead of normal
     PVector dir = PVector.sub(b, a);
@@ -55,7 +55,7 @@ class Vehicle {
     PVector target = PVector.add(normalPoint, dir);
 
     // How far away are we from the path?
-    float distance = PVector.dist(predictLoc, normalPoint);
+    float distance = PVector.dist(predictpos, normalPoint);
     // Only if the distance is greater than the path's radius do we bother to steer
     if (distance > p.radius) {
       seek(target);
@@ -157,4 +157,3 @@ class Vehicle {
     }
   }
 }
-
