@@ -62,7 +62,7 @@ class Vehicle {
     PVector predict = velocity.get();
     predict.normalize();
     predict.mult(25);
-    PVector predictLoc = PVector.add(position, predict);
+    PVector predictpos = PVector.add(position, predict);
 
     // Now we must find the normal to the path from the predicted position
     // We look at the normal for each line segment and pick out the closest one
@@ -78,7 +78,7 @@ class Vehicle {
       PVector b = p.points.get((i+1)%p.points.size()); // Note Path has to wraparound
 
       // Get the normal point to that line
-      PVector normalPoint = getNormalPoint(predictLoc, a, b);
+      PVector normalPoint = getNormalPoint(predictpos, a, b);
 
       // Check if normal is on line segment
       PVector dir = PVector.sub(b, a);
@@ -93,7 +93,7 @@ class Vehicle {
       }
 
       // How far away are we from the path?
-      float d = PVector.dist(predictLoc, normalPoint);
+      float d = PVector.dist(predictpos, normalPoint);
       // Did we beat the worldRecord and find the closest line segment?
       if (d < worldRecord) {
         worldRecord = d;
