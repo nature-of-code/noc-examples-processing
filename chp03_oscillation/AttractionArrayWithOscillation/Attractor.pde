@@ -15,7 +15,7 @@ class Attractor {
   PVector drag;  // holds the offset for when object is clicked on
 
   Attractor(PVector l_,float m_, float g_) {
-    loc = l_.get();
+    pos = l_.get();
     mass = m_;
     G = g_;
     drag = new PVector(0.0,0.0);
@@ -27,7 +27,7 @@ class Attractor {
   }
 
   PVector attract(Crawler c) {
-    PVector dir = PVector.sub(loc,c.loc);        // Calculate direction of force
+    PVector dir = PVector.sub(pos,c.pos);        // Calculate direction of force
     float d = dir.mag();                              // Distance between objects
     d = constrain(d,5.0,25.0);                        // Limiting the distance to eliminate "extreme" results for very close or very far objects
     dir.normalize();                                  // Normalize vector (distance doesn't matter here, we just want this vector for direction)
@@ -79,4 +79,3 @@ class Attractor {
   }
 
 }
-

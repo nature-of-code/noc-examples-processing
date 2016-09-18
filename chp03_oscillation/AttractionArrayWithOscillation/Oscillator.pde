@@ -33,5 +33,3 @@ class Oscillator {
     ellipse(x,0,8,8);
   }
 }
-
-
