@@ -17,8 +17,8 @@ General Structure notes.
 
 class Particle {
   int len;            // number of elements in position array
-  Vec3D[] loc;        // array of position vectors
-  Vec3D startLoc;     // just used to make sure every loc[] is initialized to the same position
+  Vec3D[] pos;        // array of position vectors
+  Vec3D startpos;     // just used to make sure every pos[] is initialized to the same position
   Vec3D vel;          // velocity vector
   Vec3D perlin;       // perlin noise vector
   float radius;       // particle's size
@@ -30,10 +30,10 @@ class Particle {
   boolean ISBOUNCING; // if particle hits the floor...
 
 
-  Particle( Vec3D _loc, Vec3D _vel ) {
+  Particle( Vec3D _pos, Vec3D _vel ) {
     radius      = random( 10, 40 );
     len         = (int)( radius );
-    loc         = new Vec3D[ len ];
+    pos         = new Vec3D[ len ];
 
     // This confusing-looking line does three things at once.
     // First, you make a random vector.
@@ -45,10 +45,10 @@ class Particle {
     // This is just a way to make sure all the particles made this frame
     // don't all start on the exact same pixel. This staggering will be useful
     // when we incorporate magnetic repulsion in a later tutorial.
-    startLoc    = new Vec3D( _pos.add( new Vec3D().randomVector().scaleSelf( random( 5.0 ) ) ) ); 
+    startpos    = new Vec3D( _pos.add( new Vec3D().randomVector().scaleSelf( random( 5.0 ) ) ) ); 
 
     for( int i=0; i<len; i++ ) {
-      loc[i]    = new Vec3D( startLoc );
+      pos[i]    = new Vec3D( startpos );
     }
 
 
@@ -87,8 +87,8 @@ class Particle {
   }
 
   void findPerlin() {
-    float xyRads      = getRads( loc[0].x, loc[0].z, 10.0, 20.0 );
-    float yRads       = getRads( loc[0].x, loc[0].y, 10.0, 20.0 );
+    float xyRads      = getRads( pos[0].x, pos[0].z, 10.0, 20.0 );
+    float yRads       = getRads( pos[0].x, pos[0].y, 10.0, 20.0 );
     perlin.set( cos(xyRads), -sin(yRads), sin(xyRads) );
     perlin.scaleSelf( .5 );
   }
@@ -101,7 +101,7 @@ class Particle {
       vel.addSelf( perlin );
 
     if( ALLOWFLOOR ) {
-      if( loc[0].y + vel.y > floorLevel ) {
+      if( pos[0].y + vel.y > floorLevel ) {
         ISBOUNCING = true;
       } 
       else {
@@ -119,18 +119,18 @@ class Particle {
     // Every frame, the current position will be passed on to
     // the next element in the position array. Think 'cursor trail effect'.
     for( int i=len-1; i>0; i-- ) {
-      loc[i].set( loc[i-1] );
+      pos[i].set( pos[i-1] );
     }
 
     // Set the initial position.
-    // loc[0] represents the current position of the particle.
-    loc[0].addSelf( vel );
+    // pos[0] represents the current position of the particle.
+    pos[0].addSelf( vel );
   }
 
   void render() {
     // As the particle ages, it will gain blue but will lose red and green.
     color c = color( agePer, agePer*.75, 1.0 - agePer );
-    renderImage(particleImg, loc[0], radius * agePer, c, 1.0 );
+    renderImage(particleImg, pos[0], radius * agePer, c, 1.0 );
   }
 
   void renderTrails() {
@@ -139,9 +139,9 @@ class Particle {
     beginShape(QUAD_STRIP);
     for ( int i=0; i<len - 1; i++ ) {
       float per     = 1.0 - (float)i/(float)(len-1);
-      xp            = loc[i].x;
-      yp            = loc[i].y;
-      zp            = loc[i].z;
+      xp            = pos[i].x;
+      yp            = pos[i].y;
+      zp            = pos[i].z;
 
       if ( i < len - 2 ) {
         // Okay, here is some vector craziness that I probably cant explain very well.
@@ -162,7 +162,7 @@ class Particle {
         // this particular piece of source which has no camera object is I have replaced the eyeNormal
         // (which would be the vector pointing from ribbon towards camera) with a generic Vec3D(0, 1, 0).
         // Why? Well cause it works and thats enough for me. WHEE!
-        Vec3D perp0 = loc[i].sub( loc[i+1] );
+        Vec3D perp0 = pos[i].sub( pos[i+1] );
         Vec3D perp1 = perp0.cross( new Vec3D( 0, 1, 0 ) ).normalize();
         Vec3D perp2 = perp0.cross( perp1 ).normalize();
         perp1 = perp0.cross( perp2 ).normalize();
@@ -205,4 +205,3 @@ class Particle {
     }
   }
 }
-

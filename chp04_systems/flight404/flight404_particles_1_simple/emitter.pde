@@ -8,7 +8,7 @@ multiple emitters.
 */
 
 class Emitter{
-  Vec3D loc;
+  Vec3D pos;
   Vec3D vel;
   Vec3D velToMouse;
   
@@ -17,7 +17,7 @@ class Emitter{
   ArrayList particles;
   
   Emitter(  ){
-    loc        = new Vec3D();
+    pos        = new Vec3D();
     vel        = new Vec3D();
     velToMouse = new Vec3D();
     
@@ -71,7 +71,7 @@ class Emitter{
   
   
   void render(){
-    renderImage( emitterImg, loc, 150, myColor, 1.0 );
+    renderImage( emitterImg, pos, 150, myColor, 1.0 );
   }
   
   void iterateListRenderTrails(){
@@ -83,7 +83,7 @@ class Emitter{
 
   void addParticles( int _amt ){
     for( int i=0; i<_amt; i++ ){
-      particles.add( new Particle( loc, vel ) );
+      particles.add( new Particle( pos, vel ) );
     }
   }
 }
