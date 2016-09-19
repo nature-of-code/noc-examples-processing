@@ -14,7 +14,7 @@ class Particle {
     float vx = randomGaussian()*0.3;
     float vy = randomGaussian()*0.3 - 1.0;
     vel = new PVector(vx,vy);
-    loc = l.get();
+    pos = l.get();
     lifespan = 100.0;
     img = img_;
   }
@@ -58,4 +58,3 @@ class Particle {
     }
   }
 }
-
