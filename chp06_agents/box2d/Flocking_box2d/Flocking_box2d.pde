@@ -10,13 +10,13 @@
 
 // Click mouse to add boids into the system
 
-import pbox2d.*;
+import shiffman.box2d.*;
 import org.jbox2d.collision.shapes.*;
 import org.jbox2d.common.*;
 import org.jbox2d.dynamics.*;
 
 // A reference to our box2d world
-PBox2D box2d;
+Box2DProcessing box2d;
 
 Flock flock;
 
