@@ -23,7 +23,7 @@ Flock flock;
 void setup() {
   size(640,360);
   // Initialize box2d physics and create the world
-  box2d = new PBox2D(this);
+  box2d = new Box2DProcessing(this);
   box2d.createWorld();
   // We are setting a custom gravity
   box2d.setGravity(0,0);
