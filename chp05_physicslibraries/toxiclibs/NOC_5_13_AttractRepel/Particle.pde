@@ -11,7 +11,7 @@ class Particle extends VerletParticle2D {
     super(loc);
     r = 8;
     physics.addParticle(this);
-    physics.addBehavior(new AttractionBehavior(this, r*4, -1));
+    physics.addBehavior(new AttractionBehavior2D(this, r*4, -1));
   }
 
   void display () {
@@ -21,4 +21,3 @@ class Particle extends VerletParticle2D {
     ellipse (x, y, r*2, r*2);
   }
 }
-

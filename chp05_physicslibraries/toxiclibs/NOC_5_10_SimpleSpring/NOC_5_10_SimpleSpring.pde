@@ -19,7 +19,7 @@ void setup() {
 
   // Initialize the physics
   physics=new VerletPhysics2D();
-  physics.addBehavior(new GravityBehavior(new Vec2D(0,0.5)));
+  physics.addBehavior(new GravityBehavior2D(new Vec2D(0,0.5)));
 
   // Set the world's bounding box
   physics.setWorldBounds(new Rect(0,0,width,height));
@@ -63,6 +63,3 @@ void draw() {
     p2.unlock();
   } 
 }
-
-
-

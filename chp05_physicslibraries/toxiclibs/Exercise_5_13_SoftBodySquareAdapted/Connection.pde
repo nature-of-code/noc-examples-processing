@@ -12,4 +12,3 @@ class Connection extends VerletSpring2D {
     line(a.x,a.y,b.x,b.y);
   }
 }
-

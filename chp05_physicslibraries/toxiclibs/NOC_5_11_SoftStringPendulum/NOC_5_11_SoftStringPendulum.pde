@@ -38,7 +38,7 @@ void setup() {
   size(640, 360);
   // Initialize the physics world
   physics=new VerletPhysics2D();
-  physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.1)));
+  physics.addBehavior(new GravityBehavior2D(new Vec2D(0, 0.1)));
   physics.setWorldBounds(new Rect(0, 0, width, height));
 
   // Initialize the chain
@@ -65,4 +65,3 @@ void mouseReleased() {
   // Release the chain
   chain.release();
 }
-
