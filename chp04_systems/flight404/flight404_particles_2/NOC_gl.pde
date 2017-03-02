@@ -1,5 +1,5 @@
 
-void renderImage(PImage img, Vec3D _loc, float _diam, color _col, float _alpha ) {
+void renderImage(PImage img, Vec3D _pos, float _diam, color _col, float _alpha ) {
   pushMatrix();
   translate( _pos.x, _pos.y, _pos.z );
   pov.glReverseCamera();
@@ -9,7 +9,7 @@ void renderImage(PImage img, Vec3D _loc, float _diam, color _col, float _alpha )
   popMatrix();
 }
 
-void renderImageOnFloor(PImage img,  Vec3D _loc, float _diam, color _col, float _aa ) {
+void renderImageOnFloor(PImage img,  Vec3D _pos, float _diam, color _col, float _aa ) {
   pushMatrix();
   translate( _pos.x, _pos.y, _pos.z );
   rotateX(PI/2);
@@ -20,7 +20,7 @@ void renderImageOnFloor(PImage img,  Vec3D _loc, float _diam, color _col, float 
   popMatrix();
 }
 
-void renderImageAndRotate(PImage img, Vec3D _loc, float _diam, color _col, float _aa, float _rot ) {
+void renderImageAndRotate(PImage img, Vec3D _pos, float _diam, color _col, float _aa, float _rot ) {
   pushMatrix();
   translate( _pos.x, _pos.y, _pos.z );
   pov.glReverseCamera();

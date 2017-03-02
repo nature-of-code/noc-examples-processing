@@ -1,5 +1,5 @@
 class Emitter{
-  Vec3D loc;
+  Vec3D pos;
   Vec3D vel;
   Vec3D velToMouse;
   float radius;
@@ -10,7 +10,7 @@ class Emitter{
   ArrayList nebulae;
 
   Emitter(  ){
-    loc        = new Vec3D();
+    pos        = new Vec3D();
     vel        = new Vec3D();
     velToMouse = new Vec3D();
     
@@ -35,7 +35,7 @@ class Emitter{
   }
   
   void findVelocity(){
-    Vec3D dirToMouse = new Vec3D( mouse.pos.sub( loc ).scale( .15 ) );
+    Vec3D dirToMouse = new Vec3D( mouse.pos.sub( pos ).scale( .15 ) );
     vel.set( dirToMouse );
   }
   
@@ -92,12 +92,12 @@ class Emitter{
   
   void render(){
     //pgl.bindTexture( images.emitter );
-    renderImage( images.emitter,loc, radius, myColor, 1.0 );
+    renderImage( images.emitter,pos, radius, myColor, 1.0 );
     
     
     if( ALLOWNEBULA ){
-      nebulae.add( new Nebula( loc, 15.0, true ) );
-      nebulae.add( new Nebula( loc, 45.0, true ) );
+      nebulae.add( new Nebula( pos, 15.0, true ) );
+      nebulae.add( new Nebula( pos, 45.0, true ) );
     }
     
     
@@ -128,12 +128,12 @@ class Emitter{
 
   void addParticles( int _amt ){
     for( int i=0; i<_amt; i++ ){
-      particles.add( new Particle( 1, loc, vel ) );
+      particles.add( new Particle( 1, pos, vel ) );
     }
     
     if( ALLOWNEBULA ){
-      nebulae.add( new Nebula( loc, 40.0, false ) );
-      nebulae.add( new Nebula( loc, 100.0, false ) );
+      nebulae.add( new Nebula( pos, 40.0, false ) );
+      nebulae.add( new Nebula( pos, 100.0, false ) );
     }
   }
   
@@ -141,9 +141,9 @@ class Emitter{
     // play with amt if you want to control how many particles spawn when splitting
     int amt = (int)( _p.radius * .15 );
     for( int i=0; i<amt; i++ ){
-      particles.add( new Particle( _p.gen + 1, _p.loc[0], _p.vel ) );
+      particles.add( new Particle( _p.gen + 1, _p.pos[0], _p.vel ) );
       if( ALLOWNEBULA )
-        nebulae.add( new Nebula( _p.loc[0], random( 5.0, 50.0 ), true ) );
+        nebulae.add( new Nebula( _p.pos[0], random( 5.0, 50.0 ), true ) );
     }
   }
 }

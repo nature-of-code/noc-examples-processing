@@ -4,7 +4,7 @@
 // It's my intention to redo this example using GlGraphics (http://glgraphics.sourceforge.net/)
 // But for now, just want to make sure it works in principal
 
-// February 28 2011
+// March 1 2017
 // Daniel Shiffman
 
 // Source Code release 1
@@ -174,4 +174,3 @@ float getRads(float val1, float val2, float mult, float div) {
 
   return rads * mult;
 }
-

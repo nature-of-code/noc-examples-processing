@@ -1,9 +1,9 @@
 class Cursor{
-  Vec3D loc;
+  Vec3D pos;
   Vec3D vel;
   
   Cursor(){
-    loc      = new Vec3D();
+    pos      = new Vec3D();
     vel      = new Vec3D();
   }
   

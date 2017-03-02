@@ -3,9 +3,9 @@
 // http://natureofcode.com
 
 // Updated version of flight404 Particle Emitter release 1
-// This works with Processing 2.0
+// This works with Processing 3.0
 
-// February 28 2011
+// March 1, 2017
 // Daniel Shiffman
 
 // Source Code release 1

@@ -1,5 +1,5 @@
 class Nebula{
-  Vec3D loc;
+  Vec3D pos;
   Vec3D vel;
   float radius;
   float scaleFac;
@@ -12,8 +12,8 @@ class Nebula{
   boolean ISDEAD;
   boolean ISGROUNDED;
 
-  Nebula( Vec3D _loc, float _radius, boolean _ISGROUNDED ){
-    loc            = new Vec3D( _loc );
+  Nebula( Vec3D _pos, float _radius, boolean _ISGROUNDED ){
+    pos            = new Vec3D( _pos);
     vel            = new Vec3D( pov.eyeNormal.scale( 2.0 ) );
     radius         = random( _radius*.8, _radius*1.75 );
     
@@ -43,7 +43,7 @@ class Nebula{
   }
   
   void render(){
-    renderImageAndRotate( loc, radius, c, sin(agePer*PI) * .4, rot );
+    renderImageAndRotate(images.corona, pos, radius, c, sin(agePer*PI) * .4, rot );
   }
   
   void checkAge(){
