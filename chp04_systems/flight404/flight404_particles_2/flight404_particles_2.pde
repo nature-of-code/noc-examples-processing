@@ -5,6 +5,7 @@
 // But for now, just want to make sure it works in principal
 
 // March 1 2017
+// Updated for Processing 3.0
 // Daniel Shiffman
 
 // Source Code release 1
@@ -106,7 +107,7 @@ void setup() {
 
 void draw() {
   background( 0.0 );
- 
+  
   pov.exist();
   mouse.exist();
 
