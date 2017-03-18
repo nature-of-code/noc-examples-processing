@@ -4,11 +4,11 @@
 
 class GOL {
 
-  int w = 8;
-  int columns, rows;
+  private int w = 8;
+  private int columns, rows;
 
   // Game of life board
-  int[][] board;
+  private int[][] board;
 
 
   GOL() {
@@ -32,7 +32,7 @@ class GOL {
   // The process of creating the new generation
   void generate() {
 
-    int[][] next = new int[columns][rows];
+    final int[][] next = new int[columns][rows];
 
     // Loop through every spot in our 2D array and check spots neighbors
     for (int x = 1; x < columns-1; x++) {

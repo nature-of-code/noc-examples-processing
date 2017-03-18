@@ -16,9 +16,9 @@
 class DNA {
 
   // The genetic sequence
-  char[] genes;
+  private char[] genes;
   
-  float fitness;
+  private float fitness;
   
   // Constructor (makes a random DNA)
   DNA(int num) {
@@ -30,7 +30,7 @@ class DNA {
   
   // Converts character array to a String
   String getPhrase() {
-    return new String(genes);
+    return String.valueOf(genes);
   }
   
   // Fitness function (returns floating point % of "correct" characters)
@@ -47,7 +47,7 @@ class DNA {
   // Crossover
   DNA crossover(DNA partner) {
     // A new child
-    DNA child = new DNA(genes.length);
+    final DNA child = new DNA(genes.length);
     
     int midpoint = int(random(genes.length)); // Pick a midpoint
     
