@@ -182,4 +182,3 @@ class Boid {
     return sum;
   }
 }
-
