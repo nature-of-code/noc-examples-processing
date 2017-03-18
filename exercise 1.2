@@ -1,0 +1,38 @@
+I am not a "coder"! I am an artist. I was interested in 'Processing'. 
+The-Nature-of-Code-Examples (http://natureofcode.com/book/introduction/)
+'Example I.2: Random number distribution' is faulty! When you "reset" the bargraph, 
+the bars start leaping up & down until you reload the web-page. This does not encourage 
+me...(I wonder how many others have been put off by this error in the "Introduction"
+to Processing? Also - I am not a "git", but this github is not user-friendly for the non-coder...
+Here is the code:
+
+
+//Example I.2: Random number distribution
+//An array to keep track of how often random numbers are picked
+int[] randomCounts;
+ 
+void setup() {
+  size(640,240);
+  randomCounts = new int[20];
+}
+ 
+void draw() {
+  background(255);
+ 
+
+//Pick a random number and increase the count.
+
+  int index = int(random(randomCounts.length));
+  randomCounts[index]++;
+ 
+  stroke(0);
+  fill(175);
+  int w = width/randomCounts.length;
+
+//Graphing the results
+
+  for (int x = 0; x < randomCounts.length; x++) {
+    rect(x*w,height-randomCounts[x],w-1,randomCounts[x]);
+  }
+
+}
