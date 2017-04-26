@@ -20,7 +20,8 @@ void draw() {
   background(255);
 
   a.display();
-
+  a.drag();
+  a.rollover(mouseX, mouseY);
 
   for (int i = 0; i < movers.length; i++) {
     for (int j = 0; j < movers.length; j++) {
@@ -35,21 +36,12 @@ void draw() {
     movers[i].update();
     movers[i].display();
   }
-
-  
-
 }
 
+void mousePressed() {
+  a.clicked(mouseX, mouseY);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+void mouseReleased() {
+  a.stopDragging();
+}
