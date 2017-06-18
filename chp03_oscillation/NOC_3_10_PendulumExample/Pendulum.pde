@@ -81,8 +81,10 @@ class Pendulum {
 
   // This tells us we are not longer clicking on the ball
   void stopDragging() {
-    aVelocity = 0; // No velocity once you let go
-    dragging = false;
+    if (dragging) {
+      aVelocity = 0; // No velocity once you let go
+      dragging = false;
+    }
   }
 
   void drag() {
