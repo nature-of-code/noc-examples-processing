@@ -65,20 +65,20 @@ class Mover {
     float sumR = r + other.r;
     // Are they colliding?
     if (!colliding && d < sumR) {
-      // Yes, make new veposities!
+      // Yes, make new velocities!
       colliding = true;
       // Direction of one object another
       PVector n = PVector.sub(other.pos,pos);
       n.normalize();
 
-      // Difference of veposities so that we think of one object as stationary
+      // Difference of velocities so that we think of one object as stationary
       PVector u = PVector.sub(vel,other.vel);
 
       // Separate out components -- one in direction of normal
       PVector un = componentVector(u,n);
       // Other component
       u.sub(un);
-      // These are the new veposities plus the veposity of the object we consider as stastionary
+      // These are the new velocities plus the velocity of the object we consider as stastionary
       vel = PVector.add(u,other.vel);
       other.vel = PVector.add(un,other.vel);
     } 
