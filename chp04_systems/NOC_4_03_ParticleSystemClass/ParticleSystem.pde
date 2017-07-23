@@ -13,8 +13,8 @@ class ParticleSystem {
     particles = new ArrayList<Particle>();
   }
 
-  void addParticle() {
-    particles.add(new Particle(origin));
+  void addParticle(PVector position) {
+    particles.add(new Particle(position.get()));
   }
 
   void run() {
@@ -27,7 +27,3 @@ class ParticleSystem {
     }
   }
 }
-
-
-
-
