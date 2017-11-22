@@ -8,7 +8,7 @@ class Walker {
   PVector pos;
 
   Walker() {
-    loc = new PVector(width/2,height/2);
+    pos = new PVector(width/2,height/2);
   }
 
   void render() {
