@@ -16,6 +16,8 @@ class Boid {
   
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
+  
+  Vec2 pos = new Vec2(0,0);  //create the "pos" variable, seems req. for Processing3
 
   Boid(PVector pos) {
     w = 12;
@@ -84,7 +86,8 @@ class Boid {
   // Drawing the box
   void display() {
     // We look at each body and get its screen position
-    Vec2 pos = box2d.getBodyPixelCoord(body);
+    //Vec2 pos = box2d.getBodyPixelCoord(body); //caused an error in Processing3
+    pos = box2d.getBodyPixelCoord(body); //assumes variable "pos" already exists
     
     // Get its angle of rotation
     float a = body.getAngle();
