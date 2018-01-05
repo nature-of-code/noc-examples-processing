@@ -16,8 +16,6 @@ class Boid {
   
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
-  
-  Vec2 pos = new Vec2(0,0);  //create the "pos" variable, seems req. for Processing3
 
   Boid(PVector pos) {
     w = 12;
@@ -49,17 +47,17 @@ class Boid {
     ali.mulLocal(1);
     coh.mulLocal(1);
     // Add the force vectors to acceleration
-    Vec2 loc = body.getWorldCenter();
-    body.applyForce(sep,loc);
-    body.applyForce(ali,loc);
-    body.applyForce(coh,loc);
+    Vec2 pos = body.getWorldCenter();
+    body.applyForce(sep,pos);
+    body.applyForce(ali,pos);
+    body.applyForce(coh,pos);
   }
 
   // A method that calculates and applies a steering force towards a target
   // STEER = DESIRED MINUS VELOCITY
   Vec2 seek(Vec2 target) {
-    Vec2 loc = body.getWorldCenter();
-    Vec2 desired = target.sub(loc);  // A vector pointing from the position to the target
+    Vec2 pos = body.getWorldCenter();
+    Vec2 desired = target.sub(pos);  // A vector pointing from the position to the target
 
     // If the magnitude of desired equals 0, skip out of here
     // (We could optimize this to check if x and y are 0 to avoid mag() square root
@@ -86,8 +84,8 @@ class Boid {
   // Drawing the box
   void display() {
     // We look at each body and get its screen position
-    //Vec2 pos = box2d.getBodyPixelCoord(body); //caused an error in Processing3
-    pos = box2d.getBodyPixelCoord(body); //assumes variable "pos" already exists
+    
+    Vec2 pos = box2d.getBodyPixelCoord(body); 
     
     // Get its angle of rotation
     float a = body.getAngle();
@@ -105,7 +103,7 @@ class Boid {
 
   // Wraparound
   void borders() {
-    Vec2 loc = box2d.getBodyPixelCoord(body); 
+    Vec2 pos = box2d.getBodyPixelCoord(body); 
     Vec2 vel = body.getLinearVelocity();
     float a = body.getAngularVelocity();
     if (pos.x < -w) {
@@ -257,4 +255,3 @@ class Boid {
   
   
 }
-
