@@ -15,7 +15,7 @@ class Vehicle {
   float maxspeed;    // Maximum speed
 
     Vehicle(PVector l, float ms, float mf) {
-    position = l.get();
+    position = l.copy();
     r = 3.0;
     maxspeed = ms;
     maxforce = mf;
@@ -61,7 +61,7 @@ class Vehicle {
 
   void display() {
     // Draw a triangle rotated in the direction of velocity
-    float theta = velocity.heading2D() + radians(90);
+    float theta = velocity.heading() + radians(90);
     fill(175);
     stroke(0);
     pushMatrix();
@@ -83,5 +83,3 @@ class Vehicle {
     if (position.y > height+r) position.y = -r;
   }
 }
-
-

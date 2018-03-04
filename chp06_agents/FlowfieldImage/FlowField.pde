@@ -57,13 +57,12 @@ class FlowField {
   // Renders a vector object 'v' as an arrow and a position 'x,y'
   void drawVector(PVector v, float x, float y, float scayl) {
     pushMatrix();
-    float arrowsize = 4;
     // Translate to position to render vector
     translate(x, y);
     strokeWeight(2);
     stroke(255, 0, 0);
     // Call vector heading function to get direction (note that pointing up is a heading of 0) and rotate
-    rotate(v.heading2D());
+    rotate(v.heading());
     // Calculate length of vector & scale it to be bigger or smaller if necessary
     float len = v.mag()*scayl;
     // Draw three lines to make an arrow (draw pointing up since we've rotate to the proper direction)
@@ -76,10 +75,6 @@ class FlowField {
   PVector lookup(PVector lookup) {
     int column = int(constrain(lookup.x/resolution, 0, cols-1));
     int row = int(constrain(lookup.y/resolution, 0, rows-1));
-    return field[column][row].get();
+    return field[column][row].copy();
   }
 }
-
-
-
-
