@@ -22,7 +22,7 @@ class Landscape {
   }
 
 
-  // Calculate height values (based off a neural netork)
+  // Calculate height values (based off a neural network)
   void calculate() {
     float xoff = 0;
     for (int i = 0; i < cols; i++)
