@@ -29,8 +29,7 @@ This is the repository for example [Processing](http://processing.org) code from
 * [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby) for processing-2.2.1
 * [JRubyArt port](https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt) for processing-3.0+
 
-### Other
-* [Clojure / Quil](https://github.com/sjl/The-Nature-of-Code-Examples)
-* [More Clojure / Quil](https://github.com/mudphone/natureofclojure)
-
-
+### Clojure
+* [sjl's Quil port](https://github.com/sjl/The-Nature-of-Code-Examples)
+* [mudphone's Quil port](https://github.com/mudphone/natureofclojure)
+* [Clojure2d port](https://github.com/Clojure2D/clojure2d-examples/tree/master/src/NOC)
