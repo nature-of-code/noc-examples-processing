@@ -24,6 +24,7 @@ This is the repository for example [Processing](http://processing.org) code from
 * [Path Following using canvas by roman01la](https://github.com/roman01la/path-following)
 * [hardmaru's paper.js port of box2d physics lib examples](https://github.com/hardmaru/paperjs_box2d)([online demo](http://otoro.net/paperbox/))
 * [mvcrft's port of Adobe After Effects examples](https://github.com/mvcrft/NOC_AE)
+* [ming/playgrd's three.js port](https://github.com/playgrdstar/natureofcode_threejs)
 
 ### Ruby
 * [Ruby-processing port](https://github.com/ruby-processing/The-Nature-of-Code-Examples-in-Ruby) for processing-2.2.1
