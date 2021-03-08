@@ -35,6 +35,3 @@ This is the repository for example [Processing](http://processing.org) code from
 * [sjl's Quil port](https://github.com/sjl/The-Nature-of-Code-Examples)
 * [mudphone's Quil port](https://github.com/mudphone/natureofclojure)
 * [Clojure2d port](https://github.com/Clojure2D/clojure2d-examples/tree/master/src/NOC)
-
-### Rust
-* [Examples written in Rust using Nannou](https://github.com/nannou-org/nannou/tree/master/nature_of_code)
