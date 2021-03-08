@@ -11,7 +11,7 @@ class Leaf {
   PVector pos;
 
   Leaf(PVector l) {
-    pos = l.get();
+    loc = l.get();
   }
 
   void display() {
