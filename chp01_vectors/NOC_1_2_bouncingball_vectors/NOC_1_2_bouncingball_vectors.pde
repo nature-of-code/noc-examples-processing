@@ -5,6 +5,7 @@
 // Example 1-2: Bouncing Ball, with PVector!
 PVector position;
 PVector velocity;
+float ballRadius = 8;
 
 void setup() {
   size(200,200);
@@ -21,17 +22,17 @@ void draw() {
   // Add the current speed to the position.
   position.add(velocity);
 
-  if ((position.x > width) || (position.x < 0)) {
+  if ((position.x > width - ballRadius) || (position.x < ballRadius)) {
     velocity.x = velocity.x * -1;
   }
-  if ((position.y > height) || (position.y < 0)) {
+  if ((position.y > height - ballRadius) || (position.y < ballRadius)) {
     velocity.y = velocity.y * -1;
   }
 
   // Display circle at x position
   stroke(0);
   fill(175);
-  ellipse(position.x,position.y,16,16);
+  ellipse(position.x, position.y, ballRadius*2, ballRadius*2);
 }
 
 
