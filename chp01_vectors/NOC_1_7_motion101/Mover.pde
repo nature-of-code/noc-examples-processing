@@ -4,12 +4,14 @@
 
 class Mover {
 
+  float ballRadius;
   PVector position;
   PVector velocity;
 
   Mover() {
     position = new PVector(random(width), random(height));
     velocity = new PVector(random(-2, 2), random(-2, 2));
+    ballRadius = 24;
   }
 
   void update() {
@@ -20,23 +22,23 @@ class Mover {
     stroke(0);
     strokeWeight(2);
     fill(127);
-    ellipse(position.x, position.y, 48, 48);
+    ellipse(position.x, position.y, ballRadius*2, ballRadius*2);
   }
 
   void checkEdges() {
 
-    if (position.x > width) {
-      position.x = 0;
+    if (position.x > width + ballRadius) {
+      position.x = -ballRadius;
     } 
-    else if (position.x < 0) {
-      position.x = width;
+    else if (position.x < -ballRadius) {
+      position.x = width + ballRadius;
     }
 
-    if (position.y > height) {
-      position.y = 0;
+    if (position.y > height + ballRadius) {
+      position.y = -ballRadius;
     } 
-    else if (position.y < 0) {
-      position.y = height;
+    else if (position.y < -ballRadius) {
+      position.y = height + ballRadius;
     }
   }
 }
